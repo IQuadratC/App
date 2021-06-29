@@ -1,26 +1,26 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace Utility
 {
-    [CreateAssetMenu(fileName = "PublicEventMaster", menuName = "Utility/PublicEventMaster")]
-    public class PublicEventMaster : ScriptableObject
+    [CreateAssetMenu(fileName = "PublicEventFloat4", menuName = "Utility/PublicEventFloat4")]
+    public class PublicEventFloat4 : ScriptableObject
     {
-        private Action<object>[] funcs = new Action<object>[1];
+        private Action<float4>[] funcs = new Action<float4>[1];
         private int maxId = 0;
         private List<int> freeIds = new List<int>();
         
-        public void Raise(object variable)
+        public void Raise(float4 variable)
         {
-            foreach (Action<object> func in funcs)
+            foreach (Action<float4> func in funcs)
             {
                 func?.Invoke(variable);
             }
         }
     
-        public int Register(Action<object> func)
+        public int Register(Action<float4> func)
         {
             int id;
             if (freeIds.Count == 0)
@@ -52,7 +52,7 @@ namespace Utility
         private void raiseArray()
         {
             int length = funcs.Length;
-            Action<object>[] newFunc = new Action<object>[length + 1];
+            Action<float4>[] newFunc = new Action<float4>[length + 1];
             
             for (int i = 0; i < length; i++)
             {
