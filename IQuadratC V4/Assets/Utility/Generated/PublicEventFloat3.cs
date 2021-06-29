@@ -61,5 +61,8 @@ namespace Utility
 
             funcs = newFunc;
         }
+        
+        // Debug
+        [SerializeField] private string description;
     }
 }

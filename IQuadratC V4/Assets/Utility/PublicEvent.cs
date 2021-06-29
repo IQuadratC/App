@@ -59,4 +59,8 @@ public class PublicEvent : ScriptableObject
 
         funcs = newFunc;
     }
+    
+    // Debug
+    [SerializeField] private string description;
+    
 }
