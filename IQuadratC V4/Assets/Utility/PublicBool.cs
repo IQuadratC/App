@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Utility
 {
-    [CreateAssetMenu(fileName = "Publicint", menuName = "Utility/Publicint")]
+    [CreateAssetMenu(fileName = "Publicbool", menuName = "Utility/Publicbool")]
     public class PublicInt : ScriptableObject, ISerializationCallbackReceiver
     {
-        [NonSerialized] public int value;
-        [SerializeField] private int initalValue;
+        [NonSerialized] public bool value;
+        [SerializeField] private bool initalValue;
         
         public void OnBeforeSerialize() { }
         public void OnAfterDeserialize()

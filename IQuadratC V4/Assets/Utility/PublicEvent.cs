@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PublicEvent", menuName = "Utility/PublicEvent")]
 public class PublicEvent : ScriptableObject
 {
-    private Action[] funcs = new Action[8];
+    private Action[] funcs = new Action[1];
     private int maxId = 0;
     private List<int> freeIds = new List<int>();
     
@@ -50,11 +50,13 @@ public class PublicEvent : ScriptableObject
     private void raiseArray()
     {
         int length = funcs.Length;
-        Action[] newFunc = new Action[length * 2];
+        Action[] newFunc = new Action[length + 1];
         
         for (int i = 0; i < length; i++)
         {
             newFunc[i] = funcs[i];
         }
+
+        funcs = newFunc;
     }
 }

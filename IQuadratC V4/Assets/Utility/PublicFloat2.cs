@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Utility
 {
-    [CreateAssetMenu(fileName = "Publicint", menuName = "Utility/Publicint")]
+    [CreateAssetMenu(fileName = "Publicfloat2", menuName = "Utility/Publicfloat2")]
     public class PublicInt : ScriptableObject, ISerializationCallbackReceiver
     {
-        [NonSerialized] public int value;
-        [SerializeField] private int initalValue;
+        [NonSerialized] public float2 value;
+        [SerializeField] private float2 initalValue;
         
         public void OnBeforeSerialize() { }
         public void OnAfterDeserialize()
