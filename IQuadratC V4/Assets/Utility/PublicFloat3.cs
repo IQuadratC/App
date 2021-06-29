@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-
+using Unity.Mathematics;
 namespace Utility
 {
     [CreateAssetMenu(fileName = "PublicFloat3", menuName = "Utility/PublicFloat3")]

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Utility
@@ -51,7 +52,7 @@ namespace Utility
         private void raiseArray()
         {
             int length = funcs.Length;
-            Action<object>[] newFunc = new Action<PublicInt>[length + 1];
+            Action<object>[] newFunc = new Action<object>[length + 1];
             
             for (int i = 0; i < length; i++)
             {
