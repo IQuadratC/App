@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace Utility
 {
-    [CreateAssetMenu(fileName = "PublicEventint4", menuName = "Utility/PublicEventint4")]
-    public class PublicEventWithVar : ScriptableObject
+    [CreateAssetMenu(fileName = "PublicEventInt4", menuName = "Utility/PublicEventInt4")]
+    public class PublicEventInt4 : ScriptableObject
     {
         private Action<int4>[] funcs = new Action<int4>[1];
         private int maxId = 0;

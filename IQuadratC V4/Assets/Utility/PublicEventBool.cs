@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace Utility
 {
-    [CreateAssetMenu(fileName = "PublicEventbool", menuName = "Utility/PublicEventbool")]
-    public class PublicEventWithVar : ScriptableObject
+    [CreateAssetMenu(fileName = "PublicEventBool", menuName = "Utility/PublicEventBool")]
+    public class PublicEventBool : ScriptableObject
     {
         private Action<bool>[] funcs = new Action<bool>[1];
         private int maxId = 0;

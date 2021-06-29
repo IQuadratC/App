@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace Utility
 {
-    [CreateAssetMenu(fileName = "Publicfloat3", menuName = "Utility/Publicfloat3")]
-    public class PublicInt : ScriptableObject, ISerializationCallbackReceiver
+    [CreateAssetMenu(fileName = "PublicFloat3", menuName = "Utility/PublicFloat3")]
+    public class PublicFloat3 : ScriptableObject, ISerializationCallbackReceiver
     {
         [NonSerialized] public float3 value;
         [SerializeField] private float3 initalValue;

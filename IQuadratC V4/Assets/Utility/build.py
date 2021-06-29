@@ -17,8 +17,11 @@ types = {
 
 def convert(fileprefix, content):
     for type in types:
-        newContent = content.replace(baseType, type)
-        newPublicEventFile = open(fileprefix + type[0].upper() + type[1:] + ".cs", "w")
+        typeForName = (type[0].upper() + type[1:]).replace("[]", "Array")
+        
+        newContent = content.replace("Master", typeForName)
+        newContent = newContent.replace(baseType, type)
+        newPublicEventFile = open(fileprefix + typeForName + ".cs", "w")
         newPublicEventFile.write(newContent)
         newPublicEventFile.close()
 

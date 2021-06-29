@@ -4,22 +4,22 @@ using UnityEngine;
 
 namespace Utility
 {
-    [CreateAssetMenu(fileName = "PublicEventstring[]", menuName = "Utility/PublicEventstring[]")]
-    public class PublicEventWithVar : ScriptableObject
+    [CreateAssetMenu(fileName = "PublicEventIntArray", menuName = "Utility/PublicEventIntArray")]
+    public class PublicEventIntArray : ScriptableObject
     {
-        private Action<string[]>[] funcs = new Action<string[]>[1];
+        private Action<int[]>[] funcs = new Action<int[]>[1];
         private int maxId = 0;
         private List<int> freeIds = new List<int>();
         
-        public void Raise(string[] variable)
+        public void Raise(int[] variable)
         {
-            foreach (Action<string[]> func in funcs)
+            foreach (Action<int[]> func in funcs)
             {
                 func?.Invoke(variable);
             }
         }
     
-        public int Register(Action<string[]> func)
+        public int Register(Action<int[]> func)
         {
             int id;
             if (freeIds.Count == 0)
@@ -51,7 +51,7 @@ namespace Utility
         private void raiseArray()
         {
             int length = funcs.Length;
-            Action<string[]>[] newFunc = new Action<PublicInt>[length + 1];
+            Action<int[]>[] newFunc = new Action<PublicInt>[length + 1];
             
             for (int i = 0; i < length; i++)
             {

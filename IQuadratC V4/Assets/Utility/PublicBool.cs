@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace Utility
 {
-    [CreateAssetMenu(fileName = "Publicbool", menuName = "Utility/Publicbool")]
-    public class PublicInt : ScriptableObject, ISerializationCallbackReceiver
+    [CreateAssetMenu(fileName = "PublicBool", menuName = "Utility/PublicBool")]
+    public class PublicBool : ScriptableObject, ISerializationCallbackReceiver
     {
         [NonSerialized] public bool value;
         [SerializeField] private bool initalValue;
