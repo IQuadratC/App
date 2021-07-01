@@ -25,6 +25,13 @@ public class TCPClient : MonoBehaviour
         
         buffer = new byte[bufferSize];
         sb = new StringBuilder();
+        
+        Connect();
+    }
+
+    private void OnDisable()
+    {
+        Disconnect();
     }
 
     private void Connect()
@@ -44,17 +51,16 @@ public class TCPClient : MonoBehaviour
             s.EndConnect(ar);
             state = NetworkState.idle;
   
-            Debug.LogFormat("Socket connected to {0}", s.RemoteEndPoint.ToString());
+            Debug.LogFormat("TCP Client: Connected to {0}", s.RemoteEndPoint.ToString());
 
         } catch (Exception e) {  
             Debug.Log(e.ToString());  
         }  
     }
     
-    private void Send(String data) {
+    private void Send(byte[] data) {
         
-        byte[] byteData = Encoding.ASCII.GetBytes(data);
-        s.BeginSend(byteData, 0, byteData.Length, SocketFlags.None,  
+        s.BeginSend(data, 0, data.Length, SocketFlags.None,  
             SendCallback, s);  
         
         state = NetworkState.sending;
@@ -65,7 +71,7 @@ public class TCPClient : MonoBehaviour
             int bytesSent = s.EndSend(ar);  
             state = NetworkState.idle;
             
-            Debug.LogFormat("Sent {0} bytes to server.", bytesSent);
+            Debug.LogFormat("TCP Client: Sent {0} bytes to server.", bytesSent);
             
         } catch (Exception e) {  
             Debug.Log(e.ToString());  
@@ -74,8 +80,7 @@ public class TCPClient : MonoBehaviour
 
     private void Receive() {  
         try {
-            s.BeginReceive(buffer, 0, bufferSize, 0,  
-                ReceiveCallback, state);
+            s.BeginReceive(buffer, 0, bufferSize, 0, ReceiveCallback, state);
             
             state = NetworkState.reciving;
             
@@ -87,29 +92,37 @@ public class TCPClient : MonoBehaviour
     private void ReceiveCallback( IAsyncResult ar ) {  
         try {
             int bytesRead = s.EndReceive(ar);  
-            if (bytesRead > 0) {  
+            if (bytesRead > 0) {
                 
-                // There might be more data, so store the data received so far.  
-                sb.Append(Encoding.ASCII.GetString(buffer,0,bytesRead));  
-                //  Get the rest of the data.  
-                s.BeginReceive(buffer,0,bufferSize,0,  
-                    ReceiveCallback, state);  
+                s.BeginReceive(buffer,0,bufferSize,0, ReceiveCallback, state);  
                 state = NetworkState.reciving;
                 
             } else {  
                 // All the data has arrived; put it in response.  
                 if (sb.Length > 1) {
                     state = NetworkState.idle;
-                    
-                    //response = state.sb.ToString();  
-                    
+
+                    TCPMessage.ParseMessage(buffer);
+                    buffer = new byte[0];
                 }
             }  
         } catch (Exception e) {  
             Debug.Log(e.ToString());  
         }  
-    }  
-    
+    }
+
+    private void Disconnect()
+    {
+        s.Shutdown(SocketShutdown.Both);  
+        s.Close();
+        s = null;
+        state = NetworkState.notConnected;
+        
+        Threader.RunOnMainThread(() =>
+            {
+                Debug.Log("TCP Client: Disconnected.");  
+            });
+    }
 }
 
 

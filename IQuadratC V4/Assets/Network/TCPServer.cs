@@ -9,51 +9,6 @@ namespace Network
 {
     public class TCPServer : MonoBehaviour
     {
-        [SerializeField] private PublicString ip;
-        [SerializeField] private PublicInt tcpPort;
-        
-        [SerializeField] private int maxClients = 100;
-        private int currentClients;
-        
-        private Socket s;
-        private IPEndPoint ipe;
-        [SerializeField] private NetworkState state;
-
-        public const int bufferSize = 1024;
-
-        private void Start()
-        {
-            currentClients = 0;
-            state = NetworkState.notConnected;
-        }
-
-        private void StartServer()
-        {
-            s = new Socket(AddressFamily.InterNetwork,
-                SocketType.Stream, ProtocolType.Tcp);
-        
-            ipe = new IPEndPoint(IPAddress.Parse(ip.value),tcpPort.value);
-
-            try
-            {
-                s.Bind(ipe);
-                s.Listen(maxClients);
-                state = NetworkState.idle;
-
-                while (true)
-                {
-                    if (state != NetworkState.idle) continue;
-                    
-                    s.BeginAccept(AcceptCallback, null);
-                    state = NetworkState.connecting;
-                }
-            }
-            catch (Exception e)
-            {
-                Debug.Log(e.ToString());  
-            }
-        }
-        
         class Client
         {
             public int id;
@@ -71,18 +26,98 @@ namespace Network
                 state = NetworkState.idle;
             }
         }
+        
+        [SerializeField] private PublicString ip;
+        [SerializeField] private PublicInt tcpPort;
+        
+        [SerializeField] private int maxClients = 100;
+        private int currentClients;
+
+        private Client[] clients;
+        
+        private Socket s;
+        private IPEndPoint ipe;
+        [SerializeField] private NetworkState state;
+
+        public const int bufferSize = 1024;
+
+        private void Start()
+        {
+            currentClients = 0;
+            state = NetworkState.notConnected;
+            clients = new Client[maxClients];
+            
+            Threader.RunAsync(StartServer);
+        }
+
+        private void OnDisable()
+        {
+            Threader.RunAsync(StopServer);
+        }
+
+        private void StartServer()
+        {
+            s = new Socket(AddressFamily.InterNetwork,
+                SocketType.Stream, ProtocolType.Tcp);
+        
+            ipe = new IPEndPoint(IPAddress.Parse(ip.value),tcpPort.value);
+
+            try
+            {
+                s.Bind(ipe);
+                s.Listen(maxClients);
+                state = NetworkState.idle;
+                
+                Threader.RunOnMainThread(() =>
+                {
+                    Debug.Log("TCP Server: Online");  
+                });
+
+                while (true)
+                {
+                    if (state != NetworkState.connecting)
+                    { 
+                        s.BeginAccept(AcceptCallback, null);
+                        state = NetworkState.idle;
+                    }
+                    
+                    for (int i = 0; i < clients.Length; i++)
+                    {
+                        Client client = clients[i];
+                        if (client != null && !client.s.Connected)
+                        {
+                            client.s.Close();
+                            clients[i] = null;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Threader.RunOnMainThread(() =>
+                {
+                    Debug.Log(e.ToString());  
+                });
+            }
+        }
+        
         public void AcceptCallback(IAsyncResult ar)
         {
-            state = NetworkState.idle;
+            state = NetworkState.connecting;
 
             Client client = new Client(currentClients, s.EndAccept(ar));
             currentClients++;
 
-            client.s.BeginReceive(client.buffer, 0, bufferSize, 0,  
-                ReadCallback, client);  
-            
+            clients[client.id] = client;
+
+            client.s.BeginReceive(client.buffer, 0, bufferSize, 0, ReadCallback, client);
             client.state = NetworkState.reciving;
-        }  
+            
+            Threader.RunOnMainThread(() =>
+            {
+                Debug.LogFormat("TCP Server: Client {0} from {1} connected.", client.id, client.s.RemoteEndPoint);
+            });
+        }
         
         public void ReadCallback(IAsyncResult ar)
         {
@@ -133,15 +168,35 @@ namespace Network
                 client.state = NetworkState.idle;
                 
                 int bytesSent = client.s.EndSend(ar);
-                Console.WriteLine("Sent {0} bytes to client.", bytesSent);  
-  
-                client.s.Shutdown(SocketShutdown.Both);  
-                client.s.Close();
+                Console.WriteLine("Sent {0} bytes to client.", bytesSent);
             }
             catch (Exception e)
             {
-                Debug.Log(e.ToString());  
+                Threader.RunOnMainThread(() =>
+                {
+                    Debug.Log(e.ToString());  
+                });
             }  
+        }
+
+        private void StopServer()
+        {
+            for (int i = 0; i < clients.Length; i++)
+            {
+                Client client = clients[i];
+                if (client != null)
+                {
+                    client.s.Shutdown(SocketShutdown.Both);  
+                    client.s.Close();
+                    clients[i] = null;
+                }
+            }
+            state = NetworkState.notConnected;
+            
+            Threader.RunOnMainThread(() =>
+            {
+                Debug.Log("TCP Server: Stopped");  
+            });
         }
     }
 }

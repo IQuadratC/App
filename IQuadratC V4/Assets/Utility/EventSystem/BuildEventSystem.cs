@@ -8,7 +8,7 @@ namespace Utility
     public class MenuItems
     {
 
-        static string path  = "Assets/Utility/";
+        static string path  = "Assets/Utility/EventSystem";
         
         [MenuItem("Tools/Build Event System")]
         private static void NewMenuOption()
