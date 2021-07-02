@@ -41,22 +41,31 @@ namespace Network
 
         public const int bufferSize = 1024;
 
+        [SerializeField] private PublicEvent  [SerializeField] private PublicEvent startServerEvent;;
+        [SerializeField] private PublicEvent stopServerEvent;
+
         private void Start()
         {
             currentClients = 0;
             state = NetworkState.notConnected;
             clients = new Client[maxClients];
-            
-            Threader.RunAsync(StartServer);
-        }
 
-        private void OnDisable()
-        {
-            Threader.RunAsync(StopServer);
+            startServerEvent.Register(() =>
+            {
+                Threader.RunAsync(StartServer);
+            });
+            
+            startServerEvent.Register(() =>
+            {
+                Threader.RunAsync(StopServer);
+            });
+
         }
 
         private void StartServer()
         {
+            if (state != NetworkState.notConnected) {return;}
+            
             s = new Socket(AddressFamily.InterNetwork,
                 SocketType.Stream, ProtocolType.Tcp);
         
@@ -110,7 +119,7 @@ namespace Network
 
             clients[client.id] = client;
 
-            client.s.BeginReceive(client.buffer, 0, bufferSize, 0, ReadCallback, client);
+            client.s.BeginReceive(client.buffer, 0, bufferSize, 0, ReciveCallback, client);
             client.state = NetworkState.reciving;
             
             Threader.RunOnMainThread(() =>
@@ -118,8 +127,7 @@ namespace Network
                 Debug.LogFormat("TCP Server: Client {0} from {1} connected.", client.id, client.s.RemoteEndPoint);
             });
         }
-        
-        public void ReadCallback(IAsyncResult ar)
+        public void ReciveCallback(IAsyncResult ar)
         {
             String content = String.Empty;  
             
@@ -147,7 +155,7 @@ namespace Network
 
                 } else {  
                     
-                    client.s.BeginReceive(client.buffer, 0, bufferSize, 0, ReadCallback, client);
+                    client.s.BeginReceive(client.buffer, 0, bufferSize, 0, ReciveCallback, client);
                     client.state = NetworkState.reciving;
                 }  
             }  
@@ -159,7 +167,6 @@ namespace Network
             client.s.BeginSend(byteData, 0, byteData.Length, 0, SendCallback, client);
             client.state = NetworkState.sending;
         }
-        
         private void SendCallback(IAsyncResult ar)
         {
             try
@@ -186,6 +193,7 @@ namespace Network
                 Client client = clients[i];
                 if (client != null)
                 {
+                    
                     client.s.Shutdown(SocketShutdown.Both);  
                     client.s.Close();
                     clients[i] = null;

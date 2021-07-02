@@ -14,3 +14,4 @@ data
 
 # standerts:
 Allways BigLittleEndian
+UTF8
