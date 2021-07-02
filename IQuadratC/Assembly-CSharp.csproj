@@ -71,15 +71,11 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat3.cs" />
      <Compile Include="Assets\Network\Server\ServerHandle.cs" />
-     <Compile Include="Assets\Network\Client\ClientDatabase.cs" />
      <Compile Include="Assets\Network\Client\ClientHandle.cs" />
-     <Compile Include="Assets\Network\Server\ServerDatabase.cs" />
      <Compile Include="Assets\Network\Server\Server.cs" />
      <Compile Include="Assets\Network\Packet.cs" />
      <Compile Include="Assets\Network\Server\IpManager.cs" />
-     <Compile Include="Assets\Network\Server\ServerData.cs" />
      <Compile Include="Assets\Network\Client\Client.cs" />
-     <Compile Include="Assets\Network\Client\ServerData.cs" />
      <Compile Include="Assets\Network\Client\ClientSend.cs" />
      <Compile Include="Assets\Network\Server\Client.cs" />
      <Compile Include="Assets\Network\Server\ServerSend.cs" />

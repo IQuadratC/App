@@ -1,11 +1,7 @@
-﻿using Player;
-using Player.Trooper;
-using SharedFiles.Utility;
-using UI;
-using UI.Panles;
+﻿using SharedFiles.Utility;
 using UnityEngine;
 
-namespace Server
+namespace Network.Client
 {
     public class ClientSend : MonoBehaviour
     {
@@ -32,37 +28,8 @@ namespace Server
             using (Packet packet = new Packet((int)ClientPackets.gameEnterRequest))
             {
                 packet.Write(Client.instance.myId);
-                packet.Write(UIManager.gameSettings.playerName);
-                packet.Write(StartPanel.instance.currentSelectedServer.password);
 
                 SendTcpData(packet);
-            }
-        }
-
-        /// <summary>Sends player input to the server.</summary>
-        public static void TrooperTransformUpdate(Trooper trooper)
-        {
-            using (Packet packet = new Packet((int)ClientPackets.trooperTransformUpdate))
-            {
-                packet.Write(trooper.transform.position);
-                packet.Write(trooper.transform.rotation);
-                packet.Write(trooper.velocity);
-                packet.Write(trooper.grounded);
-
-                SendUdpData(packet);
-            }
-        }
-        
-        public static void TrooperGrappleUpdate(Trooper trooper)
-        {
-            using (Packet packet = new Packet((int)ClientPackets.trooperGrappleUpdate))
-            {
-                packet.Write(trooper.isGrappling);
-                packet.Write(trooper.grappleObjectId);
-                packet.Write(trooper.grapplePoint);
-                packet.Write(trooper.maxDistanceFromGrapple);
-
-                SendUdpData(packet);
             }
         }
         #endregion

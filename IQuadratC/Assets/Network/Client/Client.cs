@@ -4,16 +4,18 @@ using System.Net;
 using System.Net.Sockets;
 using SharedFiles.Utility;
 using UnityEngine;
+using Utility;
 
-namespace Server
+namespace Network.Client
 {
     public class Client : MonoBehaviour
     {
         public static Client instance;
         private const int dataBufferSize = 4096;
 
-        public string ip = "127.0.0.1";
-        public int port = 17685;
+        [SerializeField] private PublicString ip;
+        [SerializeField] private PublicInt port;
+        
         public int myId = 0;
         public Tcp tcp;
         public Udp udp;
@@ -22,7 +24,8 @@ namespace Server
         private delegate void PacketHandler(Packet packet);
         private static Dictionary<int, PacketHandler> packetHandlers;
 
-        public List<ServerData> serverDatas;
+        [SerializeField] private PublicEvent connectEvent;
+        [SerializeField] private PublicEvent disconnectEvent;
 
         private void Awake()
         {
@@ -35,21 +38,22 @@ namespace Server
                 Debug.Log("Instance already exists, destroying object!");
                 Destroy(this);
             }
-            
-            serverDatas = new List<ServerData>();
+
+            connectEvent.Register(Connect);
+            disconnectEvent.Register(Disconnect);
         }
-        
+    
         private void OnApplicationQuit()
         {
             Disconnect(); // Disconnect when the game is closed
         }
 
         /// <summary>Attempts to connect to the server.</summary>
-        public void ConnectToServer()
+        public void Connect()
         {
             tcp = new Tcp();
             udp = new Udp();
-            
+        
             InitializeClientData();
 
             isConnected = true;
@@ -74,7 +78,7 @@ namespace Server
                 };
 
                 receiveBuffer = new byte[dataBufferSize];
-                socket.BeginConnect(instance.ip, instance.port, ConnectCallback, socket);
+                socket.BeginConnect(instance.ip.value, instance.port.value, ConnectCallback, socket);
             }
 
             /// <summary>Initializes the newly connected client's TCP-related info.</summary>
@@ -158,7 +162,7 @@ namespace Server
                 {
                     // While packet contains data AND packet data length doesn't exceed the length of the packet we're reading
                     byte[] packetBytes = receivedData.ReadBytes(packetLength);
-                    ThreadManager.ExecuteOnMainThread(() =>
+                    Threader.RunOnMainThread(() =>
                     {
                         using (Packet packet = new Packet(packetBytes))
                         {
@@ -207,7 +211,7 @@ namespace Server
 
             public Udp()
             {
-                endPoint = new IPEndPoint(IPAddress.Parse(instance.ip), instance.port);
+                endPoint = new IPEndPoint(IPAddress.Parse(instance.ip.value), instance.port.value);
             }
 
             /// <summary>Attempts to connect to the server via UDP.</summary>
@@ -275,7 +279,7 @@ namespace Server
                     data = packet.ReadBytes(packetLength);
                 }
 
-                ThreadManager.ExecuteOnMainThread(() =>
+                Threader.RunOnMainThread(() =>
                 {
                     using (Packet packet = new Packet(data))
                     {
@@ -294,20 +298,13 @@ namespace Server
                 socket = null;
             }
         }
-        
+    
         /// <summary>Initializes all necessary client data.</summary>
         private void InitializeClientData()
         {
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
                 { (int)ServerPackets.serverConnection, ClientHandle.ServerConnection },
-                { (int)ServerPackets.gameEnterRejected, ClientHandle.GameEnterRejected },
-                { (int)ServerPackets.gameState, ClientHandle.GameStateChange },
-                { (int)ServerPackets.playerEnter, ClientHandle.PlayerEnter },
-                { (int)ServerPackets.playerLeave, ClientHandle.PlayerLeave },
-                { (int)ServerPackets.playerState, ClientHandle.PlayerState },
-                { (int)ServerPackets.trooperTransformUpdate, ClientHandle.TrooperTransformUpdate },
-                { (int)ServerPackets.trooperGrappleUpdate, ClientHandle.TrooperGrappleUpdate }
             };
             Debug.Log("Initialized packets.");
         }
@@ -316,7 +313,7 @@ namespace Server
         public void Disconnect()
         {
             if (!isConnected) return;
-            
+        
             isConnected = false;
             tcp.socket.Close();
             udp.socket.Close();
