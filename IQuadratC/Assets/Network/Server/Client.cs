@@ -67,13 +67,15 @@ namespace Network.Server
                 }
                 catch (Exception ex)
                 {
-                    Debug.Log($"Error sending data to player {id} via TCP: {ex}");
+                    Debug.Log($"SERVER: Error sending data to player {id} via TCP: {ex}");
                 }
             }
 
             /// <summary>Reads incoming data from the stream.</summary>
             private void ReceiveCallback(IAsyncResult result)
             {
+                if (stream == null) { return; }
+                
                 try
                 {
                     int byteLength = stream.EndRead(result);
@@ -91,8 +93,8 @@ namespace Network.Server
                 }
                 catch (Exception ex)
                 {
-                    Debug.Log($"Error receiving TCP data: {ex}");
-                    Network.Server.Server.instance.clients[id].Disconnect();
+                    Debug.Log($"SERVER: Error receiving TCP data: {ex}");
+                    Server.instance.clients[id].Disconnect();
                 }
             }
 
@@ -209,17 +211,10 @@ namespace Network.Server
             }
         }
 
-        /// <summary>Sends the client into the game and informs other clients of the new player.</summary>
-        /// <param name="playerName">The username of the new player.</param>
-        public void EnterPlayer(string playerName)
-        {
-            
-        }
-
         /// <summary>Disconnects the client and stops all network traffic.</summary>
         public void Disconnect()
         {
-            Debug.Log($"{tcp.socket.Client.RemoteEndPoint} has disconnected.");
+            Debug.Log($"SERVER: {tcp.socket.Client.RemoteEndPoint} has disconnected.");
             
             tcp.Disconnect();
             udp.Disconnect();

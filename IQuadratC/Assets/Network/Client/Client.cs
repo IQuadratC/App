@@ -35,7 +35,7 @@ namespace Network.Client
             }
             else if (instance != this)
             {
-                Debug.Log("Instance already exists, destroying object!");
+                Debug.Log("CLIENT: Instance already exists, destroying object!");
                 Destroy(this);
             }
 
@@ -111,7 +111,7 @@ namespace Network.Client
                 }
                 catch (Exception ex)
                 {
-                    Debug.Log($"Error sending data to server via TCP: {ex}");
+                    Debug.Log($"CLIENT:: Error sending data to server via TCP: {ex}");
                 }
             }
 
@@ -243,7 +243,7 @@ namespace Network.Client
                 }
                 catch (Exception ex)
                 {
-                    Debug.Log($"Error sending data to server via UDP: {ex}");
+                    Debug.Log($"CLIENT: Error sending data to server via UDP: {ex}");
                 }
             }
 
@@ -305,9 +305,12 @@ namespace Network.Client
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
                 { (int)ServerPackets.serverConnection, ClientHandle.ServerConnection },
+                { (int)ServerPackets.serverDisconnect, ClientHandle.ServerDisconnect },
             };
-            Debug.Log("Initialized packets.");
+            Debug.Log("CLIENT: Initialized packets.");
         }
+        
+        
 
         /// <summary>Disconnects from the server and stops all network traffic.</summary>
         public void Disconnect()
@@ -318,7 +321,8 @@ namespace Network.Client
             tcp.socket.Close();
             udp.socket.Close();
 
-            Debug.Log("Disconnected from server.");
+            Debug.Log("CLIENT: Disconnected from server.");
+            
         }
     }
 }

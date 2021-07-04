@@ -10,12 +10,21 @@ namespace Network.Client
         {
             int myId = packet.ReadInt();
 
-            Debug.Log("Established TCP connection");
+            Debug.Log("CLIENT: Established TCP connection");
             Client.instance.myId = myId;
-            ClientSend.ServerConnectionReceived();
+            ClientSend.ClientConnectionReceived();
 
             // Now that we have the client's id, connect UDP
             Client.instance.udp.Connect(((IPEndPoint) Client.instance.tcp.socket.Client.LocalEndPoint).Port);
+        }
+        
+        public static void ServerDisconnect(Packet packet)
+        {
+            int myId = packet.ReadInt();
+            
+            Client.instance.Disconnect();
+
+            Debug.Log("CLIENT: Established TCP connection");
         }
     }
 }

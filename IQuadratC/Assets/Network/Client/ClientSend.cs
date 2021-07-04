@@ -23,9 +23,9 @@ namespace Network.Client
 
         #region Packets
         /// <summary>Lets the server know that the welcome message was received.</summary>
-        public static void ServerConnectionReceived()
+        public static void ClientConnectionReceived()
         {
-            using (Packet packet = new Packet((int)ClientPackets.gameEnterRequest))
+            using (Packet packet = new Packet((int)ClientPackets.clientConnectionRecived))
             {
                 packet.Write(Client.instance.myId);
 

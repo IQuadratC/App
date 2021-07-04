@@ -6,9 +6,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PublicEvent", menuName = "Utility/PublicEvent")]
 public class PublicEvent : ScriptableObject
 {
-    private Action[] funcs = new Action[1];
-    private int maxId = 0;
-    private List<int> freeIds = new List<int>();
+    [NonSerialized] private Action[] funcs = new Action[1];
+    [NonSerialized] private int maxId = 0;
+    [NonSerialized] private List<int> freeIds = new List<int>();
     
     public void Raise()
     {
@@ -32,7 +32,7 @@ public class PublicEvent : ScriptableObject
             freeIds.RemoveAt(0);
         }
         
-        if (funcs.Length >= id)
+        if (funcs.Length <= id)
         {
             raiseArray();
         }

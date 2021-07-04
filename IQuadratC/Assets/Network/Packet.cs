@@ -9,42 +9,17 @@ namespace SharedFiles.Utility
     public enum ServerPackets
     {
         serverConnection = 1,
-        gameEnterRejected,
-        gameState,
-        playerEnter,
-        playerState,
-        trooperTransformUpdate,
-        trooperGrappleUpdate,
-        playerLeave
+        serverDisconnect,
+
     }
 
     /// <summary>Sent from client to server.</summary>
     public enum ClientPackets
     {
-        gameEnterRequest = 1,
-        trooperTransformUpdate,
-        trooperGrappleUpdate
+        clientConnectionRecived = 1,
     }
     
-    public enum PlayerState{
-        inGame = 1,
-        spectator,
-        loadingScreen
-    }
     
-    public enum GameModeType{
-        waiting = 1,
-        lastManStanding,
-        teams
-    }
-    
-    public struct PlayerVote
-    {
-        public int id;
-        public GameModeType gameModeType;
-        public string lobbyName;
-    }
-
     public class Packet : IDisposable
     {
         private List<byte> buffer;

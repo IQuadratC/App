@@ -84,6 +84,17 @@ namespace Network.Server
                 SendTcpData(toClient, packet);
             }
         }
+        
+        public static void ServerDisconnect(int toClient)
+        {
+            using (Packet packet = new Packet((int)ServerPackets.serverDisconnect))
+            {
+                packet.Write(toClient);
+
+                SendTcpData(toClient, packet);
+            }
+        }
+        
         #endregion
     }
 }

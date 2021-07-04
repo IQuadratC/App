@@ -16,7 +16,7 @@ namespace Network.Server
         private const int clientSocketsOverlap = 10;
         
         [SerializeField] private PublicInt port;
-        public Dictionary<int, Client> clients = new Dictionary<int, Client>();
+        public Dictionary<int, Client> clients;
         public delegate void PacketHandler(int fromClient, Packet packet);
         public Dictionary<int, PacketHandler> packetHandlers;
 
@@ -36,7 +36,7 @@ namespace Network.Server
             }
             else if (instance != this)
             {
-                Debug.Log("Instance already exists, destroying object!");
+                Debug.Log("SERVER: Instance already exists, destroying object!");
                 Destroy(this);
             }
 
@@ -50,7 +50,7 @@ namespace Network.Server
             ip = IPManager.GetIPAddress();
             Debug.Log(ip);
 
-            Debug.Log("Starting server...");
+            Debug.Log("SERVER: Starting...");
             InitializeServerData();
 
             tcpListener = new TcpListener(IPAddress.Any, port.value);
@@ -60,7 +60,7 @@ namespace Network.Server
             udpListener = new UdpClient(port.value);
             udpListener.BeginReceive(UdpReceiveCallback, null);
 
-            Debug.Log($"Server started on port {port.value}.");
+            Debug.Log($"SERVER: started on port {port.value}.");
         }
 
         /// <summary>Handles new TCP connections.</summary>
@@ -68,7 +68,7 @@ namespace Network.Server
         {
             TcpClient client = tcpListener.EndAcceptTcpClient(result);
             tcpListener.BeginAcceptTcpClient(TcpConnectCallback, null);
-            Debug.Log($"Incoming connection from {client.Client.RemoteEndPoint}...");
+            Debug.Log($"SERVER: Incoming connection from {client.Client.RemoteEndPoint}...");
 
             for (int i = 1; i <= maxClients + clientSocketsOverlap; i++)
             {
@@ -77,7 +77,7 @@ namespace Network.Server
                 return;
             }
 
-            Debug.Log($"{client.Client.RemoteEndPoint} failed to connect: Server full!");
+            Debug.Log($"SERVER: {client.Client.RemoteEndPoint} failed to connect: Server full!");
         }
 
         /// <summary>Receives incoming UDP data.</summary>
@@ -86,6 +86,10 @@ namespace Network.Server
             try
             {
                 IPEndPoint clientEndPoint = new IPEndPoint(IPAddress.Any, 0);
+                if (clientEndPoint.ToString() == "0.0.0.0:0")
+                {
+                    return;
+                }
                 byte[] data = udpListener.EndReceive(result, ref clientEndPoint);
                 udpListener.BeginReceive(UdpReceiveCallback, null);
 
@@ -119,7 +123,7 @@ namespace Network.Server
             }
             catch (Exception ex)
             {
-                Debug.Log($"Error receiving UDP data: {ex}");
+                Debug.Log($"SERVER: Error receiving UDP data: {ex}");
             }
         }
 
@@ -137,29 +141,43 @@ namespace Network.Server
             }
             catch (Exception ex)
             {
-                Debug.Log($"Error sending data to {clientEndPoint} via UDP: {ex}");
+                Debug.Log($"SERVER: Error sending data to {clientEndPoint} via UDP: {ex}");
             }
         }
 
         /// <summary>Initializes all necessary server data.</summary>
         private void InitializeServerData()
         {
+            clients = new Dictionary<int, Client>();
+            
             for (int i = 1; i <= maxClients + clientSocketsOverlap; i++)
             {
-                clients.Add(i, new global::Network.Server.Client(i));
+                clients.Add(i, new Client(i));
             }
 
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
-                { (int)ClientPackets.gameEnterRequest, ServerHandle.GameEnterReqest },
+                { (int)ClientPackets.clientConnectionRecived, ServerHandle.ClientConnectionRecived },
             };
-            Debug.Log("Initialized packets.");
+            Debug.Log("SERVER: Initialized packets.");
         }
         
         public void StopServer()
         {
+            foreach (KeyValuePair<int,Client> keyValuePair in clients)
+            {
+                if (keyValuePair.Value.tcp.socket != null)
+                {
+                    keyValuePair.Value.Disconnect();
+                }
+            }
+            
             tcpListener.Stop();
             udpListener.Close();
+
+            clients = null;
+            
+            Debug.Log("SERVER: Stopped.");
         }
     }
 }
