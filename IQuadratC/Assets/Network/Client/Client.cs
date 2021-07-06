@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using SharedFiles.Utility;
 using UnityEngine;
 using Utility;
+using Debug = UnityEngine.Debug;
 
 namespace Network.Client
 {
@@ -40,6 +42,7 @@ namespace Network.Client
 
             connectEvent.Register(Connect);
             disconnectEvent.Register(Disconnect);
+            clientState.value = (int) NetworkState.notConnected;
         }
     
         private void OnApplicationQuit()
@@ -50,6 +53,8 @@ namespace Network.Client
         /// <summary>Attempts to connect to the server.</summary>
         public void Connect()
         {
+            if (clientState.value == (int) NetworkState.connected) { return; }
+            
             tcp = new Tcp();
             udp = new Udp();
         
@@ -76,7 +81,21 @@ namespace Network.Client
                 };
 
                 receiveBuffer = new byte[dataBufferSize];
-                socket.BeginConnect(instance.ip.value, instance.port.value, ConnectCallback, socket);
+                IAsyncResult result = socket.BeginConnect(instance.ip.value, instance.port.value, ConnectCallback, socket);
+                
+                Threader.RunAsync(() =>
+                {
+                    bool success = result.AsyncWaitHandle.WaitOne( 2000, true );
+                    if (!success)
+                    {
+                        Threader.RunOnMainThread(() =>
+                        {
+                            Debug.Log("CLIENT: Connect Timeout");
+                        });
+                        instance.clientState.value = (int) NetworkState.notConnected;
+                        Disconnect();
+                    }
+                });
             }
 
             /// <summary>Initializes the newly connected client's TCP-related info.</summary>
@@ -102,6 +121,8 @@ namespace Network.Client
             /// <param name="packet">The packet to send.</param>
             public void SendData(Packet packet)
             {
+                if (instance.clientState.value == (int) NetworkState.notConnected) { return; }
+                
                 try
                 {
                     if (socket != null)
@@ -118,6 +139,8 @@ namespace Network.Client
             /// <summary>Reads incoming data from the stream.</summary>
             private void ReceiveCallback(IAsyncResult result)
             {
+                if (instance.clientState.value == (int) NetworkState.notConnected) { return; }
+                
                 try
                 {
                     int byteLength = stream.EndRead(result);
@@ -233,6 +256,8 @@ namespace Network.Client
             /// <param name="packet">The packet to send.</param>
             public void SendData(Packet packet)
             {
+                if (instance.clientState.value == (int) NetworkState.notConnected) { return; }
+                
                 try
                 {
                     packet.InsertInt(instance.clientId.value); // Insert the client's ID at the start of the packet
@@ -250,6 +275,8 @@ namespace Network.Client
             /// <summary>Receives incoming UDP data.</summary>
             private void ReceiveCallback(IAsyncResult result)
             {
+                if (instance.clientState.value == (int) NetworkState.notConnected) { return; }
+                
                 try
                 {
                     byte[] data = socket.EndReceive(result, ref endPoint);
@@ -323,7 +350,7 @@ namespace Network.Client
             {
                 udp.socket.Close();
             }
-
+            
             Debug.Log("CLIENT: Disconnected from server.");
             
         }

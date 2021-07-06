@@ -49,6 +49,8 @@ namespace Network.Server
         /// <summary>Starts the server.</summary>
         private void StartServer()
         {
+            if (serverState.value == (int) NetworkState.connected) { return; }
+            
             ip = IPManager.GetIPAddress();
             Debug.Log(ip);
 
@@ -63,7 +65,6 @@ namespace Network.Server
             udpListener.BeginReceive(UdpReceiveCallback, null);
 
             serverState.value = (int) NetworkState.connected;
-
             Debug.Log($"SERVER: started on port {port.value}.");
         }
 
@@ -87,14 +88,11 @@ namespace Network.Server
         /// <summary>Receives incoming UDP data.</summary>
         private void UdpReceiveCallback(IAsyncResult result)
         {
+            if (serverState.value == (int) NetworkState.notConnected) { return; }
+            
             try
             {
                 IPEndPoint clientEndPoint = new IPEndPoint(IPAddress.Any, 0);
-                if (clientEndPoint.ToString() == "0.0.0.0:0")
-                {
-                    instance.serverState.value = (int) NetworkState.notConnected;
-                    return;
-                }
                 byte[] data = udpListener.EndReceive(result, ref clientEndPoint);
                 udpListener.BeginReceive(UdpReceiveCallback, null);
 
@@ -137,6 +135,8 @@ namespace Network.Server
         /// <param name="packet">The packet to send.</param>
         public void SendUdpData(IPEndPoint clientEndPoint, Packet packet)
         {
+            if (serverState.value == (int) NetworkState.notConnected) { return; }
+            
             try
             {
                 if (clientEndPoint != null)
