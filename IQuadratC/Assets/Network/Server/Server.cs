@@ -27,6 +27,7 @@ namespace Network.Server
 
         [SerializeField] private PublicEvent startServerEvent;
         [SerializeField] private PublicEvent stopServerEvent;
+        [SerializeField] private PublicInt serverState;
 
         private void Awake()
         {
@@ -42,6 +43,7 @@ namespace Network.Server
 
             startServerEvent.Register(StartServer);
             stopServerEvent.Register(StopServer);
+            serverState.value = (int) NetworkState.notConnected;
         }
 
         /// <summary>Starts the server.</summary>
@@ -59,6 +61,8 @@ namespace Network.Server
 
             udpListener = new UdpClient(port.value);
             udpListener.BeginReceive(UdpReceiveCallback, null);
+
+            serverState.value = (int) NetworkState.connected;
 
             Debug.Log($"SERVER: started on port {port.value}.");
         }
@@ -88,6 +92,7 @@ namespace Network.Server
                 IPEndPoint clientEndPoint = new IPEndPoint(IPAddress.Any, 0);
                 if (clientEndPoint.ToString() == "0.0.0.0:0")
                 {
+                    instance.serverState.value = (int) NetworkState.notConnected;
                     return;
                 }
                 byte[] data = udpListener.EndReceive(result, ref clientEndPoint);
@@ -164,6 +169,8 @@ namespace Network.Server
         
         public void StopServer()
         {
+            if (serverState.value == (int) NetworkState.notConnected) { return; }
+            
             foreach (KeyValuePair<int,Client> keyValuePair in clients)
             {
                 if (keyValuePair.Value.tcp.socket != null)
@@ -177,6 +184,7 @@ namespace Network.Server
 
             clients = null;
             
+            serverState.value = (int) NetworkState.notConnected;
             Debug.Log("SERVER: Stopped.");
         }
     }

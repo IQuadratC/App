@@ -8,13 +8,12 @@ namespace Utility
     [CreateAssetMenu(fileName = "PublicStringArray", menuName = "Utility/PublicStringArray")]
     public class PublicStringArray : ScriptableObject, ISerializationCallbackReceiver
     {
-        [NonSerialized] public string[] value;
+        [SerializeField] public string[] value;
         [SerializeField] private string[] initalValue;
 
         public void OnBeforeSerialize() { }
         public void OnAfterDeserialize()
-        {
-
+        { 
             value = new string[initalValue.Length];
            for (int i = 0; i < initalValue.Length; i++)
            {

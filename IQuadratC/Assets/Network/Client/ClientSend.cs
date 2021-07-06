@@ -27,7 +27,7 @@ namespace Network.Client
         {
             using (Packet packet = new Packet((int)ClientPackets.clientConnectionRecived))
             {
-                packet.Write(Client.instance.myId);
+                packet.Write(Client.instance.clientId.value);
 
                 SendTcpData(packet);
             }

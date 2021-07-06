@@ -8,7 +8,7 @@ namespace Utility
     [CreateAssetMenu(fileName = "PublicMaster", menuName = "Utility/PublicMaster")]
     public class PublicMaster : ScriptableObject, ISerializationCallbackReceiver
     {
-        [NonSerialized] public object value;
+        [SerializeField] public object value;
         [SerializeField] private object initalValue;
 
         public void OnBeforeSerialize() { }

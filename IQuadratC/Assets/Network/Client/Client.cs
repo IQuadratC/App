@@ -15,17 +15,16 @@ namespace Network.Client
 
         [SerializeField] private PublicString ip;
         [SerializeField] private PublicInt port;
+        [SerializeField] public PublicInt clientId;
         
-        public int myId = 0;
         public Tcp tcp;
         public Udp udp;
-
-        private bool isConnected = false;
         private delegate void PacketHandler(Packet packet);
         private static Dictionary<int, PacketHandler> packetHandlers;
 
         [SerializeField] private PublicEvent connectEvent;
         [SerializeField] private PublicEvent disconnectEvent;
+        [SerializeField] private PublicInt clientState;
 
         private void Awake()
         {
@@ -55,8 +54,7 @@ namespace Network.Client
             udp = new Udp();
         
             InitializeClientData();
-
-            isConnected = true;
+            
             tcp.Connect(); // Connect tcp, udp gets connected once tcp is done
         }
 
@@ -88,8 +86,10 @@ namespace Network.Client
 
                 if (!socket.Connected)
                 {
+                    instance.clientState.value = (int) NetworkState.notConnected;
                     return;
                 }
+                instance.clientState.value = (int) NetworkState.connected;
 
                 stream = socket.GetStream();
 
@@ -235,7 +235,7 @@ namespace Network.Client
             {
                 try
                 {
-                    packet.InsertInt(instance.myId); // Insert the client's ID at the start of the packet
+                    packet.InsertInt(instance.clientId.value); // Insert the client's ID at the start of the packet
                     if (socket != null)
                     {
                         socket.BeginSend(packet.ToArray(), packet.Length(), null, null);
@@ -315,11 +315,14 @@ namespace Network.Client
         /// <summary>Disconnects from the server and stops all network traffic.</summary>
         public void Disconnect()
         {
-            if (!isConnected) return;
-        
-            isConnected = false;
+            if (clientState.value == (int) NetworkState.notConnected) return;
+
+            clientState.value = (int) NetworkState.notConnected;
             tcp.socket.Close();
-            udp.socket.Close();
+            if (udp.socket != null)
+            {
+                udp.socket.Close();
+            }
 
             Debug.Log("CLIENT: Disconnected from server.");
             

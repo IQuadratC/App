@@ -9,7 +9,7 @@ namespace SharedFiles.Utility
     public enum ServerPackets
     {
         serverConnection = 1,
-        serverDisconnect,
+        serverDisconnect = 2,
 
     }
 
@@ -17,6 +17,12 @@ namespace SharedFiles.Utility
     public enum ClientPackets
     {
         clientConnectionRecived = 1,
+    }
+
+    public enum NetworkState
+    {
+        notConnected = 1,
+        connected = 2,
     }
     
     

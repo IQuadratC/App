@@ -11,7 +11,7 @@ namespace Network.Client
             int myId = packet.ReadInt();
 
             Debug.Log("CLIENT: Established TCP connection");
-            Client.instance.myId = myId;
+            Client.instance.clientId.value = myId;
             ClientSend.ClientConnectionReceived();
 
             // Now that we have the client's id, connect UDP
