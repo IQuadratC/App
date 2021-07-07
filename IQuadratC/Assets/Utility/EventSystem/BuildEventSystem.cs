@@ -8,7 +8,7 @@ namespace Utility
     public class MenuItems
     {
 
-        static string path  = "Assets/Utility/EventSystem";
+        static string path  = "Assets/Utility/EventSystem/";
         
         [MenuItem("Tools/Build Event System")]
         private static void NewMenuOption()
@@ -16,8 +16,10 @@ namespace Utility
             string content = File.ReadAllText(path + "PublicEventMaster.cs");
             createConvtert("PublicEvent", content);
             
+            /*
             content = File.ReadAllText(path + "PublicMaster.cs");
             createConvtert("Public", content);
+            */
         }
 
         private static void createConvtert(string fileprefix, string content)

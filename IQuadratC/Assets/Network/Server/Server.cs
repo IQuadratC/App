@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
-using SharedFiles.Utility;
 using UnityEngine;
 using Utility;
 
@@ -29,6 +28,8 @@ namespace Network.Server
         [SerializeField] private PublicEvent stopServerEvent;
         [SerializeField] private PublicInt serverState;
 
+        [SerializeField] private PublicEventString debugEvent;
+
         private void Awake()
         {
             if (instance == null)
@@ -44,6 +45,13 @@ namespace Network.Server
             startServerEvent.Register(StartServer);
             stopServerEvent.Register(StopServer);
             serverState.value = (int) NetworkState.notConnected;
+            
+            debugEvent.Register(ServerSend.DebugMessage);
+        }
+
+        private void OnApplicationQuit()
+        {
+            StopServer();
         }
 
         /// <summary>Starts the server.</summary>
@@ -96,7 +104,7 @@ namespace Network.Server
                 byte[] data = udpListener.EndReceive(result, ref clientEndPoint);
                 udpListener.BeginReceive(UdpReceiveCallback, null);
 
-                if (data.Length < 4)
+                if (data.Length < 2)
                 {
                     return;
                 }
@@ -162,9 +170,9 @@ namespace Network.Server
 
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
-                { (int)ClientPackets.clientConnectionRecived, ServerHandle.ClientConnectionRecived },
+                { (int) Packets.clientConnectionRecived, ServerHandle.ClientConnectionRecived },
+                { (int) Packets.debugMessage, ServerHandle.DebugMessage },
             };
-            Debug.Log("SERVER: Initialized packets.");
         }
         
         public void StopServer()

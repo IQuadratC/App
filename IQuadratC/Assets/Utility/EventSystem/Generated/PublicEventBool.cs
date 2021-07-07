@@ -8,9 +8,9 @@ namespace Utility
     [CreateAssetMenu(fileName = "PublicEventBool", menuName = "Utility/PublicEventBool")]
     public class PublicEventBool : ScriptableObject
     {
-        private Action<bool>[] funcs = new Action<bool>[1];
-        private int maxId = 0;
-        private List<int> freeIds = new List<int>();
+        [NonSerialized] private Action<bool>[] funcs = new Action<bool>[1];
+        [NonSerialized] private int maxId = 0;
+        [NonSerialized] private List<int> freeIds = new List<int>();
         
         public void Raise(bool variable)
         {
@@ -34,7 +34,7 @@ namespace Utility
                 freeIds.RemoveAt(0);
             }
             
-            if (funcs.Length >= id)
+            if (funcs.Length <= id)
             {
                 raiseArray();
             }

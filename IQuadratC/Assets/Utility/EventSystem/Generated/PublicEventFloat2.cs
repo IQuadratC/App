@@ -8,9 +8,9 @@ namespace Utility
     [CreateAssetMenu(fileName = "PublicEventFloat2", menuName = "Utility/PublicEventFloat2")]
     public class PublicEventFloat2 : ScriptableObject
     {
-        private Action<float2>[] funcs = new Action<float2>[1];
-        private int maxId = 0;
-        private List<int> freeIds = new List<int>();
+        [NonSerialized] private Action<float2>[] funcs = new Action<float2>[1];
+        [NonSerialized] private int maxId = 0;
+        [NonSerialized] private List<int> freeIds = new List<int>();
         
         public void Raise(float2 variable)
         {
@@ -34,7 +34,7 @@ namespace Utility
                 freeIds.RemoveAt(0);
             }
             
-            if (funcs.Length >= id)
+            if (funcs.Length <= id)
             {
                 raiseArray();
             }

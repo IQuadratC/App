@@ -1,5 +1,4 @@
-﻿using SharedFiles.Utility;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Network.Server
 {
@@ -7,18 +6,12 @@ namespace Network.Server
     {
         public static void ClientConnectionRecived(int fromClient, Packet packet)
         {
-            int clientIdCheck = packet.ReadInt();
-            
             Debug.Log($"SERVER: {Server.instance.clients[fromClient].tcp.socket.Client.RemoteEndPoint} connected successfully and is now client {fromClient}.");
         }
-        
-        public static void ClientDisconnect(int fromClient, Packet packet)
+        public static void DebugMessage(int fromClient, Packet packet)
         {
-            int clientIdCheck = packet.ReadInt();
-            
-            Debug.Log($"SERVER: {fromClient} disconnected. ");
-            
-            Server.instance.clients[fromClient].Disconnect();
+            string message = packet.ReadString();
+            Debug.Log("SERVER: Client "+ fromClient +" [Debug] " + message);
         }
     }
 }

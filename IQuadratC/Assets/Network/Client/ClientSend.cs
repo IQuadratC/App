@@ -1,5 +1,4 @@
-﻿using SharedFiles.Utility;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Network.Client
 {
@@ -25,10 +24,17 @@ namespace Network.Client
         /// <summary>Lets the server know that the welcome message was received.</summary>
         public static void ClientConnectionReceived()
         {
-            using (Packet packet = new Packet((int)ClientPackets.clientConnectionRecived))
+            using (Packet packet = new Packet((int) Packets.clientConnectionRecived))
             {
-                packet.Write(Client.instance.clientId.value);
+                SendTcpData(packet);
+            }
+        }
 
+        public static void DebugMessage(string message)
+        {
+            using (Packet packet = new Packet((int) Packets.debugMessage))
+            {
+                packet.Write(message);
                 SendTcpData(packet);
             }
         }

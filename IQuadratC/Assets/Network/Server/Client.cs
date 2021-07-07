@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
-using SharedFiles.Utility;
 using UnityEngine;
 using Utility;
 
@@ -102,14 +101,14 @@ namespace Network.Server
             /// <param name="data">The recieved data.</param>
             private bool HandleData(byte[] data)
             {
-                int packetLength = 0;
+                UInt16 packetLength = 0;
 
                 receivedData.SetBytes(data);
 
                 if (receivedData.UnreadLength() >= 4)
                 {
                     // If client's received data contains a packet
-                    packetLength = receivedData.ReadInt();
+                    packetLength = receivedData.ReadUInt16();
                     if (packetLength <= 0)
                     {
                         // If packet contains no data
@@ -125,7 +124,7 @@ namespace Network.Server
                     {
                         using (Packet packet = new Packet(packetBytes))
                         {
-                            int packetId = packet.ReadInt();
+                            int packetId = packet.ReadUInt16();
                             Server.instance.packetHandlers[packetId](id, packet); // Call appropriate method to handle the packet
                         }
                     });
@@ -134,7 +133,7 @@ namespace Network.Server
                     if (receivedData.UnreadLength() >= 4)
                     {
                         // If client's received data contains another packet
-                        packetLength = receivedData.ReadInt();
+                        packetLength = receivedData.ReadUInt16();
                         if (packetLength <= 0)
                         {
                             // If packet contains no data
@@ -191,14 +190,14 @@ namespace Network.Server
             /// <param name="packetData">The packet containing the recieved data.</param>
             public void HandleData(Packet packetData)
             {
-                int packetLength = packetData.ReadInt();
+                UInt16 packetLength = packetData.ReadUInt16();
                 byte[] packetBytes = packetData.ReadBytes(packetLength);
 
                 Threader.RunOnMainThread(() =>
                 {
                     using (Packet packet = new Packet(packetBytes))
                     {
-                        int packetId = packet.ReadInt();
+                        int packetId = packet.ReadUInt16();
                         Server.instance.packetHandlers[packetId](id, packet); // Call appropriate method to handle the packet
                     }
                 });
@@ -215,7 +214,7 @@ namespace Network.Server
         public void Disconnect()
         {
             Debug.Log($"SERVER: {tcp.socket.Client.RemoteEndPoint} has disconnected.");
-            
+
             tcp.Disconnect();
             udp.Disconnect();
         }

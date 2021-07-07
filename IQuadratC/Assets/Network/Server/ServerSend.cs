@@ -1,6 +1,4 @@
-﻿using SharedFiles.Utility;
-
-namespace Network.Server
+﻿namespace Network.Server
 {
     public static class ServerSend
     {
@@ -77,24 +75,20 @@ namespace Network.Server
         /// <summary>Sends a welcome message to the given client.</summary>
         public static void ServerConnection(int toClient)
         {
-            using (Packet packet = new Packet((int)ServerPackets.serverConnection))
+            using (Packet packet = new Packet((int) Packets.serverConnection))
             {
                 packet.Write(toClient);
-
                 SendTcpData(toClient, packet);
             }
         }
-        
-        public static void ServerDisconnect(int toClient)
+        public static void DebugMessage(string message)
         {
-            using (Packet packet = new Packet((int)ServerPackets.serverDisconnect))
+            using (Packet packet = new Packet((int) Packets.debugMessage))
             {
-                packet.Write(toClient);
-
-                SendTcpData(toClient, packet);
+                packet.Write(message);
+                SendTcpDataToAll(packet);
             }
         }
-        
         #endregion
     }
 }

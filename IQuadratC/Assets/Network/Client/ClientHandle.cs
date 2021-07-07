@@ -1,5 +1,4 @@
 ﻿using System.Net;
-using SharedFiles.Utility;
 using UnityEngine;
 
 namespace Network.Client
@@ -18,13 +17,10 @@ namespace Network.Client
             Client.instance.udp.Connect(((IPEndPoint) Client.instance.tcp.socket.Client.LocalEndPoint).Port);
         }
         
-        public static void ServerDisconnect(Packet packet)
+        public static void DebugMessage(Packet packet)
         {
-            int myId = packet.ReadInt();
-            
-            Client.instance.Disconnect();
-
-            Debug.Log("CLIENT: Established TCP connection");
+            string message = packet.ReadString();
+            Debug.Log("CLIENT: [Debug] " + message);
         }
     }
 }

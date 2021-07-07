@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
-namespace SharedFiles.Utility
+namespace Network
 {
-    /// <summary>Sent from server to client.</summary>
-    public enum ServerPackets
+    /// <summary>Packet enum</summary>
+    public enum Packets
     {
         serverConnection = 1,
-        serverDisconnect = 2,
+        clientConnectionRecived = 2,
+        debugMessage = 3,
 
-    }
-
-    /// <summary>Sent from client to server.</summary>
-    public enum ClientPackets
-    {
-        clientConnectionRecived = 1,
     }
 
     public enum NetworkState
@@ -41,7 +36,7 @@ namespace SharedFiles.Utility
 
         /// <summary>Creates a new packet with a given ID. Used for sending.</summary>
         /// <param name="id">The packet ID.</param>
-        public Packet(int id)
+        public Packet(UInt16 id)
         {
             buffer = new List<byte>(); // Initialize buffer
             readPos = 0; // Set readPos to 0
@@ -71,7 +66,7 @@ namespace SharedFiles.Utility
         /// <summary>Inserts the length of the packet's content at the start of the buffer.</summary>
         public void WriteLength()
         {
-            buffer.InsertRange(0, BitConverter.GetBytes(buffer.Count)); // Insert the byte length of the packet at the very beginning
+            buffer.InsertRange(0, BitConverter.GetBytes((UInt16) buffer.Count)); // Insert the byte length of the packet at the very beginning
         }
 
         /// <summary>Inserts the given int at the start of the buffer.</summary>
@@ -133,6 +128,12 @@ namespace SharedFiles.Utility
         /// <summary>Adds a short to the packet.</summary>
         /// <param name="value">The short to add.</param>
         public void Write(short value)
+        {
+            buffer.AddRange(BitConverter.GetBytes(value));
+        }
+        /// <summary>Adds an int to the packet.</summary>
+        /// <param name="value">The uint16 to add.</param>
+        public void Write(UInt16 value)
         {
             buffer.AddRange(BitConverter.GetBytes(value));
         }
@@ -248,6 +249,27 @@ namespace SharedFiles.Utility
             else
             {
                 throw new Exception("Could not read value of type 'short'!");
+            }
+        }
+        
+        /// <summary>Reads a short from the packet.</summary>
+        /// <param name="moveReadPos">Whether or not to move the buffer's read position.</param>
+        public UInt16 ReadUInt16(bool moveReadPos = true)
+        {
+            if (buffer.Count > readPos)
+            {
+                // If there are unread bytes
+                UInt16 value = BitConverter.ToUInt16(readableBuffer, readPos); // Convert the bytes to a short
+                if (moveReadPos)
+                {
+                    // If _moveReadPos is true and there are unread bytes
+                    readPos += 2; // Increase readPos by 2
+                }
+                return value; // Return the short
+            }
+            else
+            {
+                throw new Exception("Could not read value of type 'UInt16'!");
             }
         }
 

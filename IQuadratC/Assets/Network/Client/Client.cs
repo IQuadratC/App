@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
-using SharedFiles.Utility;
+using System.Threading;
 using UnityEngine;
 using Utility;
 using Debug = UnityEngine.Debug;
@@ -27,6 +27,8 @@ namespace Network.Client
         [SerializeField] private PublicEvent connectEvent;
         [SerializeField] private PublicEvent disconnectEvent;
         [SerializeField] private PublicInt clientState;
+        
+        [SerializeField] private PublicEventString debugEvent;
 
         private void Awake()
         {
@@ -43,6 +45,7 @@ namespace Network.Client
             connectEvent.Register(Connect);
             disconnectEvent.Register(Disconnect);
             clientState.value = (int) NetworkState.notConnected;
+            debugEvent.Register(ClientSend.DebugMessage);
         }
     
         private void OnApplicationQuit()
@@ -54,6 +57,8 @@ namespace Network.Client
         public void Connect()
         {
             if (clientState.value == (int) NetworkState.connected) { return; }
+            
+            Debug.Log("CLIENT: Trying to connect...");
             
             tcp = new Tcp();
             udp = new Udp();
@@ -81,19 +86,18 @@ namespace Network.Client
                 };
 
                 receiveBuffer = new byte[dataBufferSize];
-                IAsyncResult result = socket.BeginConnect(instance.ip.value, instance.port.value, ConnectCallback, socket);
+                socket.BeginConnect(instance.ip.value, instance.port.value, ConnectCallback, socket);
                 
                 Threader.RunAsync(() =>
                 {
-                    bool success = result.AsyncWaitHandle.WaitOne( 2000, true );
-                    if (!success)
+                    Thread.Sleep(2000);
+                    if (instance.clientState.value == (int) NetworkState.notConnected)
                     {
                         Threader.RunOnMainThread(() =>
                         {
                             Debug.Log("CLIENT: Connect Timeout");
                         });
-                        instance.clientState.value = (int) NetworkState.notConnected;
-                        Disconnect();
+                        instance.tcp.socket.Close();
                     }
                 });
             }
@@ -166,14 +170,14 @@ namespace Network.Client
             /// <param name="data">The recieved data.</param>
             private bool HandleData(byte[] data)
             {
-                int packetLength = 0;
+                UInt16 packetLength = 0;
 
                 receivedData.SetBytes(data);
 
-                if (receivedData.UnreadLength() >= 4)
+                if (receivedData.UnreadLength() >= 2)
                 {
                     // If client's received data contains a packet
-                    packetLength = receivedData.ReadInt();
+                    packetLength = receivedData.ReadUInt16();
                     if (packetLength <= 0)
                     {
                         // If packet contains no data
@@ -189,16 +193,16 @@ namespace Network.Client
                     {
                         using (Packet packet = new Packet(packetBytes))
                         {
-                            int packetId = packet.ReadInt();
+                            int packetId = packet.ReadUInt16();
                             packetHandlers[packetId](packet); // Call appropriate method to handle the packet
                         }
                     });
 
                     packetLength = 0; // Reset packet length
-                    if (receivedData.UnreadLength() >= 4)
+                    if (receivedData.UnreadLength() >= 2)
                     {
                         // If client's received data contains another packet
-                        packetLength = receivedData.ReadInt();
+                        packetLength = receivedData.ReadUInt16();
                         if (packetLength <= 0)
                         {
                             // If packet contains no data
@@ -282,7 +286,7 @@ namespace Network.Client
                     byte[] data = socket.EndReceive(result, ref endPoint);
                     socket.BeginReceive(ReceiveCallback, null);
 
-                    if (data.Length < 4)
+                    if (data.Length < 2)
                     {
                         instance.Disconnect();
                         return;
@@ -302,7 +306,7 @@ namespace Network.Client
             {
                 using (Packet packet = new Packet(data))
                 {
-                    int packetLength = packet.ReadInt();
+                    UInt16 packetLength = packet.ReadUInt16();
                     data = packet.ReadBytes(packetLength);
                 }
 
@@ -310,7 +314,7 @@ namespace Network.Client
                 {
                     using (Packet packet = new Packet(data))
                     {
-                        int packetId = packet.ReadInt();
+                        int packetId = packet.ReadUInt16();
                         packetHandlers[packetId](packet); // Call appropriate method to handle the packet
                     }
                 });
@@ -331,13 +335,10 @@ namespace Network.Client
         {
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
-                { (int)ServerPackets.serverConnection, ClientHandle.ServerConnection },
-                { (int)ServerPackets.serverDisconnect, ClientHandle.ServerDisconnect },
+                { (int)Packets.serverConnection, ClientHandle.ServerConnection },
+                { (int)Packets.debugMessage, ClientHandle.DebugMessage },
             };
-            Debug.Log("CLIENT: Initialized packets.");
         }
-        
-        
 
         /// <summary>Disconnects from the server and stops all network traffic.</summary>
         public void Disconnect()
