@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Network
@@ -11,6 +13,7 @@ namespace Network
         serverConnection = 1,
         clientConnectionRecived = 2,
         debugMessage = 3,
+        debugImage = 4,
 
     }
 
@@ -113,71 +116,85 @@ namespace Network
         #endregion
 
         #region Write Data
-        /// <summary>Adds a byte to the packet.</summary>
-        /// <param name="value">The byte to add.</param>
         public void Write(byte value)
         {
             buffer.Add(value);
         }
-        /// <summary>Adds an array of bytes to the packet.</summary>
-        /// <param name="value">The byte array to add.</param>
         public void Write(byte[] value)
         {
             buffer.AddRange(value);
         }
-        /// <summary>Adds a short to the packet.</summary>
-        /// <param name="value">The short to add.</param>
         public void Write(short value)
         {
             buffer.AddRange(BitConverter.GetBytes(value));
         }
-        /// <summary>Adds an int to the packet.</summary>
-        /// <param name="value">The uint16 to add.</param>
         public void Write(UInt16 value)
         {
             buffer.AddRange(BitConverter.GetBytes(value));
         }
-        /// <summary>Adds an int to the packet.</summary>
-        /// <param name="value">The int to add.</param>
         public void Write(int value)
         {
             buffer.AddRange(BitConverter.GetBytes(value));
         }
-        /// <summary>Adds a long to the packet.</summary>
-        /// <param name="value">The long to add.</param>
         public void Write(long value)
         {
             buffer.AddRange(BitConverter.GetBytes(value));
         }
-        /// <summary>Adds a float to the packet.</summary>
-        /// <param name="value">The float to add.</param>
         public void Write(float value)
         {
             buffer.AddRange(BitConverter.GetBytes(value));
         }
-        /// <summary>Adds a bool to the packet.</summary>
-        /// <param name="value">The bool to add.</param>
         public void Write(bool value)
         {
             buffer.AddRange(BitConverter.GetBytes(value));
         }
-        /// <summary>Adds a string to the packet.</summary>
-        /// <param name="value">The string to add.</param>
         public void Write(string value)
         {
             Write(value.Length); // Add the length of the string to the packet
             buffer.AddRange(Encoding.ASCII.GetBytes(value)); // Add the string itself
         }
-        /// <summary>Adds a Vector3 to the packet.</summary>
-        /// <param name="value">The Vector3 to add.</param>
-        public void Write(Vector3 value)
+        public void Write(int2 value)
+        {
+            Write(value.x);
+            Write(value.y);
+        }
+        public void Write(int3 value)
         {
             Write(value.x);
             Write(value.y);
             Write(value.z);
         }
-        /// <summary>Adds a Quaternion to the packet.</summary>
-        /// <param name="value">The Quaternion to add.</param>
+        public void Write(float2 value)
+        {
+            Write(value.x);
+            Write(value.y);
+        }
+        public void Write(float3 value)
+        {
+            Write(value.x);
+            Write(value.y);
+            Write(value.z);
+        }
+        public void Write(float4 value)
+        {
+            Write(value.x);
+            Write(value.y);
+            Write(value.z);
+            Write(value.w);
+        }
+
+        public void Write(Texture2D value)
+        {
+            int2 size = (int2) (float2) value.Size();
+            Write(size);
+            
+            Color[] pixels = value.GetPixels(0,0,size.x, size.y);
+            foreach (Color pixel in pixels)
+            {
+                Write(new float4(pixel.r, pixel.g, pixel.b, pixel.a));
+            }
+        }
+        
         public void Write(Quaternion value)
         {
             Write(value.x);
@@ -377,16 +394,42 @@ namespace Network
                 throw new Exception("Could not read value of type 'string'!");
             }
         }
-
-        /// <summary>Reads a Vector3 from the packet.</summary>
-        /// <param name="moveReadPos">Whether or not to move the buffer's read position.</param>
-        public Vector3 ReadVector3(bool moveReadPos = true)
+        public int2 ReadInt2(bool moveReadPos = true)
         {
-            return new Vector3(ReadFloat(moveReadPos), ReadFloat(moveReadPos), ReadFloat(moveReadPos));
+            return new int2(ReadInt(moveReadPos), ReadInt(moveReadPos));
+        }
+        public int3 ReadInt3(bool moveReadPos = true)
+        {
+            return new int3(ReadInt(moveReadPos), ReadInt(moveReadPos), ReadInt(moveReadPos));
+        }
+        public float2 ReadFloat2(bool moveReadPos = true)
+        {
+            return new float2(ReadFloat(moveReadPos), ReadFloat(moveReadPos));
+        }
+        public float3 ReadFloat3(bool moveReadPos = true)
+        {
+            return new float3(ReadFloat(moveReadPos), ReadFloat(moveReadPos), ReadFloat(moveReadPos));
+        }
+        public float4 ReadFloat4(bool moveReadPos = true)
+        {
+            return new float4(ReadFloat(moveReadPos), ReadFloat(moveReadPos), ReadFloat(moveReadPos), ReadFloat(moveReadPos));
+        }
+        public Texture2D ReadTexture2D(bool moveReadPos = true)
+        {
+            int2 size = ReadInt2();
+            Texture2D texture = new Texture2D(size.x, size.y);
+
+            Color[] pixels = new Color[size.x * size.y];
+            for (int i = 0; i < pixels.Length; i++)
+            {
+                pixels[i] = new Color(ReadFloat(), ReadFloat(), ReadFloat(), ReadFloat());
+            }
+            texture.SetPixels(pixels);
+
+            return texture;
         }
 
-        /// <summary>Reads a Quaternion from the packet.</summary>
-        /// <param name="moveReadPos">Whether or not to move the buffer's read position.</param>
+        
         public Quaternion ReadQuaternion(bool moveReadPos = true)
         {
             return new Quaternion(ReadFloat(moveReadPos), ReadFloat(moveReadPos), ReadFloat(moveReadPos), ReadFloat(moveReadPos));

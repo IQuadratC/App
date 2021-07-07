@@ -1,4 +1,6 @@
-﻿namespace Network.Server
+﻿using UnityEngine;
+
+namespace Network.Server
 {
     public static class ServerSend
     {
@@ -86,6 +88,14 @@
             using (Packet packet = new Packet((int) Packets.debugMessage))
             {
                 packet.Write(message);
+                SendTcpDataToAll(packet);
+            }
+        }
+        public static void DebugImage(Texture2D texture)
+        {
+            using (Packet packet = new Packet((int) Packets.debugMessage))
+            {
+                packet.Write(texture);
                 SendTcpDataToAll(packet);
             }
         }

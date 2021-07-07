@@ -7,3 +7,4 @@ ids:
 serverConnection = 1,
 clientConnectionRecived = 2,
 debugMessage = 3,
+debugImage = 4,

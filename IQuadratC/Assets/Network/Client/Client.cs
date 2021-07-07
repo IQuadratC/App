@@ -30,6 +30,8 @@ namespace Network.Client
         
         [SerializeField] private PublicEventString debugEvent;
 
+        [SerializeField] public Texture2D debugTexture;
+
         private void Awake()
         {
             if (instance == null)
@@ -337,6 +339,7 @@ namespace Network.Client
             {
                 { (int)Packets.serverConnection, ClientHandle.ServerConnection },
                 { (int)Packets.debugMessage, ClientHandle.DebugMessage },
+                { (int)Packets.debugImage, ClientHandle.DebugImage },
             };
         }
 

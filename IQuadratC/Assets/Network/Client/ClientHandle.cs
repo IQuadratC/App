@@ -22,5 +22,10 @@ namespace Network.Client
             string message = packet.ReadString();
             Debug.Log("CLIENT: [Debug] " + message);
         }
+        public static void DebugImage(Packet packet)
+        {
+            Texture2D texture = packet.ReadTexture2D();
+            Client.instance.debugTexture = texture;
+        }
     }
 }
