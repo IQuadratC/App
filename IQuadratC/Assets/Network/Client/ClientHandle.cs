@@ -25,7 +25,7 @@ namespace Network.Client
         public static void DebugImage(Packet packet)
         {
             Texture2D texture = packet.ReadTexture2D();
-            Client.instance.debugTexture = texture;
+            Client.instance.debugTexture. = texture; 
         }
     }
 }

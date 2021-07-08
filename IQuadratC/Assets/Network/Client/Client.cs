@@ -30,7 +30,7 @@ namespace Network.Client
         
         [SerializeField] private PublicEventString debugEvent;
 
-        [SerializeField] public Texture2D debugTexture;
+        [SerializeField] public RenderTexture debugTexture;
 
         private void Awake()
         {
