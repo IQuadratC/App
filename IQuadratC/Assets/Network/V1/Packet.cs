@@ -5,7 +5,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace Network
+namespace Network.V1
 {
     /// <summary>Packet enum</summary>
     public enum Packets
@@ -39,7 +39,7 @@ namespace Network
 
         /// <summary>Creates a new packet with a given ID. Used for sending.</summary>
         /// <param name="id">The packet ID.</param>
-        public Packet(UInt16 id)
+        public Packet(byte id)
         {
             buffer = new List<byte>(); // Initialize buffer
             readPos = 0; // Set readPos to 0
@@ -65,18 +65,21 @@ namespace Network
             Write(data);
             readableBuffer = buffer.ToArray();
         }
-
-        /// <summary>Inserts the length of the packet's content at the start of the buffer.</summary>
-        public void WriteLength()
+        public void InsertByte(byte value)
         {
-            buffer.InsertRange(0, BitConverter.GetBytes((UInt16) buffer.Count)); // Insert the byte length of the packet at the very beginning
+            buffer.Insert(0, value); // Insert the int at the start of the buffer
         }
-
-        /// <summary>Inserts the given int at the start of the buffer.</summary>
-        /// <param name="value">The int to insert.</param>
+        public void InsertUInt16(UInt16 value)
+        {
+            buffer.InsertRange(0, BitConverter.GetBytes(value)); // Insert the int at the start of the buffer
+        }
         public void InsertInt(int value)
         {
             buffer.InsertRange(0, BitConverter.GetBytes(value)); // Insert the int at the start of the buffer
+        }
+        public void WriteLength()
+        {
+            InsertInt(buffer.Count);
         }
 
         /// <summary>Gets the packet's content in array form.</summary>
@@ -128,6 +131,7 @@ namespace Network
         {
             buffer.AddRange(BitConverter.GetBytes(value));
         }
+        
         public void Write(UInt16 value)
         {
             buffer.AddRange(BitConverter.GetBytes(value));

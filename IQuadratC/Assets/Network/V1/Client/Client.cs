@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
@@ -8,7 +7,7 @@ using UnityEngine;
 using Utility;
 using Debug = UnityEngine.Debug;
 
-namespace Network.Client
+namespace Network.V1.Client
 {
     public class Client : MonoBehaviour
     {
@@ -29,8 +28,6 @@ namespace Network.Client
         [SerializeField] private PublicInt clientState;
         
         [SerializeField] private PublicEventString debugEvent;
-
-        [SerializeField] public RenderTexture debugTexture;
 
         private void Awake()
         {
@@ -172,14 +169,14 @@ namespace Network.Client
             /// <param name="data">The recieved data.</param>
             private bool HandleData(byte[] data)
             {
-                UInt16 packetLength = 0;
+                int packetLength = 0;
 
                 receivedData.SetBytes(data);
 
                 if (receivedData.UnreadLength() >= 2)
                 {
                     // If client's received data contains a packet
-                    packetLength = receivedData.ReadUInt16();
+                    packetLength = receivedData.ReadInt();
                     if (packetLength <= 0)
                     {
                         // If packet contains no data
@@ -195,7 +192,7 @@ namespace Network.Client
                     {
                         using (Packet packet = new Packet(packetBytes))
                         {
-                            int packetId = packet.ReadUInt16();
+                            byte packetId = packet.ReadByte();
                             packetHandlers[packetId](packet); // Call appropriate method to handle the packet
                         }
                     });
@@ -204,7 +201,7 @@ namespace Network.Client
                     if (receivedData.UnreadLength() >= 2)
                     {
                         // If client's received data contains another packet
-                        packetLength = receivedData.ReadUInt16();
+                        packetLength = receivedData.ReadInt();
                         if (packetLength <= 0)
                         {
                             // If packet contains no data
@@ -266,7 +263,7 @@ namespace Network.Client
                 
                 try
                 {
-                    packet.InsertInt(instance.clientId.value); // Insert the client's ID at the start of the packet
+                    packet.InsertByte((byte) instance.clientId.value); // Insert the client's ID at the start of the packet
                     if (socket != null)
                     {
                         socket.BeginSend(packet.ToArray(), packet.Length(), null, null);
@@ -308,7 +305,7 @@ namespace Network.Client
             {
                 using (Packet packet = new Packet(data))
                 {
-                    UInt16 packetLength = packet.ReadUInt16();
+                    int packetLength = packet.ReadInt();
                     data = packet.ReadBytes(packetLength);
                 }
 
@@ -316,7 +313,7 @@ namespace Network.Client
                 {
                     using (Packet packet = new Packet(data))
                     {
-                        int packetId = packet.ReadUInt16();
+                        byte packetId = packet.ReadByte();
                         packetHandlers[packetId](packet); // Call appropriate method to handle the packet
                     }
                 });

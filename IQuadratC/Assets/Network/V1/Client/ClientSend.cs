@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Network.Client
+namespace Network.V1.Client
 {
     public class ClientSend : MonoBehaviour
     {
@@ -9,7 +9,7 @@ namespace Network.Client
         private static void SendTcpData(Packet packet)
         {
             packet.WriteLength();
-            Client.instance.tcp.SendData(packet);
+            V1.Client.Client.instance.tcp.SendData(packet);
         }
 
         /// <summary>Sends a packet to the server via UDP.</summary>
@@ -17,14 +17,14 @@ namespace Network.Client
         private static void SendUdpData(Packet packet)
         {
             packet.WriteLength();
-            Client.instance.udp.SendData(packet);
+            V1.Client.Client.instance.udp.SendData(packet);
         }
 
         #region Packets
         /// <summary>Lets the server know that the welcome message was received.</summary>
         public static void ClientConnectionReceived()
         {
-            using (Packet packet = new Packet((int) Packets.clientConnectionRecived))
+            using (Packet packet = new Packet((byte) Packets.clientConnectionRecived))
             {
                 SendTcpData(packet);
             }
@@ -32,7 +32,7 @@ namespace Network.Client
 
         public static void DebugMessage(string message)
         {
-            using (Packet packet = new Packet((int) Packets.debugMessage))
+            using (Packet packet = new Packet((byte) Packets.debugMessage))
             {
                 packet.Write(message);
                 SendTcpData(packet);

@@ -1,7 +1,8 @@
 TCP/UDP Package:
-uint16 -> id
-uint16 -> data
-bytes data 
+int -> data Length
+byte -> client/Server ID
+byte -> Package Id
+bytes data
 
 ids:
 serverConnection = 1,

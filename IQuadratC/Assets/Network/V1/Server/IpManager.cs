@@ -2,7 +2,7 @@
 using System.IO;
 using System.Net;
 
-namespace Network.Server
+namespace Network.V1.Server
 {
 	public static class IPManager
 	{

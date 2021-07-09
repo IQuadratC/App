@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using UnityEngine;
 
-namespace Network.Client
+namespace Network.V1.Client
 {
     public class ClientHandle : MonoBehaviour
     {
@@ -10,11 +10,11 @@ namespace Network.Client
             int myId = packet.ReadInt();
 
             Debug.Log("CLIENT: Established TCP connection");
-            Client.instance.clientId.value = myId;
+            V1.Client.Client.instance.clientId.value = myId;
             ClientSend.ClientConnectionReceived();
 
             // Now that we have the client's id, connect UDP
-            Client.instance.udp.Connect(((IPEndPoint) Client.instance.tcp.socket.Client.LocalEndPoint).Port);
+            V1.Client.Client.instance.udp.Connect(((IPEndPoint) V1.Client.Client.instance.tcp.socket.Client.LocalEndPoint).Port);
         }
         
         public static void DebugMessage(Packet packet)

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Network.Server
+namespace Network.V1.Server
 {
     public static class ServerSend
     {
@@ -10,7 +10,7 @@ namespace Network.Server
         private static void SendTcpData(int toClient, Packet packet)
         {
             packet.WriteLength();
-            Server.instance.clients[toClient].tcp.SendData(packet);
+            V1.Server.Server.instance.clients[toClient].tcp.SendData(packet);
         }
 
         /// <summary>Sends a packet to a client via UDP.</summary>
@@ -19,7 +19,7 @@ namespace Network.Server
         private static void SendUdpData(int toClient, Packet packet)
         {
             packet.WriteLength();
-            Server.instance.clients[toClient].udp.SendData(packet);
+            V1.Server.Server.instance.clients[toClient].udp.SendData(packet);
         }
 
         /// <summary>Sends a packet to all clients via TCP.</summary>
@@ -27,9 +27,9 @@ namespace Network.Server
         private static void SendTcpDataToAll(Packet packet)
         {
             packet.WriteLength();
-            for (int i = 1; i <= Server.instance.maxClients; i++)
+            for (int i = 1; i <= V1.Server.Server.instance.maxClients; i++)
             {
-                Server.instance.clients[i].tcp.SendData(packet);
+                V1.Server.Server.instance.clients[i].tcp.SendData(packet);
             }
         }
         /// <summary>Sends a packet to all clients except one via TCP.</summary>
@@ -38,11 +38,11 @@ namespace Network.Server
         private static void SendTcpDataToAll(int exceptClient, Packet packet)
         {
             packet.WriteLength();
-            for (int i = 1; i <= Server.instance.maxClients; i++)
+            for (int i = 1; i <= V1.Server.Server.instance.maxClients; i++)
             {
                 if (i != exceptClient)
                 {
-                    Server.instance.clients[i].tcp.SendData(packet);
+                    V1.Server.Server.instance.clients[i].tcp.SendData(packet);
                 }
             }
         }
@@ -52,9 +52,9 @@ namespace Network.Server
         private static void SendUdpDataToAll(Packet packet)
         {
             packet.WriteLength();
-            for (int i = 1; i <= Server.instance.maxClients; i++)
+            for (int i = 1; i <= V1.Server.Server.instance.maxClients; i++)
             {
-                Server.instance.clients[i].udp.SendData(packet);
+                V1.Server.Server.instance.clients[i].udp.SendData(packet);
             }
         }
         /// <summary>Sends a packet to all clients except one via UDP.</summary>
@@ -63,11 +63,11 @@ namespace Network.Server
         private static void SendUdpDataToAll(int exceptClient, Packet packet)
         {
             packet.WriteLength();
-            for (int i = 1; i <= Server.instance.maxClients; i++)
+            for (int i = 1; i <= V1.Server.Server.instance.maxClients; i++)
             {
                 if (i != exceptClient)
                 {
-                    Server.instance.clients[i].udp.SendData(packet);
+                    V1.Server.Server.instance.clients[i].udp.SendData(packet);
                 }
             }
         }

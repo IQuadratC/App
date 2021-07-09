@@ -4,7 +4,7 @@ using System.Net.Sockets;
 using UnityEngine;
 using Utility;
 
-namespace Network.Server
+namespace Network.V1.Server
 {
     public class Client
     {
@@ -190,14 +190,14 @@ namespace Network.Server
             /// <param name="packetData">The packet containing the recieved data.</param>
             public void HandleData(Packet packetData)
             {
-                UInt16 packetLength = packetData.ReadUInt16();
+                int packetLength = packetData.ReadInt();
                 byte[] packetBytes = packetData.ReadBytes(packetLength);
 
                 Threader.RunOnMainThread(() =>
                 {
                     using (Packet packet = new Packet(packetBytes))
                     {
-                        int packetId = packet.ReadUInt16();
+                        byte packetId = packet.ReadByte();
                         Server.instance.packetHandlers[packetId](id, packet); // Call appropriate method to handle the packet
                     }
                 });

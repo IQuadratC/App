@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using UnityEngine;
 using Utility;
 
-namespace Network.Server
+namespace Network.V1.Server
 {
     public class Server : MonoBehaviour
     {
@@ -29,8 +29,6 @@ namespace Network.Server
         [SerializeField] private PublicInt serverState;
 
         [SerializeField] private PublicEventString debugEvent;
-        [SerializeField] private PublicEvent debugImageEvent;
-        [SerializeField] public Texture2D debugImage;
 
         private void Awake()
         {
@@ -49,10 +47,6 @@ namespace Network.Server
             serverState.value = (int) NetworkState.notConnected;
             
             debugEvent.Register(ServerSend.DebugMessage);
-            debugImageEvent.Register(() =>
-            {
-                ServerSend.DebugImage(debugImage);
-            });
         }
 
         private void OnApplicationQuit()
@@ -117,7 +111,7 @@ namespace Network.Server
 
                 using (Packet packet = new Packet(data))
                 {
-                    int clientId = packet.ReadInt();
+                    byte clientId = packet.ReadByte();
 
                     if (clientId == 0)
                     {
