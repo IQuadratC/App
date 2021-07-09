@@ -82,6 +82,7 @@
      <Compile Include="Assets\AI\AISetup.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt2Array.cs" />
      <Compile Include="Assets\AI\GetPath.cs" />
+     <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat2Array.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
