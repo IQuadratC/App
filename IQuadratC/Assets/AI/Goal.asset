@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Goal
   m_EditorClassIdentifier: 
   value:
-    x: 0
-    y: 0
+    x: 20
+    y: 20
   initalValue:
-    x: 0
-    y: 0
+    x: 20
+    y: 20
   description: 

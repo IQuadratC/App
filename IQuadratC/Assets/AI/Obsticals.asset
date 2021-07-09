@@ -12,6 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbaead5a46b4c3e97dfd201981fbba3, type: 3}
   m_Name: Obsticals
   m_EditorClassIdentifier: 
-  value: []
-  initalValue: []
-  description: 
+  value:
+  - x: 2
+    y: 2
+  - x: 2
+    y: 3
+  - x: 2
+    y: 4
+  - x: 3
+    y: 2
+  - x: 3
+    y: 3
+  - x: 3
+    y: 4
+  - x: 4
+    y: 2
+  - x: 4
+    y: 3
+  - x: 4
+    y: 4
+  initalValue:
+  - x: 2
+    y: 2
+  - x: 2
+    y: 3
+  - x: 2
+    y: 4
+  - x: 3
+    y: 2
+  - x: 3
+    y: 3
+  - x: 3
+    y: 4
+  - x: 4
+    y: 2
+  - x: 4
+    y: 3
+  - x: 4
+    y: 4
+  description: Where the Robot can't move
