@@ -12,9 +12,11 @@ namespace Network.V2.Client
         
         public void ClientConnectionReceived()
         {
+            
+            
             using (Packet packet = new Packet((byte) Packets.clientConnectionRecived))
             {
-                client.SendTCPData(packet);
+                client.SendUDPData(packet);
             }
         }
         

@@ -8,17 +8,22 @@ namespace Network.V2.Client
     public class Client : MonoBehaviour
     {
         public PublicString ip;
-        public PublicInt port;
+        public PublicInt clientPort;
+        public PublicInt serverPort;
         public PublicInt clientId;
         public PublicInt clientState;
         
         private delegate void PacketHandler(Packet packet);
         private static Dictionary<byte, PacketHandler> packetHandlers;
 
-        private TCPClient tcpClient;
-        private UDPClient udpClient;
-        private ClientHandle clientHandle;
-        private ClientSend clientSend;
+        public TCPClient tcpClient;
+        public UDPClient udpClient;
+        public ClientHandle clientHandle;
+        public ClientSend clientSend;
+
+        [SerializeField] private PublicEvent connectEvent;
+        [SerializeField] private PublicEvent disconnectEvent;
+        [SerializeField] private PublicEventString debugMessageEvent;
         
         private void Awake()
         {
@@ -32,23 +37,44 @@ namespace Network.V2.Client
                 { (byte)Packets.serverConnection, clientHandle.ServerConnection },
                 { (byte)Packets.debugMessage, clientHandle.DebugMessage },
             };
+
+            connectEvent.Register(tcpClient.Connect);
+            disconnectEvent.Register(Disconnect);
+            debugMessageEvent.Register(clientSend.DebugMessage);
+
+            clientState.value = (int) NetworkState.notConnected;
         }
 
         public void HandleData(byte[] data)
         {
-            using (Packet packet = new Packet(data))
+            Packet packet = new Packet(data);
+            packet.PrepareForRead();
+            
+            int length = packet.ReadInt32();
+            if (length + 4 != data.Length)
             {
-                int packetLength = packet.ReadInt32();
-                data = packet.ReadBytes(packetLength);
+                Threader.RunOnMainThread(() =>
+                {
+                    Debug.Log("CLIENT: Packet size not correct.");
+                });
+                return;
             }
+            
+            byte serverId = packet.ReadByte();
+            if (serverId != 1)
+            {
+                Threader.RunOnMainThread(() =>
+                {
+                    Debug.Log("CLIENT: Server ID not correct.");
+                });
+                return;
+            }
+            
+            byte packetId = packet.ReadByte();
 
             Threader.RunOnMainThread(() =>
             {
-                using (Packet packet = new Packet(data))
-                {
-                    byte packetId = packet.ReadByte();
-                    packetHandlers[packetId](packet);
-                }
+                packetHandlers[packetId](packet);
             });
         }
 
@@ -73,9 +99,13 @@ namespace Network.V2.Client
 
         public void Disconnect()
         {
+            Debug.Log("CLIENT: Disconnecting...");
+            clientState.value = (int) NetworkState.disconnecting;
+            
             tcpClient.Disconnect();
             udpClient.Disconnect();
 
+            Debug.Log("CLIENT: Disconnected");
             clientState.value = (int) NetworkState.notConnected;
         }
     }

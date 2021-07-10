@@ -20,23 +20,25 @@ namespace Network.V2.Client
 
          public void Connect()
          {
-             socket = new UdpClient(client.port.value);
-             endPoint = new IPEndPoint(IPAddress.Parse(client.ip.value), client.port.value);
+             socket = new UdpClient(client.clientPort.value);
+             endPoint = new IPEndPoint(IPAddress.Parse(client.ip.value), client.serverPort.value);
 
              socket.Connect(endPoint);
              socket.BeginReceive(ReceiveCallback, null);
+             
+             Debug.Log($"CLIENT: Starting UDP...");
          }
          
          private void ReceiveCallback(IAsyncResult result)
          {
-             if (client.clientState.value == (int) NetworkState.notConnected) { return; }
+             if (client.clientState.value != (int) NetworkState.connected) { return; }
                 
              try
              {
                  byte[] data = socket.EndReceive(result, ref endPoint);
                  socket.BeginReceive(ReceiveCallback, null);
 
-                 if (data.Length < 4)
+                 if (data.Length < State.HeaderSize)
                  {
                      client.Disconnect();
                      return;
@@ -51,7 +53,8 @@ namespace Network.V2.Client
          
          public void SendData(byte[] data, int length)
          {
-             if (client.clientState.value == (int) NetworkState.notConnected) { return; }
+             if (client.clientState.value != (int) NetworkState.connected) { return; }
+             
              try
              {
                  if (socket != null)
@@ -67,6 +70,7 @@ namespace Network.V2.Client
          
          public void Disconnect()
          {
+             socket.Close();
              endPoint = null;
              socket = null;
          }
