@@ -46,10 +46,15 @@
      <Compile Include="Assets\Network\V1\Client\ClientSend.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicIntArray.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat4.cs" />
+     <Compile Include="Assets\Network\V2\Server\ServerHandle.cs" />
+     <Compile Include="Assets\Network\V2\Server\Server.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat.cs" />
      <Compile Include="Assets\Network\V1\Packet.cs" />
      <Compile Include="Assets\Network\V1\Server\IpManager.cs" />
+     <Compile Include="Assets\Network\V2\Server\UDPServer.cs" />
+     <Compile Include="Assets\Network\V2\Server\ServerSend.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt4.cs" />
+     <Compile Include="Assets\Network\V2\Server\ServerClient.cs" />
      <Compile Include="Assets\Network\V1\Client\ClientHandle.cs" />
      <Compile Include="Assets\Network\V2\Client\UDPClient.cs" />
      <Compile Include="Assets\AI\GetPath.cs" />
@@ -85,17 +90,12 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat3.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicEvent.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat.cs" />
+     <Compile Include="Assets\Network\V2\Server\TCPServer.cs" />
      <Compile Include="Assets\Network\V2\Client\ClientSend.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicString.cs" />
      <Compile Include="Assets\Network\V1\Server\Server.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicEventMaster.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventBool.cs" />
-     <Compile Include="Assets\Network\V2\Server\Server.cs" />
-     <Compile Include="Assets\Network\V2\Server\TCPServer.cs" />
-     <Compile Include="Assets\Network\V2\Server\UDPServer.cs" />
-     <Compile Include="Assets\Network\V2\Server\ServerSend.cs" />
-     <Compile Include="Assets\Network\V2\Server\ServerHandle.cs" />
-     <Compile Include="Assets\Network\V2\Server\ServerClient.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

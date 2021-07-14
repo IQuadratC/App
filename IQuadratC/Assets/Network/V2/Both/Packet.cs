@@ -14,13 +14,6 @@ namespace Network.V2.Both
         private byte[] readableBuffer;
         private int readPos;
 
-        /// <summary>Creates a new empty packet (without an ID).</summary>
-        public Packet()
-        {
-            buffer = new List<byte>(); 
-            readPos = 0;
-        }
-
         /// <summary>Creates a new packet with a given ID. Used for sending.</summary>
         /// <param name="id">The packet ID.</param>
         public Packet(byte id)
@@ -52,20 +45,7 @@ namespace Network.V2.Both
         {
             return buffer.Count; // Return the length of buffer
         }
-
-        /// <summary>Gets the length of the unread data contained in the packet.</summary>
-        public int UnreadLength()
-        {
-            return Length() - readPos; // Return the remaining length (unread)
-        }
-
-        /// <summary>Resets the packet instance to allow it to be reused.</summary>
-        public void Reset()
-        {
-            buffer.Clear();
-            readableBuffer = null;
-            readPos = 0;
-        }
+        
         public void PrepareForRead()
         {
             readableBuffer = ToArray();

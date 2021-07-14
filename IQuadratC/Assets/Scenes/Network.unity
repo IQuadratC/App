@@ -938,6 +938,7 @@ MonoBehaviour:
   startServerEvent: {fileID: 11400000, guid: ed450f8a6738ddc43a7240e52b746468, type: 2}
   stopServerEvent: {fileID: 11400000, guid: daaed0d5430f0f84da04b76bf7a3c2b3, type: 2}
   debugMessageEvent: {fileID: 11400000, guid: 0b71923bd36351cfe8658bf99b1abded, type: 2}
+  serverUdpSupport: 1
 --- !u!4 &1018252492
 Transform:
   m_ObjectHideFlags: 0
@@ -1975,6 +1976,9 @@ MonoBehaviour:
   connectEvent: {fileID: 11400000, guid: 1a8d0a059bd92144983a4fcd74a56185, type: 2}
   disconnectEvent: {fileID: 11400000, guid: 995784cb38572f2458e145de3a59822d, type: 2}
   debugMessageEvent: {fileID: 11400000, guid: 22b926766bdbe38889e996ddcf7912ed, type: 2}
+  clientUdpSupport: 1
+  serverUdpSupport: 0
+  udpConnected: 0
 --- !u!4 &2070034877
 Transform:
   m_ObjectHideFlags: 0

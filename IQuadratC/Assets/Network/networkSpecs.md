@@ -8,11 +8,14 @@ min length 6 byte
 server Id = 1;
 
 ## ids:
-serverConnection = 1,  
-clientConnectionRecived = 2,  
-debugMessage = 3,  
-debugImage = 4,
+debugMessage = 1,
 
+serverSettings = 2,  
+clientSettings = 3,
+serverStartUDP = 4,
+clientUDPConnection = 5,
+serverUDPConnection = 6,
+clientUDPConnectionStatus = 7,
 
 ## Procedure
 0. Awake  
@@ -32,11 +35,24 @@ debugImage = 4,
 3. TCP Connected  
    clientState = Connected  
    
-4. Server -> Client ServerConnection (TCP)  
-    clientId send from server to client  
-    client UDP Connection opened  
+4. Server -> Client ServerSettings (TCP)  
+    clientId send from server to client
+    settings:
+        udp support bool
    
-5. Server <- Client ClientConnectionReceived (UDP)  
+5.  Server <- Client ClientSettings (TCP)
+    settings:
+        udp support bool
+    
+6. Server -> Client ServerStartUDP (TCP)
+    
+7. Server <- Client ClientUDPConnection (UDP)  
     server client endpoint mapped  
+   
+8. Server -> Client ServerUDPConnection (UDP) / (TCP)
+    udp from Client recived bool
+
+9. Server <- Client ClientUDPConnectionStatus (TCP)
+   udp from Server recived bool
    
 --- Connected ---

@@ -12,6 +12,8 @@ namespace Network.V2.Server
         public byte[] receiveBuffer;
         public IPEndPoint endPoint;
         public NetworkState state;
+        public bool clientUdpSupport;
+        public bool updConnected;
 
         public ServerClient(byte id, TcpClient socket)
         {

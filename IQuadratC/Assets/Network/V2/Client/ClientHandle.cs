@@ -11,16 +11,6 @@ namespace Network.V2.Client
         {
             this.client = client;
         }
-        public void ServerConnection(Packet packet)
-        {
-            byte myId = packet.ReadByte();
-            client.clientId.value = myId;
-            
-            Debug.Log($"CLIENT: ID recived. ID is " + myId);
-            
-            client.udpClient.Connect();
-            client.clientSend.ClientConnectionReceived();
-        }
         
         public void DebugMessage(Packet packet)
         {
@@ -29,6 +19,26 @@ namespace Network.V2.Client
             {
                 Debug.Log("CLIENT: Debug: "+ message);
             });
+        }
+        
+        public void ServerSettings(Packet packet)
+        {
+            Debug.LogFormat("CLIENT: recived server settings");
+            client.clientId.value = packet.ReadByte();
+            client.serverUdpSupport = packet.ReadBool();
+            
+            client.clientSend.ClientSettings();
+        }
+        
+        public void ServerStartUDP(Packet packet)
+        {
+            client.udpClient.Connect();
+            client.clientSend.ClientUDPConnection();
+        }
+        
+        public void ServerUDPConnection(Packet packet)
+        {
+            client.clientSend.ClientUDPConnectionStatus();
         }
     }
 }

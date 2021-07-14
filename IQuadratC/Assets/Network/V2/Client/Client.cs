@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Network.V2.Both;
 using UnityEngine;
 using Utility;
@@ -24,6 +25,11 @@ namespace Network.V2.Client
         [SerializeField] private PublicEvent connectEvent;
         [SerializeField] private PublicEvent disconnectEvent;
         [SerializeField] private PublicEventString debugMessageEvent;
+
+        
+        public bool clientUdpSupport;
+        [HideInInspector] public bool serverUdpSupport;
+        [HideInInspector] public bool udpConnected;
         
         private void Awake()
         {
@@ -34,8 +40,12 @@ namespace Network.V2.Client
             
             packetHandlers = new Dictionary<byte, PacketHandler>()
             {
-                { (byte)Packets.serverConnection, clientHandle.ServerConnection },
                 { (byte)Packets.debugMessage, clientHandle.DebugMessage },
+                
+                { (byte)Packets.serverSettings, clientHandle.ServerSettings },
+                { (byte)Packets.serverStartUDP, clientHandle.ServerStartUDP },
+                { (byte)Packets.serverUDPConnection, clientHandle.ServerUDPConnection },
+
             };
 
             connectEvent.Register(tcpClient.Connect);
@@ -43,6 +53,11 @@ namespace Network.V2.Client
             debugMessageEvent.Register(clientSend.DebugMessage);
 
             clientState.value = (int) NetworkState.notConnected;
+        }
+
+        private void OnApplicationQuit()
+        {
+            Disconnect();
         }
 
         public void HandleData(byte[] data)
@@ -93,12 +108,20 @@ namespace Network.V2.Client
         
         public void SendUDPData(Packet packet)
         {
+            if (!serverUdpSupport || !clientUdpSupport)
+            {
+                SendTCPData(packet);
+                return;
+            }
+            
             packet = AddHeaderToPacket(packet);
             udpClient.SendData(packet.ToArray(), packet.Length());
         }
 
         public void Disconnect()
         {
+            if (clientState.value != (int) NetworkState.connected) {return;}
+            
             Debug.Log("CLIENT: Disconnecting...");
             clientState.value = (int) NetworkState.disconnecting;
             

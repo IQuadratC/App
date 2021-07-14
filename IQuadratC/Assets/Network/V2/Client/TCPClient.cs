@@ -115,7 +115,11 @@ namespace Network.V2.Client
          
          public void Disconnect()
          {
-             socket.Close();
+             if (socket != null)
+             {
+                 socket.Close();
+             }
+            
              stream = null;
              receiveBuffer = null;
              socket = null;

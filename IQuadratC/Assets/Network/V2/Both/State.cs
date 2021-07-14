@@ -2,9 +2,14 @@
 {
     public enum Packets
     {
-        serverConnection = 1,
-        clientConnectionRecived = 2,
-        debugMessage = 3,
+        debugMessage = 1,
+
+        serverSettings = 2,  
+        clientSettings = 3,
+        serverStartUDP = 4,
+        clientUDPConnection = 5,
+        serverUDPConnection = 6,
+        clientUDPConnectionStatus = 7,
     }
 
     public enum NetworkState

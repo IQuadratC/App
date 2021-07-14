@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using Network.V2.Both;
 using UnityEngine;
+using Utility;
 
 namespace Network.V2.Client
 {
@@ -26,7 +27,7 @@ namespace Network.V2.Client
              socket.Connect(endPoint);
              socket.BeginReceive(ReceiveCallback, null);
              
-             Debug.Log($"CLIENT: Starting UDP...");
+             Debug.Log($"CLIENT: starting UDP...");
          }
          
          private void ReceiveCallback(IAsyncResult result)
@@ -45,9 +46,13 @@ namespace Network.V2.Client
                  }
                  client.HandleData(data);
              }
-             catch
+             catch (Exception e)
              {
-                 client.Disconnect();
+                 Threader.RunOnMainThread(() =>
+                 {
+                     Debug.Log(e);
+                 });
+                 //client.Disconnect();
              }
          }
          
@@ -70,7 +75,10 @@ namespace Network.V2.Client
          
          public void Disconnect()
          {
-             socket.Close();
+             if (socket != null)
+             {
+                 socket.Close();
+             }
              endPoint = null;
              socket = null;
          }

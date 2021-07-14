@@ -21,7 +21,7 @@ namespace Network.V2.Server
         {
             if (server.serverState.value != (int) NetworkState.connecting) { return; }
             
-            tcpListener = tcpListener = new TcpListener(IPAddress.Any, server.port.value);
+            tcpListener = new TcpListener(IPAddress.Any, server.port.value);
             tcpListener.Start();
             tcpListener.BeginAcceptTcpClient(TcpConnectCallback, null);
         }
@@ -32,7 +32,7 @@ namespace Network.V2.Server
             tcpListener.BeginAcceptTcpClient(TcpConnectCallback, null);
             
             Debug.Log($"SERVER: Incoming connection from {tcpClient.Client.RemoteEndPoint}...");
-            
+
             for (byte i = 1; i <= State.MaxClients; i++)
             {
                 if (server.clients[i] != null) continue;
@@ -40,7 +40,6 @@ namespace Network.V2.Server
                 ServerClient client = new ServerClient(i, tcpClient);
                 server.clients[i] = client;
                 server.ConnectClient(client);
-                
                 return;
             }
 
@@ -54,12 +53,11 @@ namespace Network.V2.Server
             client.socket.ReceiveBufferSize = State.BufferSize;
             client.socket.SendBufferSize = State.BufferSize;
             client.stream = client.socket.GetStream();
-            
+
             client.receiveBuffer = new byte[State.BufferSize];
-            
             client.stream.BeginRead(client.receiveBuffer, 0, State.BufferSize, ReceiveCallback, client);
             
-            server.serverSend.ServerConnection(client);
+            server.serverSend.ServerSettings(client);
         }
         
         private void ReceiveCallback(IAsyncResult result)
@@ -67,7 +65,6 @@ namespace Network.V2.Server
             if (server.serverState.value != (int) NetworkState.connected) { return; }
 
             ServerClient client = (ServerClient) result.AsyncState;
-
             try
             {
                 int byteLength = client.stream.EndRead(result);
@@ -105,7 +102,10 @@ namespace Network.V2.Server
 
         public void DisconnectClient(ServerClient client)
         {
-            client.socket.Close();
+            if (client.socket != null)
+            {
+                client.socket.Close();
+            }
             client.stream = null;
             client.receiveBuffer = null;
             client.socket = null;

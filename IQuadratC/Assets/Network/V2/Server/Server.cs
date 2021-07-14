@@ -25,6 +25,8 @@ namespace Network.V2.Server
         [SerializeField] private PublicEvent stopServerEvent;
         [SerializeField] private PublicEventString debugMessageEvent;
 
+        public bool serverUdpSupport;
+
         private void Awake()
         {
             tcpServer = new TCPServer(this);
@@ -35,8 +37,11 @@ namespace Network.V2.Server
             
             packetHandlers = new Dictionary<byte, PacketHandler>()
             {
-                { (byte)Packets.clientConnectionRecived, serverHandle.ClientConnectionRecived },
                 { (byte)Packets.debugMessage, serverHandle.DebugMessage },
+                
+                { (byte)Packets.clientSettings, serverHandle.ClientSettings },
+                { (byte)Packets.clientUDPConnection, serverHandle.ClientUDPConnection },
+                { (byte)Packets.clientUDPConnectionStatus, serverHandle.ClientUDPConnectionStatus },
             };
 
             startServerEvent.Register(StartServer);
@@ -44,6 +49,11 @@ namespace Network.V2.Server
             debugMessageEvent.Register(serverSend.DebugMessage);
 
             serverState.value = (int) NetworkState.notConnected;
+        }
+
+        private void OnApplicationQuit()
+        {
+            StopServer();
         }
 
         public void StartServer()
@@ -54,8 +64,11 @@ namespace Network.V2.Server
             serverState.value = (int) NetworkState.connecting;
             
             tcpServer.Start();
-            udpServer.Start();
-            
+            if (serverUdpSupport)
+            {
+                udpServer.Start();
+            }
+
             Debug.Log("SERVER: Started");
             serverState.value = (int) NetworkState.connected;
         }
@@ -131,6 +144,12 @@ namespace Network.V2.Server
         
         public void SendUDPData(ServerClient client, Packet packet)
         {
+            if (!serverUdpSupport || !client.clientUdpSupport)
+            {
+                SendTCPData(client, packet);
+                return;
+            }
+            
             packet = AddHeaderToPacket(packet);
             udpServer.SendData(client, packet.ToArray(), packet.Length());
         }
@@ -141,6 +160,12 @@ namespace Network.V2.Server
             {
                 if (client != null)
                 {
+                    if (!serverUdpSupport || !client.clientUdpSupport)
+                    {
+                        SendTCPData(client, packet);
+                        continue;
+                    }
+                    
                     udpServer.SendData(client, packet.ToArray(), packet.Length());
                 }
             }
