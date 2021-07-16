@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using Network.V2.Both;
 using UnityEngine;
+using Utility;
 
 namespace Network.V2.Server
 {
@@ -36,15 +37,28 @@ namespace Network.V2.Server
 
                 if (data.Length < 6)
                 {
+                    Threader.RunOnMainThread(() =>
+                    {
+                        Debug.Log("SERVER no correct UDP packet size");
+                    });
                     return;
                 }
 
-                ServerClient client = server.HandelData(data);
-                if (client != null && server.clients[client.id].endPoint == null)
+                ServerClient client;
+                foreach (ServerClient serverClient in server.clients)
                 {
-                    server.clients[client.id].endPoint = clientEndPoint;
+                    if (serverClient != null && serverClient.ip == clientEndPoint.Address.ToString())
+                    {
+                        client = serverClient;
+                        if (!client.updConnected)
+                        {
+                            client.endPoint = clientEndPoint;
+                        }
+                        
+                    }
                 }
-                
+
+                server.HandelData(data);
             }
             catch (Exception ex)
             {

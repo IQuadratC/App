@@ -44,15 +44,15 @@ clientUDPConnectionStatus = 7,
     settings:
         udp support bool
     
-6. Server -> Client ServerStartUDP (TCP)
+6. Server -> Client ServerStartUDP (TCP) 
     
-7. Server <- Client ClientUDPConnection (UDP)  
-    server client endpoint mapped  
+7. Server <- Client ClientUDPConnection (UDP) 
+    server client endpoint mapped 
    
-8. Server -> Client ServerUDPConnection (UDP) / (TCP)
-    udp from Client recived bool
+8. Server -> Client ServerUDPConnection (UDP) / (TCP) 
+    udp from Client recived bool 
 
-9. Server <- Client ClientUDPConnectionStatus (TCP)
+9. Server <- Client ClientUDPConnectionStatus (TCP) 
    udp from Server recived bool
    
 --- Connected ---

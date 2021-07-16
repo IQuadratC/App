@@ -80,7 +80,7 @@ namespace Network.V2.Server
             tcpServer.ConnectClient(client);
         }
 
-        public ServerClient HandelData(byte[] data, ServerClient client = null)
+        public void HandelData(byte[] data, ServerClient client = null)
         {
             Packet packet = new Packet(data);
             packet.PrepareForRead();
@@ -92,7 +92,7 @@ namespace Network.V2.Server
                 {
                     Debug.Log("SERVER: Packet size not correct.");
                 });
-                return null;
+                return;
             }
             
             byte clientId = packet.ReadByte();
@@ -102,7 +102,7 @@ namespace Network.V2.Server
                 {
                     Debug.Log("CLIENT: Server ID not correct.");
                 });
-                return null;
+                return;
             } 
             if(clientId != 0 && client == null)
             {
@@ -115,7 +115,6 @@ namespace Network.V2.Server
             {
                 packetHandlers[packetId](client, packet);
             });
-            return client;
         }
 
         private Packet AddHeaderToPacket(Packet packet)

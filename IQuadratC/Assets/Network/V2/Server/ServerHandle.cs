@@ -14,7 +14,7 @@ namespace Network.V2.Server
         public void DebugMessage(ServerClient fromClient, Packet packet)
         {
             string message = packet.ReadString();
-            Debug.Log("SERVER: [" +fromClient.id+ "] Debug: {message}");
+            Debug.Log("SERVER: [" +fromClient.id+ "] Debug: " + message);
         }
         
         public void ClientSettings(ServerClient fromClient, Packet packet)

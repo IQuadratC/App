@@ -10,6 +10,7 @@ namespace Network.V2.Server
         public TcpClient socket;
         public NetworkStream stream;
         public byte[] receiveBuffer;
+        public string ip;
         public IPEndPoint endPoint;
         public NetworkState state;
         public bool clientUdpSupport;

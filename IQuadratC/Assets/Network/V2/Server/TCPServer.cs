@@ -53,6 +53,7 @@ namespace Network.V2.Server
             client.socket.ReceiveBufferSize = State.BufferSize;
             client.socket.SendBufferSize = State.BufferSize;
             client.stream = client.socket.GetStream();
+            client.ip =  client.socket.Client.RemoteEndPoint.ToString().Split(':')[0];
 
             client.receiveBuffer = new byte[State.BufferSize];
             client.stream.BeginRead(client.receiveBuffer, 0, State.BufferSize, ReceiveCallback, client);
