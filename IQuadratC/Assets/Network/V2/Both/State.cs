@@ -10,6 +10,8 @@
         clientUDPConnection = 5,
         serverUDPConnection = 6,
         clientUDPConnectionStatus = 7,
+        
+        serverCamImage = 8,
     }
 
     public enum NetworkState

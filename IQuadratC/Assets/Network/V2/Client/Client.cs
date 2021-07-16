@@ -31,6 +31,9 @@ namespace Network.V2.Client
         [HideInInspector] public bool serverUdpSupport;
         [HideInInspector] public bool udpConnected;
         
+        // Only for testing
+        [SerializeField] public Renderer imageRenderer;
+        
         private void Awake()
         {
             tcpClient = new TCPClient(this);
@@ -45,7 +48,8 @@ namespace Network.V2.Client
                 { (byte)Packets.serverSettings, clientHandle.ServerSettings },
                 { (byte)Packets.serverStartUDP, clientHandle.ServerStartUDP },
                 { (byte)Packets.serverUDPConnection, clientHandle.ServerUDPConnection },
-
+                
+                { (byte)Packets.serverCamImage, clientHandle.ServerCamImage},
             };
 
             connectEvent.Register(tcpClient.Connect);

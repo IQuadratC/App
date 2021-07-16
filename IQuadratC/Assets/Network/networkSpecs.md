@@ -17,6 +17,8 @@ clientUDPConnection = 5,
 serverUDPConnection = 6,
 clientUDPConnectionStatus = 7,
 
+serverCamImage = 8,
+
 ## Procedure
 0. Awake  
     clientState = notConnected  

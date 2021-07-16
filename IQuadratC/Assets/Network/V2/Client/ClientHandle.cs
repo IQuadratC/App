@@ -1,5 +1,9 @@
-﻿using Network.V2.Both;
+﻿using System;
+using System.IO;
+using Network.V2.Both;
+using Pathfinding;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 using Utility;
 
 namespace Network.V2.Client
@@ -39,6 +43,15 @@ namespace Network.V2.Client
         public void ServerUDPConnection(Packet packet)
         {
             client.clientSend.ClientUDPConnectionStatus();
+        }
+        
+        public void ServerCamImage(Packet packet)
+        {
+            byte[] data = packet.ReadBytes(packet.Length() - 14);
+            
+            Texture2D tex = new Texture2D(2, 2);
+            tex.LoadImage(data);
+            client.imageRenderer.material.mainTexture = tex;
         }
     }
 }
