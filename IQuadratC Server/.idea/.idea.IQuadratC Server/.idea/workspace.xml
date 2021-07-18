@@ -1,45 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Robot.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/ControllMode.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/ControllMode.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickMoveEvent.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickMoveEvent.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickRotateEvent.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickRotateEvent.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickStopEvent.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickStopEvent.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/RobotMover.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/Roboter.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/Roboter.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickMoveEvent.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickMoveEvent.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickRotateEvent.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickRotateEvent.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickStopEvent.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickStopEvent.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/SetRobotControlState.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/SetRobotControlState.asset.meta" afterDir="false" />
+    <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="Move Commands">
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickDir.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickDir.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickDir.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickDir.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickRotate.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickRotate.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickSender.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoysticktSpeed.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoysticktSpeed.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Both/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Both/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/networkSpecs.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/networkSpecs.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AStar.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AStar.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/RobotMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/RobotMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Scenes/Network.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Scenes/Network.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +26,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Robot/RobotMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48020190-8ED9-4DDA-A056-1E2E6E0DDD4E/f1/b0be1ac1/Socket.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -69,12 +44,17 @@
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vUM8yzJKarZ3qs2ml03uj7zRET" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -96,10 +76,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7500">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="7500" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -115,8 +95,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1626612059233</updated>
-      <workItem from="1626612078342" duration="3552000" />
+      <workItem from="1626612078342" duration="5475000" />
     </task>
+    <task id="LOCAL-00001" summary="Move Commands">
+      <created>1626618119809</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626618119809</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,51 +124,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Robot/RobotMover.cs</url>
-          <line>30</line>
-          <properties documentPath="D:\dev\IQuadratC\App\IQuadratC Server\Assets\Robot\RobotMover.cs" initialLine="30" containingFunctionPresentation="lambda expression inside method 'Awake'">
-            <startOffsets>
-              <option value="779" />
-            </startOffsets>
-            <endOffsets>
-              <option value="798" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Robot/RobotMover.cs</url>
-          <line>24</line>
-          <properties documentPath="D:\dev\IQuadratC\App\IQuadratC Server\Assets\Robot\RobotMover.cs" initialLine="24" containingFunctionPresentation="lambda expression inside method 'Awake'">
-            <startOffsets>
-              <option value="635" />
-            </startOffsets>
-            <endOffsets>
-              <option value="650" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Robot/RobotMover.cs</url>
-          <line>18</line>
-          <properties documentPath="D:\dev\IQuadratC\App\IQuadratC Server\Assets\Robot\RobotMover.cs" initialLine="18" containingFunctionPresentation="lambda expression inside method 'Awake'">
-            <startOffsets>
-              <option value="486" />
-            </startOffsets>
-            <endOffsets>
-              <option value="499" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Move Commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move Commands" />
   </component>
 </project>

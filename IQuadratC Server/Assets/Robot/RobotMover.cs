@@ -16,18 +16,21 @@ public class RobotMover : MonoBehaviour
     {
         joystickMoveEvent.Register((value) =>
         {
+            Debug.Log("Move " + value);
             move = value;
             lastJoystickupdate = Time.time;
         });
         
         joystickRotateEvent.Register((value) =>
         {
+            Debug.Log("Rotate " + value);
             rotate = value;
             lastJoystickupdate = Time.time;
         });
         
         joystickStopEvent.Register(() =>
         {
+            Debug.Log("Move Stop");
             move = float3.zero;
             rotate = 0;
             lastJoystickupdate = Time.time;
