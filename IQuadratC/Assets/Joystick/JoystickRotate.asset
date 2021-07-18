@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9ec5e33723b604c9bd9489dac5f289, type: 3}
   m_Name: JoystickRotate
   m_EditorClassIdentifier: 
-  value: 0
-  initalValue: 0
+  value: 0.01
+  initalValue: 0.01
   description: 
