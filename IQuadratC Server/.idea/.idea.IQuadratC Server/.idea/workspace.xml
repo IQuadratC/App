@@ -2,299 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp-Editor.dir/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp-Editor.dir/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp-Editor.dir/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp-Editor.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp-Editor.dir/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/ClientPort.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/ClientPort.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/Packet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/ServerIp.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/ServerIp.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/ServerPort.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/ServerPort.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/State.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/State.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/Server.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/Server.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerDebugMessage.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerDebugMessage.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerState.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerState.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/StartServer.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/StartServer.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/StopServer.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/StopServer.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/TCPServer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/TCPServer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/UDPServer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Server/UDPServer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/networkSpecs.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/networkSpecs.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/AStar.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/AStar.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Network.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Network.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/BuildEventSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/BuildEventSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicBool.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicBool.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventBool.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventBool.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventFloat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventFloat.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventFloat2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventFloat2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventFloat3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventFloat3.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventFloat4.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventFloat4.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventInt.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventInt.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventInt2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventInt2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventInt3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventInt3.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventInt4.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventInt4.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventIntArray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventIntArray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventString.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventString.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventStringArray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicEventStringArray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicFloat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicFloat.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicFloat2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicFloat2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicFloat2Array.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicFloat2Array.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicFloat3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicFloat3.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicFloat4.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicFloat4.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicInt.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicInt.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicInt2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicInt2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicInt2Array.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicInt2Array.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicInt3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicInt3.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicInt4.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicInt4.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicIntArray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicIntArray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicString.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicString.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicStringArray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicStringArray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/PublicEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/PublicEvent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/PublicEventMaster.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/PublicEventMaster.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/PublicMaster.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/PublicMaster.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/AudioCompressedInMemory.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/AudioCompressedInMemory.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/AudioStreaming.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/AudioStreaming.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/Defaults.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/Defaults/AlbedoTexture_Default.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/Defaults/AlbedoTexture_Default.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/Defaults/AudioDecompressOnLoad.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/Defaults/AudioDecompressOnLoad.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/Defaults/DirectionalLight_Default.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/Defaults/DirectionalLight_Default.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/NormalTexture.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/NormalTexture.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/UtilityTexture.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Presets/UtilityTexture.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings/ForwardRenderer.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings/ForwardRenderer.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings/SampleSceneProfile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings/SampleSceneProfile.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings/UniversalRP-HighQuality.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings/UniversalRP-HighQuality.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings/UniversalRP-LowQuality.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings/UniversalRP-LowQuality.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings/UniversalRP-MediumQuality.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Settings/UniversalRP-MediumQuality.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Threader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/Threader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AstarPathfindingProject.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AstarPathfindingProjectEditor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IQuadratC Server.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PackageToolsEditor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/XRSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/ClientPort.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/ClientPort.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Packet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Packet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/ServerIp.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/ServerIp.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/ServerPort.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/ServerPort.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientConnect.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientConnect.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientDebugMessage.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientDebugMessage.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientDisconnect.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientDisconnect.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientHandle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientHandle.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientId.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientId.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientState.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientState.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/TCPClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/TCPClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/UDPClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/UDPClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/network.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Client.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Client/Client.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Client/Client.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Client/ClientHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Client/ClientHandle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Client/ClientSend.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Client/ClientSend.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Client/ClientTexture.renderTexture" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Client/ClientTexture.renderTexture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Both/Packet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Packet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/Client.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/Client.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/IpManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/IpManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/Server.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/Server.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/ServerHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/ServerHandle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/ServerSend.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/ServerSend.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/ServerTexture.renderTexture" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V1/Server/ServerTexture.renderTexture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both/ClientPort.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both/ClientPort.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both/Packet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both/Packet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both/ServerIp.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both/ServerIp.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both/ServerPort.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both/ServerPort.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both/State.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Both/State.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/Client.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/Client.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientConnect.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientConnect.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientDebugMessage.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientDebugMessage.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientDisconnect.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientDisconnect.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientHandle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientId.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientId.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientSend.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientSend.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientState.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/ClientState.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/TCPClient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/TCPClient.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/UDPClient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Client/UDPClient.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/Server.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/Server.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/ServerClient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/ServerClient.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/ServerDebugMessage.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/ServerDebugMessage.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/ServerHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/ServerHandle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/ServerSend.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/ServerSend.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/ServerState.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/ServerState.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/StartServer.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/StartServer.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/StopServer.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/StopServer.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/TCPServer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/TCPServer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/UDPServer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/V2/Server/UDPServer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/networkSpecs.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/networkSpecs.md.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/ControllMode.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/ControllMode.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickMoveEvent.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickMoveEvent.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickRotateEvent.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickRotateEvent.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickStopEvent.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/JoystickStopEvent.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/RobotMover.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Roboter.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Roboter.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickMoveEvent.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickMoveEvent.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickRotateEvent.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickRotateEvent.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickStopEvent.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickStopEvent.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/SetRobotControlState.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/SetRobotControlState.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Network/Both/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Both/State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/Server.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Network/networkSpecs.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Network/networkSpecs.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AStar.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AStar.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Scenes/Network.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Scenes/Network.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/image.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,18 +50,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Robot/RobotMover.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Network/Client/ClientHandle.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Client/Client.cs" />
-      <option value="$PROJECT_DIR$/Assets/Network/Server/Server.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/ServerClient.cs" />
-      <option value="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/TCPServer.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/UDPServer.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Both/Packet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Network/Server/Server.cs" />
+      <option value="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Both/State.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/RobotMover.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vUM8yzJKarZ3qs2ml03uj7zRET" />
@@ -365,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1626612059233</updated>
-      <workItem from="1626612078342" duration="682000" />
+      <workItem from="1626612078342" duration="3552000" />
     </task>
     <servers />
   </component>
@@ -387,5 +137,50 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Robot/RobotMover.cs</url>
+          <line>30</line>
+          <properties documentPath="D:\dev\IQuadratC\App\IQuadratC Server\Assets\Robot\RobotMover.cs" initialLine="30" containingFunctionPresentation="lambda expression inside method 'Awake'">
+            <startOffsets>
+              <option value="779" />
+            </startOffsets>
+            <endOffsets>
+              <option value="798" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Robot/RobotMover.cs</url>
+          <line>24</line>
+          <properties documentPath="D:\dev\IQuadratC\App\IQuadratC Server\Assets\Robot\RobotMover.cs" initialLine="24" containingFunctionPresentation="lambda expression inside method 'Awake'">
+            <startOffsets>
+              <option value="635" />
+            </startOffsets>
+            <endOffsets>
+              <option value="650" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Robot/RobotMover.cs</url>
+          <line>18</line>
+          <properties documentPath="D:\dev\IQuadratC\App\IQuadratC Server\Assets\Robot\RobotMover.cs" initialLine="18" containingFunctionPresentation="lambda expression inside method 'Awake'">
+            <startOffsets>
+              <option value="486" />
+            </startOffsets>
+            <endOffsets>
+              <option value="499" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

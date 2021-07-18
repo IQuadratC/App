@@ -1278,13 +1278,17 @@ MonoBehaviour:
   serverPort: {fileID: 11400000, guid: 06666b8fb91cad24a93c40bc41b92887, type: 2}
   clientId: {fileID: 11400000, guid: 8b7ee2f1e3cdd9ed7ae576191b3ef22f, type: 2}
   clientState: {fileID: 11400000, guid: 18aef917beb0c3a5f9c1d3be6c7ddecf, type: 2}
-  connectEvent: {fileID: 11400000, guid: 1a8d0a059bd92144983a4fcd74a56185, type: 2}
-  disconnectEvent: {fileID: 11400000, guid: 995784cb38572f2458e145de3a59822d, type: 2}
-  debugMessageEvent: {fileID: 11400000, guid: 22b926766bdbe38889e996ddcf7912ed, type: 2}
   clientUdpSupport: 1
   serverUdpSupport: 0
   udpConnected: 0
+  connectEvent: {fileID: 11400000, guid: 1a8d0a059bd92144983a4fcd74a56185, type: 2}
+  disconnectEvent: {fileID: 11400000, guid: 995784cb38572f2458e145de3a59822d, type: 2}
+  debugMessageEvent: {fileID: 11400000, guid: 22b926766bdbe38889e996ddcf7912ed, type: 2}
   imageRenderer: {fileID: 687712134}
+  controllModeEvent: {fileID: 11400000, guid: 2550ad90de292764e9ef7cd211777a55, type: 2}
+  joystickMoveEvent: {fileID: 11400000, guid: 4d308dcc8da71dc439982bdea35ec8d1, type: 2}
+  joystickRotateEvent: {fileID: 11400000, guid: 0bac079d41d5c4e40a0197f4d93fad01, type: 2}
+  joystickStopEvent: {fileID: 11400000, guid: 7ef41f9ef18e7cb42883f27f4c849eca, type: 2}
 --- !u!4 &2070034877
 Transform:
   m_ObjectHideFlags: 0

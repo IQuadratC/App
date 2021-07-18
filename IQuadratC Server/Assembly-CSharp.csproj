@@ -80,6 +80,7 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicString.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicEventMaster.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventBool.cs" />
+     <Compile Include="Assets\Robot\RobotMover.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -316,6 +317,9 @@
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC Server/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="clipper_library">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC Server/Library/PackageCache/com.unity.cinemachine@2.7.4/Runtime/ThirdParty/clipper_library.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -751,6 +755,12 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC Server/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC Server/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC Server/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

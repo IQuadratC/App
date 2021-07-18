@@ -1,4 +1,5 @@
 ﻿using Network.Both;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Network.Server
@@ -42,6 +43,29 @@ namespace Network.Server
         {
             fromClient.updConnected = packet.ReadBool() && server.serverUdpSupport;
             Debug.Log("SERVER: [" +fromClient.id+ "] UDP connection status: "+ fromClient.updConnected);
+        }
+        
+        public void ClientControllMode(ServerClient fromClient, Packet packet)
+        {
+            int value = packet.ReadInt32();
+            server.controllMode.value = value;
+        }
+        
+        public void ClientJoystickMove(ServerClient fromClient, Packet packet)
+        {
+            float3 value = packet.ReadFloat3();
+            server.joystickMoveEvent.Raise(value);
+        }
+        
+        public void ClientJoystickRotate(ServerClient fromClient, Packet packet)
+        {
+            float value = packet.ReadFloat();
+            server.joystickRotateEvent.Raise(value);
+        }
+        
+        public void ClientJoystickStop(ServerClient fromClient, Packet packet)
+        {
+            server.joystickStopEvent.Raise();
         }
     }
 }

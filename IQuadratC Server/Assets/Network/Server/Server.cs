@@ -24,6 +24,11 @@ namespace Network.Server
         [SerializeField] private PublicEvent stopServerEvent;
         [SerializeField] private PublicEventString debugMessageEvent;
 
+        [SerializeField] public PublicInt controllMode;
+        [SerializeField] public PublicEventFloat3 joystickMoveEvent;
+        [SerializeField] public PublicEventFloat joystickRotateEvent;
+        [SerializeField] public PublicEvent joystickStopEvent;
+
         public bool serverUdpSupport;
 
         private void Awake()
@@ -41,6 +46,11 @@ namespace Network.Server
                 { (byte)Packets.clientSettings, serverHandle.ClientSettings },
                 { (byte)Packets.clientUDPConnection, serverHandle.ClientUDPConnection },
                 { (byte)Packets.clientUDPConnectionStatus, serverHandle.ClientUDPConnectionStatus },
+                
+                { (byte)Packets.clientControllMode, serverHandle.ClientControllMode },
+                { (byte)Packets.clientJoystickMove, serverHandle.ClientJoystickMove },
+                { (byte)Packets.clientJoystickRotate, serverHandle.ClientJoystickRotate },
+                { (byte)Packets.clientJoystickStop, serverHandle.ClientJoystickStop },
             };
 
             startServerEvent.Register(StartServer);

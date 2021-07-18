@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Network.Both;
+using Unity.Mathematics;
 using UnityEngine;
 using Utility;
 
@@ -56,6 +57,40 @@ namespace Network.V2.Client
             using (Packet packet = new Packet((byte) Packets.clientUDPConnectionStatus))
             {
                 packet.Write(client.udpConnected);
+                client.SendTCPData(packet);
+            }
+        }
+        
+        public void ClientControllMode(int mode)
+        {
+            using (Packet packet = new Packet((byte) Packets.clientControllMode))
+            {
+                packet.Write(mode);
+                client.SendTCPData(packet);
+            }
+        }
+        
+        public void ClientJoystickMove(float3 value)
+        {
+            using (Packet packet = new Packet((byte) Packets.clientJoystickMove))
+            {
+                packet.Write(value);
+                client.SendUDPData(packet);
+            }
+        }
+        public void ClientJoystickRotate(float value)
+        {
+            using (Packet packet = new Packet((byte) Packets.clientJoystickRotate))
+            {
+                packet.Write(value);
+                client.SendUDPData(packet);
+            }
+        }
+        
+        public void ClientJoystickStop()
+        {
+            using (Packet packet = new Packet((byte) Packets.clientJoystickStop))
+            {
                 client.SendTCPData(packet);
             }
         }

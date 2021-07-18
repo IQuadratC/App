@@ -21,18 +21,22 @@ namespace Network.Client
         public UDPClient udpClient;
         public ClientHandle clientHandle;
         public ClientSend clientSend;
-
-        [SerializeField] private PublicEvent connectEvent;
-        [SerializeField] private PublicEvent disconnectEvent;
-        [SerializeField] private PublicEventString debugMessageEvent;
-
         
         public bool clientUdpSupport;
         [HideInInspector] public bool serverUdpSupport;
         [HideInInspector] public bool udpConnected;
         
+
+        [SerializeField] private PublicEvent connectEvent;
+        [SerializeField] private PublicEvent disconnectEvent;
+        [SerializeField] private PublicEventString debugMessageEvent;
         // Only for testing
         [SerializeField] public Renderer imageRenderer;
+
+        [SerializeField] private PublicEventInt controllModeEvent;
+        [SerializeField] private PublicEventFloat3 joystickMoveEvent;
+        [SerializeField] private PublicEventFloat joystickRotateEvent;
+        [SerializeField] private PublicEvent joystickStopEvent;
         
         private void Awake()
         {
@@ -55,8 +59,14 @@ namespace Network.Client
             connectEvent.Register(tcpClient.Connect);
             disconnectEvent.Register(Disconnect);
             debugMessageEvent.Register(clientSend.DebugMessage);
+            
+            controllModeEvent.Register(clientSend.ClientControllMode);
+            joystickMoveEvent.Register(clientSend.ClientJoystickMove);
+            joystickRotateEvent.Register(clientSend.ClientJoystickRotate);
+            joystickStopEvent.Register(clientSend.ClientJoystickStop);
 
             clientState.value = (int) NetworkState.notConnected;
+            
         }
 
         private void OnApplicationQuit()
