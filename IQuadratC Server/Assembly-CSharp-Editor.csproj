@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5f62a913-e871-51d3-e330-58185a57ea1f}</ProjectGuid>
+    <ProjectGuid>{de86bf2e-9eab-f75b-0753-ff6ca114c4e9}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -41,46 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventStringArray.cs" />
-     <Compile Include="Assets\Network\Client\TCPClient.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicIntArray.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat4.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt4.cs" />
-     <Compile Include="Assets\Network\Client\UDPClient.cs" />
-     <Compile Include="Assets\AI\GetPath.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventInt4.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt2.cs" />
-     <Compile Include="Assets\Network\Both\State.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventInt.cs" />
-     <Compile Include="Assets\Utility\EventSystem\BuildEventSystem.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventInt3.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventIntArray.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt3.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventString.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt2Array.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventInt2.cs" />
-     <Compile Include="Assets\Network\Client\Client.cs" />
-     <Compile Include="Assets\Utility\Threader.cs" />
-     <Compile Include="Assets\Network\Client\ClientHandle.cs" />
-     <Compile Include="Assets\AI\AISetup.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat2Array.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicBool.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicStringArray.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat3.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat4.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat2.cs" />
-     <Compile Include="Assets\Utility\EventSystem\PublicMaster.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat2.cs" />
-     <Compile Include="Assets\Network\Both\Packet.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat3.cs" />
-     <Compile Include="Assets\Utility\EventSystem\PublicEvent.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat.cs" />
-     <Compile Include="Assets\Network\Client\ClientSend.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicString.cs" />
-     <Compile Include="Assets\Utility\EventSystem\PublicEventMaster.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventBool.cs" />
+     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -312,14 +273,38 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
-     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+     <Reference Include="UnityEditor.Graphs">
+     <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+     <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UWP.Extensions">
+     <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Plastic.Antlr3.Runtime">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.YamlDotNet">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.IonicZip">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="unityplastic">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="nunit.framework">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -669,6 +654,12 @@
      <Reference Include="System.Xml.XPath.XDocument">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEngine.TestRunner">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.TestRunner">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
@@ -705,6 +696,9 @@
      <Reference Include="VSSettingsProvider">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/ScriptAssemblies/VSSettingsProvider.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
@@ -722,9 +716,6 @@
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
@@ -758,17 +749,9 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{9363f64e-ec90-3ea0-9992-e344ebd304e4}</Project>
-      <Name>PackageToolsEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{f7c91fe3-9c9b-dbe0-2be8-5e4760a33e68}</Project>
-      <Name>AstarPathfindingProject</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
-      <Project>{56e62be9-5a8c-4013-390c-7e4f64d86837}</Project>
-      <Name>AstarPathfindingProjectEditor</Name>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{5f62a913-e871-51d3-e330-58185a57ea1f}</Project>
+      <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
