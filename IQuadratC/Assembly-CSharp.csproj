@@ -58,6 +58,7 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventIntArray.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt3.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventString.cs" />
+     <Compile Include="Assets\Joystick\JoystickDir.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt2Array.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventInt2.cs" />
      <Compile Include="Assets\Network\Client\Client.cs" />
@@ -72,6 +73,7 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat4.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat2.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicMaster.cs" />
+     <Compile Include="Assets\Joystick\JoystickSender.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat2.cs" />
      <Compile Include="Assets\Network\Both\Packet.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat3.cs" />
@@ -81,8 +83,6 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicString.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicEventMaster.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventBool.cs" />
-     <Compile Include="Assets\Joystick\JoystickDir.cs" />
-     <Compile Include="Assets\Joystick\JoystickSender.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
