@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +87,7 @@
       <workItem from="1627051226519" duration="674000" />
       <workItem from="1628159742855" duration="595000" />
       <workItem from="1628347536962" duration="1253000" />
+      <workItem from="1628354538952" duration="930000" />
     </task>
     <task id="LOCAL-00001" summary="Move Commands">
       <created>1626618119809</created>
