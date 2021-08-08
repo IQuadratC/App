@@ -17,15 +17,15 @@ public class AISetup : MonoBehaviour
     [SerializeField]
     private PublicInt2Array obsticals;
     
-    // Start is called before the first frame update
+
     void Start()
     {
         GridGraph gg = AstarPath.active.data.AddGraph(typeof(GridGraph)) as GridGraph;
-        gg.center = new Vector3(0, 0, 0);
+        gg.center = new Vector3(0.5f, 0, 0.5f); // 0,5 so cell coordinates are integers. 
         gg.neighbours = NumNeighbours.Eight;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (active)
