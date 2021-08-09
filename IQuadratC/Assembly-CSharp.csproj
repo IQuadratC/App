@@ -66,6 +66,7 @@
      <Compile Include="Assets\Network\Client\ClientHandle.cs" />
      <Compile Include="Assets\AI\AISetup.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat2Array.cs" />
+     <Compile Include="Assets\Video\VideoDecoder.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicBool.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicStringArray.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat3.cs" />
