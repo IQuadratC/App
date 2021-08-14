@@ -133,6 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 18473721}
   - component: {fileID: 18473720}
+  - component: {fileID: 18473722}
+  - component: {fileID: 18473723}
   m_Layer: 0
   m_Name: Server
   m_TagString: Untagged
@@ -176,6 +178,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &18473722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18473719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49f3e0fa5f24fa38833fe23756782d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ip: {fileID: 11400000, guid: 23d1fca33a0035844a09415370cb2436, type: 2}
+  name: {fileID: 11400000, guid: 5eb81eda21c80474398ec8bd4d96ac2a, type: 2}
+--- !u!114 &18473723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18473719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673269ded0704b89af57051027df3719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webAdress: {fileID: 11400000, guid: 233d2791eece7934d8cfceecf5804aa4, type: 2}
 --- !u!1 &131444867
 GameObject:
   m_ObjectHideFlags: 0

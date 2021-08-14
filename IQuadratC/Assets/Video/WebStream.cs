@@ -4,6 +4,7 @@ using System.Collections;
 using System;
 using System.Net;
 using System.IO;
+using Utility;
 
 public class WebStream : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class WebStream : MonoBehaviour
     private Stream stream;
     private WebResponse resp;
     public MeshRenderer frame;
+
+    [SerializeField] private PublicString ip;
 
     public void Start()
     {
@@ -32,7 +35,7 @@ public class WebStream : MonoBehaviour
     {
         texture = new Texture2D(2, 2);
 
-        string url = "http://192.168.1.120:8000/stream.mjpg";
+        string url = "http://" +ip.value+ ":8000/stream.mjpg";
 
         HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
 
