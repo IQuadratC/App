@@ -22,17 +22,20 @@ namespace Network.Client
         public ClientHandle clientHandle;
         public ClientSend clientSend;
         
-        public bool clientUdpSupport;
-        [HideInInspector] public bool serverUdpSupport;
-        [HideInInspector] public bool udpConnected;
-        
-
         [SerializeField] private PublicEvent connectEvent;
         [SerializeField] private PublicEvent disconnectEvent;
         [SerializeField] private PublicEventString debugMessageEvent;
-        // Only for testing
-        [SerializeField] public Renderer imageRenderer;
+        
+        public PublicBool clientUdpSupport;
+        [HideInInspector] public bool serverUdpSupport;
+        [HideInInspector] public bool udpConnected;
 
+        public PublicBool camSupport;
+        public PublicBool serverCamSupport;
+        
+        public PublicBool joystickSupport;
+        public PublicBool serverJoystickSupport;
+        
         [SerializeField] private PublicEventInt controllModeEvent;
         [SerializeField] private PublicEventFloat3 joystickMoveEvent;
         [SerializeField] private PublicEventFloat joystickRotateEvent;
@@ -52,8 +55,6 @@ namespace Network.Client
                 { (byte)Packets.serverSettings, clientHandle.ServerSettings },
                 { (byte)Packets.serverStartUDP, clientHandle.ServerStartUDP },
                 { (byte)Packets.serverUDPConnection, clientHandle.ServerUDPConnection },
-                
-                { (byte)Packets.serverCamImage, clientHandle.ServerCamImage},
             };
 
             connectEvent.Register(tcpClient.Connect);

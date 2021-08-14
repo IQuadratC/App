@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b55a685f95d176e43abcc3463b016fff, type: 3}
-  m_Name: ServerIp
+  m_Script: {fileID: 11500000, guid: f16a0cfd9afbec94e81ed27a2f59f448, type: 3}
+  m_Name: JoystickOnline
   m_EditorClassIdentifier: 
-  value: 127.0.0.1
-  initalValue: 127.0.0.1
-  description: 31.16.43.133 127.0.0.1 192.168.178.41
+  value: 0
+  initalValue: 0
+  description: 

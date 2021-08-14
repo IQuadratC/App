@@ -30,7 +30,6 @@ public class RobotMover : MonoBehaviour
         
         joystickStopEvent.Register(() =>
         {
-            Debug.Log("Move Stop");
             move = float3.zero;
             rotate = 0;
             lastJoystickupdate = Time.time;

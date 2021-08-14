@@ -28,7 +28,10 @@ namespace Network.Server
             using (Packet packet = new Packet((byte) Packets.serverSettings))
             {
                 packet.Write(client.id);
-                packet.Write(server.serverUdpSupport);
+                packet.Write(server.udpSupport.value);
+                packet.Write(server.camSupport.value);
+                packet.Write(server.joystickSupport.value);
+
                 server.SendTCPData(client, packet);
             }
         }

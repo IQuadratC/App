@@ -81,7 +81,6 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicString.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicEventMaster.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventBool.cs" />
-     <Compile Include="Assets\Network\Both\ServerData.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -763,6 +762,8 @@
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC Server/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
      </Reference>
+  </ItemGroup>
+  <ItemGroup>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -17,8 +17,6 @@ clientUDPConnection = 5,
 serverUDPConnection = 6,
 clientUDPConnectionStatus = 7,
 
-serverCamImage = 8,
-
 clientControllMode = 10, // 1 = no control, 1 = Joystick, 3 = AI
 clientJoystickMove = 21, // dir norm Vec2, speed float
 clientJoystickRotate = 22, // speed float, pos = right, neg = left
@@ -46,11 +44,14 @@ clientMoveAI = 25,
 
 4. Server -> Client ServerSettings (TCP)  
    clientId send from server to client
-   settings:
-   udp support bool
+   settings
 
 5.  Server <- Client ClientSettings (TCP)
-    settings:
-    udp support bool
+    settings
 
 6. Server -> Client ServerStart
+
+## Settings
+- UDP Support
+- Cam Support
+- Joystick Support

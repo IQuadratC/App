@@ -19,14 +19,32 @@ public class WebStream : MonoBehaviour
     public MeshRenderer frame;
 
     [SerializeField] private PublicString ip;
+    [SerializeField] private PublicBool CamOnline;
 
-    public void Start()
+    private bool online;
+    
+    private void Update()
     {
-        GetVideo();
+        if (CamOnline.value && !online)
+        {
+            online = true;
+            GetVideo();
+        }
+
+        if (!CamOnline.value && online)
+        {
+            StopStream();
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        StopStream();
     }
 
     public void StopStream()
     {
+        online = false;
         stream.Close();
         resp.Close();
     }

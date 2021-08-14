@@ -26,6 +26,8 @@ namespace Network.Client
             Debug.LogFormat("CLIENT: recived server settings");
             client.clientId.value = packet.ReadByte();
             client.serverUdpSupport = packet.ReadBool();
+            client.serverCamSupport.value = packet.ReadBool();
+            client.serverJoystickSupport.value = packet.ReadBool();
             
             client.clientSend.ClientSettings();
         }
@@ -39,15 +41,6 @@ namespace Network.Client
         public void ServerUDPConnection(Packet packet)
         {
             client.clientSend.ClientUDPConnectionStatus();
-        }
-        
-        public void ServerCamImage(Packet packet)
-        {
-            byte[] data = packet.ReadBytes(packet.Length() - 14);
-            
-            Texture2D tex = new Texture2D(2, 2);
-            tex.LoadImage(data);
-            client.imageRenderer.material.mainTexture = tex;
         }
     }
 }
