@@ -9,53 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2e007d82c24a1eb841b42210436bb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4317d35c43044bf5a20ca64ec355762c, type: 3}
   m_Name: Path
   m_EditorClassIdentifier: 
-  value:
-  - x: 20.000004
-    y: 0
-  - x: 20.500002
-    y: 0.5
-  - x: 20.500002
-    y: 1.5000001
-  - x: 20.500002
-    y: 2.5
-  - x: 20.500002
-    y: 3.5000002
-  - x: 20.500002
-    y: 4.5
-  - x: 20.500002
-    y: 5.5000005
-  - x: 20.500002
-    y: 6.5000005
-  - x: 20.500002
-    y: 7.5000005
-  - x: 20.500002
-    y: 8.5
-  - x: 20.500002
-    y: 9.5
-  - x: 20.500002
-    y: 10.500001
-  - x: 20.500002
-    y: 11.500001
-  - x: 20.500002
-    y: 12.500001
-  - x: 20.500002
-    y: 13.500001
-  - x: 20.500002
-    y: 14.500001
-  - x: 20.500002
-    y: 15.500001
-  - x: 20.500002
-    y: 16.5
-  - x: 20.500002
-    y: 17.5
-  - x: 20.500002
-    y: 18.5
-  - x: 20.500002
-    y: 19.5
-  - x: 20.000004
-    y: 20.000004
+  value: []
   initalValue: []
-  description: The points on the Path betwen the start and goal
+  description: 
