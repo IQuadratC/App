@@ -157,11 +157,13 @@ MonoBehaviour:
   startServerEvent: {fileID: 11400000, guid: ed450f8a6738ddc43a7240e52b746468, type: 2}
   stopServerEvent: {fileID: 11400000, guid: daaed0d5430f0f84da04b76bf7a3c2b3, type: 2}
   debugMessageEvent: {fileID: 11400000, guid: 0b71923bd36351cfe8658bf99b1abded, type: 2}
-  controllMode: {fileID: 0}
+  udpSupport: {fileID: 11400000, guid: 963e0f142b0aafe4ea28888da2672fba, type: 2}
+  camSupport: {fileID: 11400000, guid: 45646c020f9f5bd4bb885d76560cb64d, type: 2}
+  joystickSupport: {fileID: 11400000, guid: 06c38c019a6e16c4f97c6736587e9e88, type: 2}
+  controllMode: {fileID: 11400000, guid: 762d670e69312314199cf9854b0053b4, type: 2}
   joystickMoveEvent: {fileID: 11400000, guid: e1f3f1a67dd7d4d4d908f98db63c428d, type: 2}
   joystickRotateEvent: {fileID: 11400000, guid: 19f567d6d8aab20429106ccbbb910f5d, type: 2}
   joystickStopEvent: {fileID: 11400000, guid: 2d44edb2d8620ba4d8fdf69b05e4d1d2, type: 2}
-  serverUdpSupport: 1
 --- !u!4 &18473721
 Transform:
   m_ObjectHideFlags: 0

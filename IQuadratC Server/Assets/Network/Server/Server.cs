@@ -23,13 +23,17 @@ namespace Network.Server
         [SerializeField] private PublicEvent startServerEvent;
         [SerializeField] private PublicEvent stopServerEvent;
         [SerializeField] private PublicEventString debugMessageEvent;
+        
+        public PublicBool udpSupport;
+        
+        public PublicBool camSupport;
+
+        public PublicBool joystickSupport;
 
         [SerializeField] public PublicInt controllMode;
         [SerializeField] public PublicEventFloat3 joystickMoveEvent;
         [SerializeField] public PublicEventFloat joystickRotateEvent;
         [SerializeField] public PublicEvent joystickStopEvent;
-
-        public bool serverUdpSupport;
 
         private void Awake()
         {
@@ -73,7 +77,7 @@ namespace Network.Server
             serverState.value = (int) NetworkState.connecting;
             
             tcpServer.Start();
-            if (serverUdpSupport)
+            if (udpSupport)
             {
                 udpServer.Start();
             }
@@ -152,7 +156,7 @@ namespace Network.Server
         
         public void SendUDPData(ServerClient client, Packet packet)
         {
-            if (!serverUdpSupport || !client.clientUdpSupport)
+            if (!udpSupport || !client.clientUdpSupport)
             {
                 SendTCPData(client, packet);
                 return;
@@ -168,7 +172,7 @@ namespace Network.Server
             {
                 if (client != null)
                 {
-                    if (!serverUdpSupport || !client.clientUdpSupport)
+                    if (!udpSupport || !client.clientUdpSupport)
                     {
                         SendTCPData(client, packet);
                         continue;

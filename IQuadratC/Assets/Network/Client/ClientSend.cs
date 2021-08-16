@@ -28,7 +28,9 @@ namespace Network.V2.Client
             Debug.Log("CLIENT: sending settings");
             using (Packet packet = new Packet((byte) Packets.clientSettings))
             {
-                packet.Write(client.clientUdpSupport);
+                packet.Write(client.clientUdpSupport.value);
+                packet.Write(client.camSupport.value);
+                packet.Write(client.joystickSupport.value);
                 
                 client.SendTCPData(packet);
             }

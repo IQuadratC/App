@@ -22,8 +22,10 @@ namespace Network.Server
         {
             Debug.Log("SERVER: [" +fromClient.id+ "] recived client settings");
             fromClient.clientUdpSupport = packet.ReadBool();
+            fromClient.clientCamSupport = packet.ReadBool();
+            fromClient.clientJoystickSupport = packet.ReadBool();
 
-            if (server.serverUdpSupport && fromClient.clientUdpSupport)
+            if (server.udpSupport.value && fromClient.clientUdpSupport)
             {
                 server.serverSend.ServerStartUDP(fromClient);
             }
@@ -41,7 +43,7 @@ namespace Network.Server
         
         public void ClientUDPConnectionStatus(ServerClient fromClient, Packet packet)
         {
-            fromClient.updConnected = packet.ReadBool() && server.serverUdpSupport;
+            fromClient.updConnected = packet.ReadBool() && server.udpSupport;
             Debug.Log("SERVER: [" +fromClient.id+ "] UDP connection status: "+ fromClient.updConnected);
         }
         

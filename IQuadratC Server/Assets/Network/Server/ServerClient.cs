@@ -13,8 +13,12 @@ namespace Network.Server
         public string ip;
         public IPEndPoint endPoint;
         public NetworkState state;
+        
         public bool clientUdpSupport;
         public bool updConnected;
+        
+        public bool clientCamSupport;
+        public bool clientJoystickSupport;
 
         public ServerClient(byte id, TcpClient socket)
         {

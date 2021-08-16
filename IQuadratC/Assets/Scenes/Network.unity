@@ -335,6 +335,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648389804}
   m_CullTransparentMesh: 1
+--- !u!1 &662164924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 662164926}
+  - component: {fileID: 662164925}
+  m_Layer: 0
+  m_Name: WebStream
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &662164925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662164924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8868bc330781dfd488bac8fb019261d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JpegData: 
+  resolution: 480x360
+  frame: {fileID: 687712134}
+  ip: {fileID: 11400000, guid: 23d1fca33a0035844a09415370cb2436, type: 2}
+  CamOnline: {fileID: 11400000, guid: 138a60dee86bd2242a40853e6efb63c1, type: 2}
+--- !u!4 &662164926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662164924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 687712136}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &687712132
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,12 +474,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687712132}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.11, y: -0.31, z: 0}
-  m_LocalScale: {x: 0.60336304, y: 1, z: 0.6536904}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.11, y: 0.34, z: 0}
+  m_LocalScale: {x: 1.3966043, y: 1, z: 0.72801495}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 662164926}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &839206741
 GameObject:
@@ -480,7 +529,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &918318627
 GameObject:
@@ -541,11 +590,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918318627}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -57.800003, z: -5202.0005}
+  m_LocalScale: {x: 57.800003, y: 57.800003, z: 57.800003}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1705261171}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992332829
@@ -584,7 +633,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 113.399994, y: -76.399994}
+  m_AnchoredPosition: {x: 113.400024, y: -76.399994}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &992332831
@@ -1207,6 +1256,7 @@ RectTransform:
   - {fileID: 85000194}
   - {fileID: 992332830}
   - {fileID: 1347042265}
+  - {fileID: 918318630}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1328,13 +1378,16 @@ MonoBehaviour:
   serverPort: {fileID: 11400000, guid: 06666b8fb91cad24a93c40bc41b92887, type: 2}
   clientId: {fileID: 11400000, guid: 8b7ee2f1e3cdd9ed7ae576191b3ef22f, type: 2}
   clientState: {fileID: 11400000, guid: 18aef917beb0c3a5f9c1d3be6c7ddecf, type: 2}
-  clientUdpSupport: 1
-  serverUdpSupport: 0
-  udpConnected: 0
   connectEvent: {fileID: 11400000, guid: 1a8d0a059bd92144983a4fcd74a56185, type: 2}
   disconnectEvent: {fileID: 11400000, guid: 995784cb38572f2458e145de3a59822d, type: 2}
   debugMessageEvent: {fileID: 11400000, guid: 22b926766bdbe38889e996ddcf7912ed, type: 2}
-  imageRenderer: {fileID: 687712134}
+  clientUdpSupport: {fileID: 11400000, guid: 963e0f142b0aafe4ea28888da2672fba, type: 2}
+  serverUdpSupport: 0
+  udpConnected: 0
+  camSupport: {fileID: 11400000, guid: 45646c020f9f5bd4bb885d76560cb64d, type: 2}
+  serverCamSupport: {fileID: 11400000, guid: 138a60dee86bd2242a40853e6efb63c1, type: 2}
+  joystickSupport: {fileID: 11400000, guid: 06c38c019a6e16c4f97c6736587e9e88, type: 2}
+  serverJoystickSupport: {fileID: 11400000, guid: b54c2bae3173d3649b551b7761de72c5, type: 2}
   controllModeEvent: {fileID: 11400000, guid: 2550ad90de292764e9ef7cd211777a55, type: 2}
   joystickMoveEvent: {fileID: 11400000, guid: 4d308dcc8da71dc439982bdea35ec8d1, type: 2}
   joystickRotateEvent: {fileID: 11400000, guid: 0bac079d41d5c4e40a0197f4d93fad01, type: 2}

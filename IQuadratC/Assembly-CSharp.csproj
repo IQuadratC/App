@@ -55,6 +55,7 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventInt.cs" />
      <Compile Include="Assets\Utility\EventSystem\BuildEventSystem.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventInt3.cs" />
+     <Compile Include="Assets\Video\WebStream.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventIntArray.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt3.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventString.cs" />
