@@ -108,5 +108,30 @@ namespace Network.V2.Client
                 client.SendTCPData(packet);
             }
         }
+        
+        public void ClientLidarMode(int mode)
+        {
+            using (Packet packet = new Packet((byte) Packets.clientLidarMode))
+            {
+                packet.Write(mode);
+                client.SendTCPData(packet);
+            }
+        }
+        
+        public void ClientGetSLAMMap()
+        {
+            using (Packet packet = new Packet((byte) Packets.clientGetSLAMMap))
+            {
+                client.SendTCPData(packet);
+            }
+        }
+        
+        public void ClientGetPosition()
+        {
+            using (Packet packet = new Packet((byte) Packets.clientGetPosition))
+            {
+                client.SendTCPData(packet);
+            }
+        }
     }
 }

@@ -7,8 +7,8 @@ using Utility;
 
 public class LidarController : MonoBehaviour
 {
-    [SerializeField] private PublicEventBool lidarModeEvent;
-    [SerializeField] private PublicBool lidarMode;
+    [SerializeField] private PublicEventInt lidarModeEvent;
+    [SerializeField] private PublicInt lidarMode;
     
     [SerializeField] private float minLength = 0.1f;
     [SerializeField] private float maxLength = 8.0f;
@@ -17,23 +17,19 @@ public class LidarController : MonoBehaviour
     {
         lidarModeEvent.Register((value) =>
         {
-            if (value && !lidarMode)
-            {
-                lidarMode.value = true;
-            }
-            else if (!value && lidarMode)
-            {
-                lidarMode.value = false;
-            }
+            lidarMode.value = value;
         });
     }
 
+    [SerializeField] private PublicFloat3 pos;
+
     private void Update()
     {
-        if (lidarMode.value)
+        if (lidarMode.value == 1)
         {
             scan();
         }
+        pos.value = new float3(transform.position.x, transform.position.z, transform.rotation.eulerAngles.y);
     }
 
     [SerializeField] private PublicFloat2Array dataArrayPolar;
@@ -43,6 +39,7 @@ public class LidarController : MonoBehaviour
     
     private void OnDrawGizmos()
     {
+        Gizmos.color = new Color(1, 1, 1, 0.1f);
         if (showLines)
         {
             foreach (float2 data in dataArray.value)

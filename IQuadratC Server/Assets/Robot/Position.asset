@@ -9,9 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bd1711f24624eb7aeb397efa484b436, type: 3}
-  m_Name: SLAMGrid
+  m_Script: {fileID: 11500000, guid: 2d3da320e7d5c7c418d8b710b24a67ce, type: 3}
+  m_Name: Position
   m_EditorClassIdentifier: 
-  value: 
-  initalValue: 
+  value:
+    x: 0
+    y: 0
+    z: 0
+  initalValue:
+    x: 0
+    y: 0
+    z: 0
   description: 

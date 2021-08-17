@@ -166,6 +166,10 @@ MonoBehaviour:
   joystickMoveEvent: {fileID: 11400000, guid: e1f3f1a67dd7d4d4d908f98db63c428d, type: 2}
   joystickRotateEvent: {fileID: 11400000, guid: 19f567d6d8aab20429106ccbbb910f5d, type: 2}
   joystickStopEvent: {fileID: 11400000, guid: 2d44edb2d8620ba4d8fdf69b05e4d1d2, type: 2}
+  lidarModeEvent: {fileID: 11400000, guid: b50daf0275747994eb4b5891acc52899, type: 2}
+  lidarMode: {fileID: 11400000, guid: ab02ab6339e6fdf4a9e40d11becb8fc3, type: 2}
+  SLAMMap: {fileID: 11400000, guid: c75cee49c9c62eb48ad79d38db162acc, type: 2}
+  position: {fileID: 11400000, guid: 9602746a371fdff4da25e447136b3701, type: 2}
 --- !u!4 &18473721
 Transform:
   m_ObjectHideFlags: 0
@@ -338,9 +342,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lidarModeEvent: {fileID: 11400000, guid: b50daf0275747994eb4b5891acc52899, type: 2}
-  lidarMode: {fileID: 11400000, guid: a67783463a9ee0948947d1612326b2ce, type: 2}
+  lidarMode: {fileID: 11400000, guid: ab02ab6339e6fdf4a9e40d11becb8fc3, type: 2}
   minLength: 30
   maxLength: 8000
+  pos: {fileID: 11400000, guid: 9602746a371fdff4da25e447136b3701, type: 2}
   dataArrayPolar: {fileID: 11400000, guid: 1a5fdaa62b0ef004db48186830b4329d, type: 2}
   dataArray: {fileID: 11400000, guid: feb783e2f4aa8d44888c42cf1ece1a4f, type: 2}
   showLines: 1
@@ -808,6 +813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liveData: {fileID: 11400000, guid: feb783e2f4aa8d44888c42cf1ece1a4f, type: 2}
+  pos: {fileID: 11400000, guid: 9602746a371fdff4da25e447136b3701, type: 2}
+  grid: {fileID: 11400000, guid: c75cee49c9c62eb48ad79d38db162acc, type: 2}
   gridSize: 1000
   gridIntervall: 10
 --- !u!4 &556172756
@@ -818,7 +825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556172754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.704546, y: -8995.602, z: -636.4144}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

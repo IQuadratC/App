@@ -35,6 +35,12 @@ namespace Network.Server
         [SerializeField] public PublicEventFloat joystickRotateEvent;
         [SerializeField] public PublicEvent joystickStopEvent;
 
+        [SerializeField] public PublicEventInt lidarModeEvent;
+        [SerializeField] public PublicInt lidarMode;
+        
+        [SerializeField] public PublicByteArray SLAMMap;
+        [SerializeField] public PublicFloat3 position;
+
         private void Awake()
         {
             tcpServer = new TCPServer(this);
@@ -55,6 +61,10 @@ namespace Network.Server
                 { (byte)Packets.clientJoystickMove, serverHandle.ClientJoystickMove },
                 { (byte)Packets.clientJoystickRotate, serverHandle.ClientJoystickRotate },
                 { (byte)Packets.clientJoystickStop, serverHandle.ClientJoystickStop },
+                
+                { (byte)Packets.clientLidarMode, serverHandle.ClientLidarMode },
+                { (byte)Packets.clientGetSLAMMap, serverHandle.ClientGetSLAMMap },
+                { (byte)Packets.clientGetPosition, serverHandle.ClientGetPosition },
             };
 
             startServerEvent.Register(StartServer);

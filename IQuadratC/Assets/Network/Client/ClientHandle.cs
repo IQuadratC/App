@@ -1,4 +1,5 @@
 ﻿using Network.Both;
+using Unity.Mathematics;
 using UnityEngine;
 using Utility;
 
@@ -6,8 +7,8 @@ namespace Network.Client
 {
     public class ClientHandle
     {
-        private Network.Client.Client client;
-        public ClientHandle(Network.Client.Client client)
+        private Client client;
+        public ClientHandle(Client client)
         {
             this.client = client;
         }
@@ -57,6 +58,28 @@ namespace Network.Client
         public void ServerUDPConnection(Packet packet)
         {
             client.clientSend.ClientUDPConnectionStatus();
+        }
+        
+        public void ServerLidarStatus(Packet packet)
+        {
+            int status = packet.ReadInt32();
+            client.lidarMode.value = status;
+        }
+        
+        public void ServerSLAMMap(Packet packet)
+        {
+            int length = packet.ReadInt32();
+            byte[] map = packet.ReadBytes(length);
+            client.SLAMMap.value = map;
+            
+            Debug.Log("CLIENT: recived SLAM Map");
+        }
+        public void ServerPosition(Packet packet)
+        {
+            float3 pos = packet.ReadFloat3();
+            client.position.value = pos;
+            
+            Debug.Log("CLIENT: recived Position: " + pos);
         }
     }
 }

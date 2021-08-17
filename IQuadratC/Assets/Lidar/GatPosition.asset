@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f16a0cfd9afbec94e81ed27a2f59f448, type: 3}
-  m_Name: LidarSupport
+  m_Script: {fileID: 11500000, guid: 62f7a3c17acf94b4fae7c743576d577d, type: 3}
+  m_Name: GatPosition
   m_EditorClassIdentifier: 
-  value: 1
-  initalValue: 1
   description: 

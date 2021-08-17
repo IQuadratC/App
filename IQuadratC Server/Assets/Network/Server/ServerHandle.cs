@@ -84,5 +84,22 @@ namespace Network.Server
         {
             server.joystickStopEvent.Raise();
         }
+        
+        public void ClientLidarMode(ServerClient fromClient, Packet packet)
+        {
+            int mode = packet.ReadInt32();
+            server.lidarModeEvent.Raise(mode);
+            server.serverSend.ServerLidarStatus(fromClient, server.lidarMode.value);
+        }
+        
+        public void ClientGetSLAMMap(ServerClient fromClient, Packet packet)
+        {
+            server.serverSend.ServerSLAMMap(fromClient, server.SLAMMap.value);
+        }
+        
+        public void ClientGetPosition(ServerClient fromClient, Packet packet)
+        {
+            server.serverSend.ServerPosition(fromClient, server.position.value);
+        }
     }
 }

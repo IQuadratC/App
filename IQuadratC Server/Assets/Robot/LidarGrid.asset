@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f16a0cfd9afbec94e81ed27a2f59f448, type: 3}
-  m_Name: LidarSupport
+  m_Script: {fileID: 11500000, guid: f17a2038911c4ca38b7f31aac0aacd3d, type: 3}
+  m_Name: LidarGrid
   m_EditorClassIdentifier: 
-  value: 1
-  initalValue: 1
+  value: 
+  initalValue: 
   description: 

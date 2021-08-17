@@ -46,7 +46,16 @@ namespace Network.Client
         
         public PublicBool lidarSupport;
         public PublicBool serverLidarSupport;
+
+        [SerializeField] private PublicEventInt lidarModeEvent;
+        public PublicInt lidarMode;
+
+        [SerializeField] private PublicEvent getSLAMMapEvent;
+        public PublicByteArray SLAMMap;
         
+        [SerializeField] private PublicEvent getPositionEvent;
+        public PublicFloat3 position;
+
         private void Awake()
         {
             tcpClient = new TCPClient(this);
@@ -61,6 +70,11 @@ namespace Network.Client
                 { (byte)Packets.serverSettings, clientHandle.ServerSettings },
                 { (byte)Packets.serverStartUDP, clientHandle.ServerStartUDP },
                 { (byte)Packets.serverUDPConnection, clientHandle.ServerUDPConnection },
+                
+                { (byte)Packets.serverLidarStatus, clientHandle.ServerLidarStatus },
+                { (byte)Packets.servertSLAMMap, clientHandle.ServerSLAMMap },
+                { (byte)Packets.serverPosition, clientHandle.ServerPosition },
+                
             };
 
             connectEvent.Register(tcpClient.Connect);
@@ -72,6 +86,10 @@ namespace Network.Client
             joystickRotateEvent.Register(clientSend.ClientJoystickRotate);
             joystickStopEvent.Register(clientSend.ClientJoystickStop);
 
+            lidarModeEvent.Register(clientSend.ClientLidarMode);
+            getSLAMMapEvent.Register(clientSend.ClientGetSLAMMap);
+            getPositionEvent.Register(clientSend.ClientGetPosition);
+            
             clientState.value = (int) NetworkState.notConnected;
             
         }

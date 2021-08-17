@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Network.Both;
+using Unity.Mathematics;
 using UnityEngine;
 using Utility;
 
@@ -80,6 +81,37 @@ namespace Network.Server
                 {
                     server.SendTCPData(client, packet);
                 }
+            }
+        }
+        
+        public void ServerLidarStatus(ServerClient client, int status)
+        {
+            Debug.LogFormat("SERVER: [" +client.id+ "] sending Lidar status: " + status);
+            using (Packet packet = new Packet((byte) Packets.serverLidarStatus))
+            {
+                packet.Write(status);
+                server.SendTCPData(client, packet);
+            }
+        }
+        
+        public void ServerSLAMMap(ServerClient client, byte[] map)
+        {
+            Debug.LogFormat("SERVER: [" +client.id+ "] sending SLAM map ");
+            using (Packet packet = new Packet((byte) Packets.servertSLAMMap))
+            {
+                packet.Write(map.Length);
+                packet.Write(map);
+                server.SendUDPData(client, packet);
+            }
+        }
+        
+        public void ServerPosition(ServerClient client, float3 pos)
+        {
+            Debug.LogFormat("SERVER: [" +client.id+ "] sending Position: " + pos);
+            using (Packet packet = new Packet((byte) Packets.servertSLAMMap))
+            {
+                packet.Write(pos);
+                server.SendUDPData(client, packet);
             }
         }
     }

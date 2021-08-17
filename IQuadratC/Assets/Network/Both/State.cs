@@ -30,8 +30,13 @@
 
 
 // 50 - 59 Lidar
-        clientLidarMode = 50,  // Client requset to start or stop Lidar sensor int 1 = off, 2 = off
+        clientLidarMode = 50,  // Client requset to start or stop Lidar sensor int 1 = on,  2 = off
         serverLidarStatus = 51, // Status of the Lidar 1 = on, 2 = off
+        clientGetSLAMMap = 52,
+        servertSLAMMap = 53,
+
+        clientGetPosition = 54,
+        serverPosition = 55,
     }
 
     public enum NetworkState
