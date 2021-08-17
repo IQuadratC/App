@@ -286,6 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165279545}
   - component: {fileID: 165279546}
+  - component: {fileID: 165279547}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -324,6 +325,25 @@ MonoBehaviour:
   joystickMoveEvent: {fileID: 11400000, guid: e1f3f1a67dd7d4d4d908f98db63c428d, type: 2}
   joystickRotateEvent: {fileID: 11400000, guid: 19f567d6d8aab20429106ccbbb910f5d, type: 2}
   joystickStopEvent: {fileID: 11400000, guid: 2d44edb2d8620ba4d8fdf69b05e4d1d2, type: 2}
+--- !u!114 &165279547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165279544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa485119b0812e46af519c2ae48fb53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lidarModeEvent: {fileID: 11400000, guid: b50daf0275747994eb4b5891acc52899, type: 2}
+  lidarMode: {fileID: 11400000, guid: a67783463a9ee0948947d1612326b2ce, type: 2}
+  minLength: 30
+  maxLength: 8000
+  dataArrayPolar: {fileID: 11400000, guid: 1a5fdaa62b0ef004db48186830b4329d, type: 2}
+  dataArray: {fileID: 11400000, guid: feb783e2f4aa8d44888c42cf1ece1a4f, type: 2}
+  showLines: 1
 --- !u!1 &272842951
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +778,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539132321}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &556172754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556172756}
+  - component: {fileID: 556172755}
+  m_Layer: 0
+  m_Name: SLAM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &556172755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556172754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3320f8f46d04d4d92728d48fec87b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liveData: {fileID: 11400000, guid: feb783e2f4aa8d44888c42cf1ece1a4f, type: 2}
+  gridSize: 1000
+  gridIntervall: 10
+--- !u!4 &556172756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556172754}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.704546, y: -8995.602, z: -636.4144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &621450352
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,37 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/Settings/ChatSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/Settings/ChatSupport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/Settings/LidarSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Network/Both/Settings/LidarSupport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Chat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Chat/serverLiadarSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Chat/serverLiadarSupport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/serverChatSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/serverChatSupport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ChatSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ChatSupport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/LidarSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/LidarSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarDataPolar.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarDataPolar.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMode.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMode.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarModeEvent.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarModeEvent.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/GridSize.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/GridSize.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/SLAMGrid.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/SLAMGrid.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Utility/EventSystem/Generated/PublicByteArray.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Utility/EventSystem/Generated/PublicByteArray.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Both/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Both/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/ServerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/ControllMode.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/ControllMode.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/JoystickMoveEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/JoystickMoveEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/JoystickRotateEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/JoystickRotateEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/JoystickStopEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/JoystickStopEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/RobotMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/RobotMover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/network.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/network.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/AstarPathfindingProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/AstarPathfindingProject.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/AstarPathfindingProjectEditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/AstarPathfindingProjectEditor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/PackageToolsEditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/PackageToolsEditor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vendor/GPUVideoPlayer" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/GPUVideoPlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Scenes/Network.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Scenes/Network.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/GPUVideoPlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/.idea/.idea.OpenH264Lib/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/.idea/.idea.OpenH264Lib/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/.idea/.idea.OpenH264Lib/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/.idea/.idea.OpenH264Lib/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/.idea/.idea.OpenH264Lib/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/AssemblyInfo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/Decoder.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/Decoder.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/Encoder.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/Encoder.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/OpenH264Header/codec_api.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/OpenH264Header/codec_app_def.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/OpenH264Header/codec_def.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/OpenH264Header/codec_ver.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/OpenH264Lib.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/OpenH264Lib.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/ReadMe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/Stdafx.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/Stdafx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/app.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/app.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Lib/resource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/AVI/AviWriter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/AVI/H264Writer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/AVI/RiffFile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/App.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/OpenH264Sample.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/Properties/Resources.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/Properties/Resources.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/Properties/Settings.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/Properties/Settings.settings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/frmMain.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/frmMain.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/OpenH264Sample/frmMain.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/OpenH264Lib.NET/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +87,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Robot/RobotMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/2b/7a070bba/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@11.0.0/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48020190-8ED9-4DDA-A056-1E2E6E0DDD4E/f1/b0be1ac1/Socket.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -56,11 +102,14 @@
       <option value="$PROJECT_DIR$/Assets/Network/Both/Database.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Firebase/ServerDatabase.cs" />
       <option value="$PROJECT_DIR$/Assets/Robot/RobotMover.cs" />
-      <option value="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Both/State.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/Server.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/ServerClient.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/Movment/RobotMover.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vUM8yzJKarZ3qs2ml03uj7zRET" />
@@ -96,10 +145,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8972">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="8972" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -122,7 +171,7 @@
       <workItem from="1628354538952" duration="930000" />
       <workItem from="1628948638632" duration="2078000" />
       <workItem from="1628953243708" duration="1600000" />
-      <workItem from="1629194663085" duration="4137000" />
+      <workItem from="1629194663085" duration="12268000" />
     </task>
     <task id="LOCAL-00001" summary="Move Commands">
       <created>1626618119809</created>
