@@ -85,6 +85,7 @@
      <Compile Include="Assets\Utility\EventSystem\PublicEventMaster.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventBool.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicByteArray.cs" />
+     <Compile Include="Assets\Lidar\MapPreview.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

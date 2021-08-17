@@ -2,49 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidatMode.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidatMode.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/LidarGrid.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/LidarGrid.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/Position.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/Position.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicByteArray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicByteArray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/GatPosition.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/GatPosition.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/GetSLAMMap.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/GetSLAMMap.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/LidarModeEvent.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/LidarModeEvent.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/LidarStatus.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/LidarStatus.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/Position.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/Position.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/SLAMMap.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/SLAMMap.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/GridIntervall.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/GridIntervall.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/MapPreview.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Both/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Both/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMode.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMode.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarModeEvent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarModeEvent.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Robot/Pos.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Robot/Pos.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/RobotPos.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/RobotPos.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/SLAMGrid.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/SLAMGrid.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/LidarSupport.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/LidarSupport.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Scenes/Network.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Scenes/Network.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +102,7 @@
       <workItem from="1628354538952" duration="930000" />
       <workItem from="1628948638632" duration="2078000" />
       <workItem from="1628953243708" duration="1600000" />
-      <workItem from="1629194663085" duration="26194000" />
+      <workItem from="1629194663085" duration="27440000" />
     </task>
     <task id="LOCAL-00001" summary="Move Commands">
       <created>1626618119809</created>

@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95143c3bfb0162a48962a6f3f540b661, type: 3}
-  m_Name: JoystickDir
+  m_Script: {fileID: 11500000, guid: 483561b2e4f30ab438b2bc33322b2d26, type: 3}
+  m_Name: GridIntervall
   m_EditorClassIdentifier: 
-  value:
-    x: -4.53
-    y: 0
-  initalValue:
-    x: -4.53
-    y: 0
+  value: 10
+  initalValue: 10
   description: 

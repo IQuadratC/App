@@ -69,6 +69,11 @@ namespace Network.Client
         public void ServerSLAMMap(Packet packet)
         {
             int length = packet.ReadInt32();
+            if (length <= 0)
+            {
+                return;
+            }
+            
             byte[] map = packet.ReadBytes(length);
             client.SLAMMap.value = map;
             
