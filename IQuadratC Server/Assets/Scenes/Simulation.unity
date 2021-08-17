@@ -160,6 +160,8 @@ MonoBehaviour:
   udpSupport: {fileID: 11400000, guid: 963e0f142b0aafe4ea28888da2672fba, type: 2}
   camSupport: {fileID: 11400000, guid: 45646c020f9f5bd4bb885d76560cb64d, type: 2}
   joystickSupport: {fileID: 11400000, guid: 06c38c019a6e16c4f97c6736587e9e88, type: 2}
+  chatSupport: {fileID: 11400000, guid: f63704324c8e1d44d9e3415ae192e5c6, type: 2}
+  lidarSupport: {fileID: 11400000, guid: b9338c5b4e5394e4db8eb7466a2d0942, type: 2}
   controllMode: {fileID: 11400000, guid: 762d670e69312314199cf9854b0053b4, type: 2}
   joystickMoveEvent: {fileID: 11400000, guid: e1f3f1a67dd7d4d4d908f98db63c428d, type: 2}
   joystickRotateEvent: {fileID: 11400000, guid: 19f567d6d8aab20429106ccbbb910f5d, type: 2}

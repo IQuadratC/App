@@ -25,12 +25,24 @@ namespace Network.V2.Client
         
         public void ClientSettings()
         {
-            Debug.Log("CLIENT: sending settings");
+            string version = "1.1";
+            Debug.Log("CLIENT: sending settings: " +
+                      "\nVersion " + version +
+                      "\nUDP " + client.clientUdpSupport.value + 
+                      "\nCam " + client.camSupport.value + 
+                      "\nJoystick " + client.joystickSupport.value +
+                      "\nChat " + client.chatSupport.value +
+                      "\nLidar " + client.lidarSupport.value
+                      );
+            
             using (Packet packet = new Packet((byte) Packets.clientSettings))
             {
+                packet.Write(version);
                 packet.Write(client.clientUdpSupport.value);
                 packet.Write(client.camSupport.value);
                 packet.Write(client.joystickSupport.value);
+                packet.Write(client.chatSupport.value);
+                packet.Write(client.lidarSupport.value);
                 
                 client.SendTCPData(packet);
             }

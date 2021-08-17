@@ -20,10 +20,25 @@ namespace Network.Server
         
         public void ClientSettings(ServerClient fromClient, Packet packet)
         {
-            Debug.Log("SERVER: [" +fromClient.id+ "] recived client settings");
-            fromClient.clientUdpSupport = packet.ReadBool();
-            fromClient.clientCamSupport = packet.ReadBool();
-            fromClient.clientJoystickSupport = packet.ReadBool();
+            string version = packet.ReadString();
+
+            if (version == "1.1")
+            {
+                fromClient.clientUdpSupport = packet.ReadBool();
+                fromClient.clientCamSupport = packet.ReadBool();
+                fromClient.clientJoystickSupport = packet.ReadBool();
+                fromClient.clientChatSupport = packet.ReadBool();
+                fromClient.clientLidarSupport = packet.ReadBool();
+            }
+            
+            Debug.Log("SERVER: [" +fromClient.id+ "] recived client settings:" +
+                      "\nVersion " + version +
+                      "\nUDP " + fromClient.clientUdpSupport + 
+                      "\nCam " + fromClient.clientCamSupport + 
+                      "\nJoystick " + fromClient.clientJoystickSupport +
+                      "\nChat " + fromClient.clientChatSupport +
+                      "\nLidar " + fromClient.clientLidarSupport
+                      );
 
             if (server.udpSupport.value && fromClient.clientUdpSupport)
             {

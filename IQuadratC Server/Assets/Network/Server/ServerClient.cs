@@ -19,6 +19,8 @@ namespace Network.Server
         
         public bool clientCamSupport;
         public bool clientJoystickSupport;
+        public bool clientChatSupport;
+        public bool clientLidarSupport;
 
         public ServerClient(byte id, TcpClient socket)
         {

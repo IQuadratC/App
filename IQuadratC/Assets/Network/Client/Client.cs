@@ -41,6 +41,12 @@ namespace Network.Client
         [SerializeField] private PublicEventFloat joystickRotateEvent;
         [SerializeField] private PublicEvent joystickStopEvent;
         
+        public PublicBool chatSupport;
+        public PublicBool serverChatSupport;
+        
+        public PublicBool lidarSupport;
+        public PublicBool serverLidarSupport;
+        
         private void Awake()
         {
             tcpClient = new TCPClient(this);

@@ -1392,6 +1392,10 @@ MonoBehaviour:
   joystickMoveEvent: {fileID: 11400000, guid: 4d308dcc8da71dc439982bdea35ec8d1, type: 2}
   joystickRotateEvent: {fileID: 11400000, guid: 0bac079d41d5c4e40a0197f4d93fad01, type: 2}
   joystickStopEvent: {fileID: 11400000, guid: 7ef41f9ef18e7cb42883f27f4c849eca, type: 2}
+  chatSupport: {fileID: 11400000, guid: 6321671cfa6764d4989e16ff4b0ce7aa, type: 2}
+  serverChatSupport: {fileID: 11400000, guid: 4457a761b5c46e241b6011cd1cf1a931, type: 2}
+  lidarSupport: {fileID: 11400000, guid: 50cdc63aba52e934cb995a47fa3d8e38, type: 2}
+  serverLidarSupport: {fileID: 11400000, guid: 4457a761b5c46e241b6011cd1cf1a931, type: 2}
 --- !u!4 &2070034877
 Transform:
   m_ObjectHideFlags: 0

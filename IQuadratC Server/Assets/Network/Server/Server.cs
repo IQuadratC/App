@@ -25,10 +25,10 @@ namespace Network.Server
         [SerializeField] private PublicEventString debugMessageEvent;
         
         public PublicBool udpSupport;
-        
         public PublicBool camSupport;
-
         public PublicBool joystickSupport;
+        public PublicBool chatSupport;
+        public PublicBool lidarSupport;
 
         [SerializeField] public PublicInt controllMode;
         [SerializeField] public PublicEventFloat3 joystickMoveEvent;

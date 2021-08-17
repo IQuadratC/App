@@ -24,13 +24,26 @@ namespace Network.Server
         
         public void ServerSettings(ServerClient client)
         {
-            Debug.LogFormat("SERVER: [" +client.id+ "] sending settings");
+            string version = "1.1";
+            Debug.Log("SERVER: [" + client.id + "] sending settings" +
+                  "\nVersion " + version +
+                  "\nUDP " + server.udpSupport.value +
+                  "\nCam " + server.camSupport.value +
+                  "\nJoystick " + server.joystickSupport.value +
+                  "\nChat " + server.chatSupport.value +
+                  "\nLidar " + server.lidarSupport.value
+            );
+            
             using (Packet packet = new Packet((byte) Packets.serverSettings))
             {
                 packet.Write(client.id);
+                
+                packet.Write(version);
                 packet.Write(server.udpSupport.value);
                 packet.Write(server.camSupport.value);
                 packet.Write(server.joystickSupport.value);
+                packet.Write(server.chatSupport.value);
+                packet.Write(server.lidarSupport.value);
 
                 server.SendTCPData(client, packet);
             }
