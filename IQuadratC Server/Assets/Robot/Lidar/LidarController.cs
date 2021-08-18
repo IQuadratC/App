@@ -21,11 +21,8 @@ public class LidarController : MonoBehaviour
         });
     }
 
-    [SerializeField] private PublicFloat3 pos;
-
     private void Update()
     {
-        pos.value = new float3(transform.position.x, transform.position.y, transform.rotation.eulerAngles.z);
         if (lidarMode.value == 1)
         {
             scan();
@@ -75,7 +72,9 @@ public class LidarController : MonoBehaviour
             {
                 //dataArrayPolar.value[i].y = maxLidarDistance.value;
             }
-            dataArray.value[i] = mathAdditions.Polar2CartisianDegree(new float2(i, dataArrayPolar.value[i].y)) + pos.value.xy;
+
+            dataArray.value[i] = mathAdditions.Polar2CartisianDegree(new float2(i, dataArrayPolar.value[i].y)) +
+                                 new float2(transform.position.x, transform.position.y);
         }
     }
 }

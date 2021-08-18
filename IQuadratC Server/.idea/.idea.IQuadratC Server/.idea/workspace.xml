@@ -2,19 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMaxDistance.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMaxDistance.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMinDistance.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMinDistance.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/mathAdditions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Utility/mathAdditions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/GridIntervall.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/GridIntervall.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/GridSize.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/GridSize.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/LidarGrid.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/LidarGrid.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/MapPreview.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/MapPreview.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/Position.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/Position.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMControllerV1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMControllerV1.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMMap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMMath.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMMath.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Robot/Movment/RobotMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/Movment/RobotMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/LidarGrid.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/LidarGrid.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/Position.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/Position.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/PerfectSLAMController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/PerfectSLAMController.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,14 +36,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/2b/7a070bba/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/56/e234f23e/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42425271-A85C-48A7-81B5-AE89B9328419/1f/15a45773/SemVersionParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/6b/2ced8336/Number.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/47/2c1d4438/EncodingTable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/ed/243e9d77/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@11.0.0/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Robot/SLAM/PerfectSLAMController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.1/Unity.Mathematics/math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ADFA4B62-4008-4918-9388-DF71C9E26E89/bf/9d757f8a/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.1/Unity.Mathematics/float2.gen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4D909C80-E34F-4A76-896B-D88597D1591C/42/d66006ec/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48020190-8ED9-4DDA-A056-1E2E6E0DDD4E/f1/b0be1ac1/Socket.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Robot/SLAM/SLAMMap.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -51,8 +70,14 @@
       <option value="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs" />
       <option value="$PROJECT_DIR$/Assets/Robot/Movment/RobotMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Utility/mathAdditions.cs" />
-      <option value="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/SLAM/MapPreview.cs" />
+      <option value="$PROJECT_DIR$/Assets/Utility/EventSystem/Generated/PublicByteArray2D.cs" />
       <option value="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/SLAM/PerfectSLAMController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMMap.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMMath.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMControllerV1.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vUM8yzJKarZ3qs2ml03uj7zRET" />
@@ -65,12 +90,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35102925" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.4992272" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -104,10 +130,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11788">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1696">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11788" />
+      <option name="pid" value="1696" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -137,6 +163,7 @@
       <workItem from="1628953243708" duration="1600000" />
       <workItem from="1629194663085" duration="27440000" />
       <workItem from="1629271694072" duration="7732000" />
+      <workItem from="1629286828585" duration="15403000" />
     </task>
     <task id="LOCAL-00001" summary="Move Commands">
       <created>1626618119809</created>
