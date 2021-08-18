@@ -13,7 +13,7 @@ public class SLAMController : MonoBehaviour
 
     private int convertIndex(float x, float y)
     {
-        return (int) ((x + gridSize) / gridIntervall) * (gridSize / gridIntervall) * 2 + (int) (y + gridSize) / gridIntervall; 
+        return (int) ((y + gridSize) / gridIntervall) * (gridSize / gridIntervall) * 2 + (int) (x + gridSize) / gridIntervall; 
     }
 
     [SerializeField] private int gridSize = 1000;

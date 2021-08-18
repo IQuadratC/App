@@ -4,19 +4,16 @@ using System.Linq;
 using Pathfinding;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Utility;
 
 public class AISetup : MonoBehaviour
 {
-    [SerializeField]
-    private int width;
-    [SerializeField]
-    private int height;
-    [SerializeField]
-    private bool active;
-    [SerializeField]
-    private PublicInt2Array obsticals;
-    
+    [SerializeField]private bool active;
+    [SerializeField]private PublicByteArray Map;
+    [SerializeField]private PublicInt gridSize;
+    [SerializeField]private PublicInt gridIntervall;
+    private int size;
 
     void Start()
     {
@@ -38,14 +35,12 @@ public class AISetup : MonoBehaviour
     void UpdateGraph()
     {
         GridGraph gg = AstarPath.active.data.gridGraph;
-        gg.SetDimensions(width, height,1); // nodeSize is 1 because we dont use it
+        gg.SetDimensions(gridSize.value/gridIntervall.value * 2, gridSize.value/gridIntervall.value * 2, gridIntervall.value);
         AstarPath.active.Scan();
         AstarPath.active.AddWorkItem(new AstarWorkItem(ctx => {
-            for(int x = 0; x < width; x++) {
-                for(int y = 0; y < height; y++) {
-                    var node = gg.GetNode(x,y);
-                    node.Walkable = !obsticals.value.Contains(new int2(x,y));
-                }
+            for (int i = 0; i < Map.value.Length; i++)
+            {
+                gg.nodes[i].Walkable = Map.value[i] == 1;
             }
             gg.GetNodes(node => gg.CalculateConnections((GridNodeBase)node));
         }));
