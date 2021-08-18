@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/GridIntervall.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/GridIntervall.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/MapPreview.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMaxDistance.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMaxDistance.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMinDistance.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarMinDistance.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Utility/mathAdditions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Utility/mathAdditions.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/Movment/RobotMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/Movment/RobotMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientHandle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +28,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/2b/7a070bba/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@11.0.0/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.1/Unity.Mathematics/math.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ADFA4B62-4008-4918-9388-DF71C9E26E89/bf/9d757f8a/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.1/Unity.Mathematics/float2.gen.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4D909C80-E34F-4A76-896B-D88597D1591C/42/d66006ec/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48020190-8ED9-4DDA-A056-1E2E6E0DDD4E/f1/b0be1ac1/Socket.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -34,13 +45,14 @@
       <option value="$PROJECT_DIR$/Assets/Network/Firebase/ServerDatabase.cs" />
       <option value="$PROJECT_DIR$/Assets/Robot/RobotMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/ServerClient.cs" />
-      <option value="$PROJECT_DIR$/Assets/Robot/Movment/RobotMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Both/State.cs" />
-      <option value="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/Server.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/ServerHandle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" />
       <option value="$PROJECT_DIR$/Assets/Network/Server/ServerSend.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/Movment/RobotMover.cs" />
+      <option value="$PROJECT_DIR$/Assets/Utility/mathAdditions.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/Lidar/LidarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vUM8yzJKarZ3qs2ml03uj7zRET" />
@@ -66,6 +78,22 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Utility.mathAdditions.run" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
+      <option name="EXE_PATH" value="C:\Users\maart\AppData\Local\JetBrains\Toolbox\apps\Rider\ch-0\211.6693.105\lib\ReSharperHost\JetLauncherILc.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Assembly-CSharp.csproj" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.1" />
+      <option name="CLASS_NAME" value="Utility.mathAdditions" />
+      <option name="METHOD_NAME" value="run" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -76,16 +104,21 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8972">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11788">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8972" />
+      <option name="pid" value="11788" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Static Method.Utility.mathAdditions.run" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -103,6 +136,7 @@
       <workItem from="1628948638632" duration="2078000" />
       <workItem from="1628953243708" duration="1600000" />
       <workItem from="1629194663085" duration="27440000" />
+      <workItem from="1629271694072" duration="7732000" />
     </task>
     <task id="LOCAL-00001" summary="Move Commands">
       <created>1626618119809</created>

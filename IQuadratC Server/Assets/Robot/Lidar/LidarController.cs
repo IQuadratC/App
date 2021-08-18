@@ -10,8 +10,8 @@ public class LidarController : MonoBehaviour
     [SerializeField] private PublicEventInt lidarModeEvent;
     [SerializeField] private PublicInt lidarMode;
     
-    [SerializeField] private float minLength = 0.1f;
-    [SerializeField] private float maxLength = 8.0f;
+    [SerializeField] private PublicInt minLidarDistance;
+    [SerializeField] private PublicInt maxLidarDistance;
 
     void Start()
     {
@@ -25,11 +25,11 @@ public class LidarController : MonoBehaviour
 
     private void Update()
     {
+        pos.value = new float3(transform.position.x, transform.position.y, transform.rotation.eulerAngles.z);
         if (lidarMode.value == 1)
         {
             scan();
         }
-        pos.value = new float3(transform.position.x, transform.position.z, transform.rotation.eulerAngles.y);
     }
 
     [SerializeField] private PublicFloat2Array dataArrayPolar;
@@ -39,36 +39,43 @@ public class LidarController : MonoBehaviour
     
     private void OnDrawGizmos()
     {
-        Gizmos.color = new Color(1, 1, 1, 0.1f);
         if (showLines)
         {
+            Gizmos.color = new Color(1, 1, 1, 0.1f);
             foreach (float2 data in dataArray.value)
             {
-                float3 robot = new float3(transform.position.x, 10, transform.position.z);
-                float3 point = new float3(data.x, 10, data.y);
-                Gizmos.DrawLine(robot + math.normalize(point - robot) * minLength, point);
+                float3 robot = new float3(transform.position.x, transform.position.y, 0);
+                float3 point = new float3(data.xy, 0);
+                Gizmos.DrawLine(robot + math.normalize(point - robot) * minLidarDistance.value, point);
             }
         }
     }
 
     private void scan()
     {
-        List<float2> dataListPolar = new List<float2>();
-        List<float2> dataList = new List<float2>();
+        dataArrayPolar.value = new float2[360];
+        dataArray.value = new float2[360];
         
         int layerMask = 1 << 8;
-        for (float i = 0; i < 365; i++)
+        for (int i = 0; i < 360; i++)
         {
-            var direction = new Vector3(Mathf.Sin(Mathf.Deg2Rad * i), 0, Mathf.Cos(Mathf.Deg2Rad * i));
-            RaycastHit hit;
-            if (Physics.Raycast(new Vector3(transform.position.x, 10, transform.position.z) + direction * minLength, direction, out hit, maxLength - minLength))
-            {
-                dataListPolar.Add(new float2(i, hit.distance));
-                dataList.Add(new float2(hit.point.x, hit.point.z));
-            }
-        }
+            dataArrayPolar.value[i] = new float2(i, 0);
+            dataArray.value[i] = new float2(0, 0);
 
-        dataArrayPolar.value = dataListPolar.ToArray();
-        dataArray.value = dataList.ToArray();
+            float2 direction = mathAdditions.Polar2CartisianDegree(new float2(i, 1));
+            RaycastHit hit;
+            if (Physics.Raycast(
+                new Vector3(transform.position.x, transform.position.y, -10) + new Vector3(direction.x, direction.y, 0) * minLidarDistance.value, 
+                new Vector3(direction.x, direction.y, 0), out hit, 
+                maxLidarDistance.value - minLidarDistance.value))
+            {
+                dataArrayPolar.value[i].y = hit.distance + minLidarDistance.value;
+            }
+            else
+            {
+                //dataArrayPolar.value[i].y = maxLidarDistance.value;
+            }
+            dataArray.value[i] = mathAdditions.Polar2CartisianDegree(new float2(i, dataArrayPolar.value[i].y)) + pos.value.xy;
+        }
     }
 }

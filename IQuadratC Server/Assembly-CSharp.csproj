@@ -51,6 +51,7 @@
      <Compile Include="Assets\Network\Server\ServerSend.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt4.cs" />
      <Compile Include="Assets\Network\Server\ServerClient.cs" />
+     <Compile Include="Assets\Utility\EventSystem\Generated\PublicByteArray.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventInt4.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt2.cs" />
      <Compile Include="Assets\Network\Both\State.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat3.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt.cs" />
      <Compile Include="Assets\Robot\Movment\RobotMover.cs" />
+     <Compile Include="Assets\Robot\Lidar\LidarController.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat4.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat2.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicMaster.cs" />
@@ -79,11 +81,10 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat.cs" />
      <Compile Include="Assets\Network\Server\TCPServer.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicString.cs" />
+     <Compile Include="Assets\Robot\SLAM\SLAMController.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicEventMaster.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventBool.cs" />
-     <Compile Include="Assets\Robot\Lidar\LidarController.cs" />
-     <Compile Include="Assets\Robot\SLAM\SLAMController.cs" />
-     <Compile Include="Assets\Utility\EventSystem\Generated\PublicByteArray.cs" />
+     <Compile Include="Assets\Utility\mathAdditions.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

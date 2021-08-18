@@ -305,14 +305,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165279544}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 675611696}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &165279546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,8 +343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lidarModeEvent: {fileID: 11400000, guid: b50daf0275747994eb4b5891acc52899, type: 2}
   lidarMode: {fileID: 11400000, guid: ab02ab6339e6fdf4a9e40d11becb8fc3, type: 2}
-  minLength: 30
-  maxLength: 8000
+  minLidarDistance: {fileID: 11400000, guid: 0e8d997cc42dac84ebcd405351e14246, type: 2}
+  maxLidarDistance: {fileID: 11400000, guid: 77d8f8acfd47d224caf620ee2b95ab97, type: 2}
   pos: {fileID: 11400000, guid: 9602746a371fdff4da25e447136b3701, type: 2}
   dataArrayPolar: {fileID: 11400000, guid: 1a5fdaa62b0ef004db48186830b4329d, type: 2}
   dataArray: {fileID: 11400000, guid: feb783e2f4aa8d44888c42cf1ece1a4f, type: 2}
@@ -812,9 +812,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa3320f8f46d04d4d92728d48fec87b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liveData: {fileID: 11400000, guid: feb783e2f4aa8d44888c42cf1ece1a4f, type: 2}
+  lidarDataPolar: {fileID: 11400000, guid: 1a5fdaa62b0ef004db48186830b4329d, type: 2}
+  lidarData: {fileID: 11400000, guid: feb783e2f4aa8d44888c42cf1ece1a4f, type: 2}
   pos: {fileID: 11400000, guid: 9602746a371fdff4da25e447136b3701, type: 2}
   grid: {fileID: 11400000, guid: c75cee49c9c62eb48ad79d38db162acc, type: 2}
+  minLidarDistance: {fileID: 11400000, guid: 0e8d997cc42dac84ebcd405351e14246, type: 2}
+  maxLidarDistance: {fileID: 11400000, guid: 77d8f8acfd47d224caf620ee2b95ab97, type: 2}
   gridSize: 1000
   gridIntervall: 10
 --- !u!4 &556172756
@@ -1337,13 +1340,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055495582}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 500, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -172, y: 107, z: -525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1055495586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2293,8 +2296,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874774996}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 198, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 272842955}
@@ -2310,7 +2313,7 @@ Transform:
   - {fileID: 2083754047}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1881651710
 GameObject:
   m_ObjectHideFlags: 0
