@@ -11,7 +11,7 @@ public class MapPreview : MonoBehaviour
     
     private int convertIndex(float x, float y)
     {
-        return (int) ((x + gridSize.value) / gridIntervall.value) * (gridSize.value / gridIntervall.value) * 2 + (int) (y + gridSize.value) / gridIntervall.value; 
+        return (int) ((y + gridSize.value) / gridIntervall.value) * (gridSize.value / gridIntervall.value) * 2 + (int) (x + gridSize.value) / gridIntervall.value; 
     }
     
     private void OnDrawGizmos()
