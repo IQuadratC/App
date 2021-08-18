@@ -7,9 +7,13 @@ using Utility;
 
 public class SLAMController : MonoBehaviour
 {
-    [SerializeField] private PublicFloat2Array liveData;
+    [SerializeField] private PublicFloat2Array lidarDataPolar;
+    [SerializeField] private PublicFloat2Array lidarData;
     [SerializeField] private PublicFloat3 pos;
     [SerializeField] private PublicByteArray grid;
+    
+    [SerializeField] private PublicInt minLidarDistance;
+    [SerializeField] private PublicInt maxLidarDistance;
 
     private int convertIndex(float x, float y)
     {
@@ -17,7 +21,7 @@ public class SLAMController : MonoBehaviour
     }
 
     [SerializeField] private int gridSize = 1000;
-    [SerializeField] private int gridIntervall = 100; 
+    [SerializeField] private int gridIntervall = 10; 
     
     void Start()
     {
@@ -45,7 +49,7 @@ public class SLAMController : MonoBehaviour
                     {
                         Gizmos.color = Color.red;
                     }
-                    Gizmos.DrawCube(new Vector3(x + gridIntervall / 2, 20, y + gridIntervall / 2), Vector3.one * 2);
+                    Gizmos.DrawCube(new Vector3(x + gridIntervall / 2, y + gridIntervall / 2, -20), Vector3.one * 2);
                 }
             }
         }
@@ -53,74 +57,42 @@ public class SLAMController : MonoBehaviour
 
     void Update()
     {
-        foreach (float2 point in liveData.value)
+        int2 middleCell = (int2) (pos.value.xy / gridIntervall) * gridIntervall;
+        for (int x = middleCell.x - maxLidarDistance.value; x < pos.value.x + maxLidarDistance.value; x += gridIntervall)
         {
-            castRay(pos.value.xy, point);
-            
+            for (int y = middleCell.y - maxLidarDistance.value; y < pos.value.y + maxLidarDistance.value; y += gridIntervall)
+            {
+                float2 polarPoint = mathAdditions.Cartisian2PolarDegree(new float2(x, y) - pos.value.xy);
+
+                while (polarPoint.x < 0)
+                {
+                    polarPoint.x += 360;
+                }
+                
+                while (polarPoint.x >= 360)
+                {
+                    polarPoint.x -= 360;
+                }
+                
+                if (lidarDataPolar.value[(int) polarPoint.x].y > polarPoint.y)
+                {
+                    int index = convertIndex(x, y);
+                    if (grid.value[index] == 0)
+                    {
+                        grid.value[index] = 1;
+                    }
+                }
+            }
+        }
+        
+        foreach (float2 point in lidarData.value)
+        {
+            if (math.distance(point, pos.value.xy) < minLidarDistance.value)
+            {
+               continue;
+            }
             int index = convertIndex(point.x, point.y);
             grid.value[index] = 2;
         }
-    }
-
-    void castRay(float2 start, float2 end)
-    {
-        float2 startPos = start / gridIntervall;
-        float2 dir = math.normalize(end - start);
-        float2 rayStepSize = new float2(
-            math.sqrt(1 + (dir.y / dir.x) * (dir.y / dir.x)),
-            math.sqrt(1 + (dir.x / dir.y) * (dir.x / dir.y)));
-        
-        int2 currentCell = (int2) (start / new float2(gridIntervall));
-        float2 rayLength1D;
-        int2 step;
-
-        if (dir.x < 0)
-        {
-            step.x = -1;
-            rayLength1D.x = (startPos.x - currentCell.x) * rayStepSize.x;
-        }
-        else
-        {
-            step.x = 1;
-            rayLength1D.x = (currentCell.x + 1 - startPos.x) * rayStepSize.x;
-        }
-        
-        if (dir.y < 0)
-        {
-            step.y = -1;
-            rayLength1D.y = (startPos.y - currentCell.y) * rayStepSize.y;
-        }
-        else
-        {
-            step.y = 1;
-            rayLength1D.y = (currentCell.y + 1 - startPos.y) * rayStepSize.y;
-        }
-
-        float distance = 0;
-        float maxDistance = math.distance(start, end) / gridIntervall;
-        while (maxDistance > distance && 
-               currentCell.x >= -gridSize / gridIntervall && currentCell.x < gridSize / gridIntervall &&
-               currentCell.y >= -gridSize / gridIntervall && currentCell.y < gridSize / gridIntervall)
-        {
-            int index = convertIndex(currentCell.x * gridIntervall, currentCell.y * gridIntervall);
-            if (grid.value[index] == 0)
-            {
-                grid.value[index] = 1;
-            }
-
-            if (rayLength1D.x < rayLength1D.y)
-            {
-                currentCell.x += step.x;
-                distance = rayLength1D.x;
-                rayLength1D.x += rayStepSize.x;
-            }
-            else
-            {
-                currentCell.y += step.y;
-                distance = rayLength1D.y;
-                rayLength1D.y += rayStepSize.y;
-            }
-        }
-        
     }
 }

@@ -51,8 +51,8 @@ public class RobotMover : MonoBehaviour
                 return;
             }
 
-            transform.position += (Vector3) new float3(move.xy * move.z * Time.deltaTime, 0).xzy;
-            transform.Rotate(Vector3.up, rotate * Mathf.Rad2Deg * Time.deltaTime);
+            transform.position += (Vector3) new float3(move.xy * move.z * Time.deltaTime, 0);
+            transform.Rotate(new Vector3(0,0,-1), rotate * Mathf.Rad2Deg * Time.deltaTime);
         }
     }
 }
