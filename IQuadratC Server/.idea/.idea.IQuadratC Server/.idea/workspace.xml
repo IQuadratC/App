@@ -2,192 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.idea/.idea.Assembly-CSharp-Editor.dir/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.idea/.idea.Assembly-CSharp-Editor.dir/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.idea/.idea.Assembly-CSharp-Editor.dir/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.idea/.idea.Assembly-CSharp-Editor.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.idea/.idea.Assembly-CSharp-Editor.dir/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.idea/.idea.IQuadratC/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.idea/.idea.IQuadratC/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.idea/.idea.IQuadratC/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.idea/.idea.IQuadratC/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/.vsconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assembly-CSharp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/ClientPort.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/ClientPort.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Packet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Packet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/ServerIp.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/ServerIp.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/ServerPort.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/ServerPort.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/CamSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/CamSupport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ChatSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ChatSupport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/JoystickSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/JoystickSupport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/LidarSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/LidarSupport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/UDPSupport.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/UDPSupport.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/State.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/State.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/Client.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/Client.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientConnect.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientConnect.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientDebugMessage.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientDebugMessage.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientDisconnect.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientDisconnect.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientHandle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientHandle.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientId.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientId.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientSend.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientSend.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientState.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientState.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/TCPClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/TCPClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/UDPClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/UDPClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Scenes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Scenes/Main.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Scenes/Main.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/BuildEventSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/BuildEventSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicBool.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicBool.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicByteArray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicByteArray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventBool.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventBool.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventFloat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventFloat.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventFloat2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventFloat2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventFloat3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventFloat3.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventFloat4.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventFloat4.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventInt.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventInt.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventInt2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventInt2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventInt3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventInt3.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventInt4.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventInt4.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventIntArray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventIntArray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventString.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventString.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventStringArray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicEventStringArray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicFloat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicFloat.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicFloat2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicFloat2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicFloat2Array.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicFloat2Array.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicFloat3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicFloat3.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicFloat4.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicFloat4.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicInt.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicInt.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicInt2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicInt2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicInt2Array.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicInt2Array.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicInt3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicInt3.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicInt4.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicInt4.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicIntArray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicIntArray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicString.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicString.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicStringArray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/Generated/PublicStringArray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/PublicEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/PublicEvent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/PublicEventMaster.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/PublicEventMaster.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/PublicMaster.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/EventSystem/PublicMaster.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/AudioCompressedInMemory.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/AudioCompressedInMemory.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/AudioStreaming.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/AudioStreaming.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/Defaults.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/Defaults/AlbedoTexture_Default.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/Defaults/AlbedoTexture_Default.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/Defaults/AudioDecompressOnLoad.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/Defaults/AudioDecompressOnLoad.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/Defaults/DirectionalLight_Default.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/Defaults/DirectionalLight_Default.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/NormalTexture.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/NormalTexture.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/UtilityTexture.preset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Presets/UtilityTexture.preset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings/ForwardRenderer.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings/ForwardRenderer.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings/SampleSceneProfile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings/SampleSceneProfile.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings/UniversalRP-HighQuality.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings/UniversalRP-HighQuality.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings/UniversalRP-LowQuality.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings/UniversalRP-LowQuality.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings/UniversalRP-MediumQuality.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Settings/UniversalRP-MediumQuality.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Threader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Utility/Threader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/AstarPathfindingProject.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/AstarPathfindingProjectEditor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/IQuadratC.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/PackageToolsEditor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Packages/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Packages/packages-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/PresetManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/VFXManager.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/ProjectSettings/XRSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/UserSettings/Search.settings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Simulation.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/AI/AISetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/AI/AISetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/AI/GetPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/AI/GetPath.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,23 +17,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/2b/7a070bba/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/56/e234f23e/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42425271-A85C-48A7-81B5-AE89B9328419/1f/15a45773/SemVersionParser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/6b/2ced8336/Number.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/47/2c1d4438/EncodingTable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/ed/243e9d77/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/Client.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@11.0.0/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Robot/SLAM/PerfectSLAMController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.1/Unity.Mathematics/math.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ADFA4B62-4008-4918-9388-DF71C9E26E89/bf/9d757f8a/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.1/Unity.Mathematics/float2.gen.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4D909C80-E34F-4A76-896B-D88597D1591C/42/d66006ec/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48020190-8ED9-4DDA-A056-1E2E6E0DDD4E/f1/b0be1ac1/Socket.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Robot/SLAM/SLAMMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/Client.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -293,10 +100,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1696">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="1696" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -327,6 +134,7 @@
       <workItem from="1629194663085" duration="27440000" />
       <workItem from="1629271694072" duration="7732000" />
       <workItem from="1629286828585" duration="15997000" />
+      <workItem from="1629363698603" duration="717000" />
     </task>
     <task id="LOCAL-00001" summary="Move Commands">
       <created>1626618119809</created>

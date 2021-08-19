@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   value:
-    x: 20
+    x: 0
     y: 0
   initalValue:
-    x: 20
+    x: 0
     y: 0
   description: 

@@ -1019,6 +1019,9 @@ MonoBehaviour:
   start: {fileID: 11400000, guid: 030f69e3da9383c44ba3c3ffe89fc6e4, type: 2}
   goal: {fileID: 11400000, guid: 5200f66961af30b4bb40701c671ac5a9, type: 2}
   path: {fileID: 11400000, guid: 348203feee4c31943bda3703e824dc96, type: 2}
+  Map: {fileID: 11400000, guid: 105820f77e288264fa81e4323a7ce2f6, type: 2}
+  gridSize: {fileID: 11400000, guid: 31d2f8c35bac5234da5ce3aa448b63c4, type: 2}
+  gridIntervall: {fileID: 11400000, guid: caf3e0ca4d201fb448c26f285db4f095, type: 2}
 --- !u!114 &1011037716
 MonoBehaviour:
   m_ObjectHideFlags: 0

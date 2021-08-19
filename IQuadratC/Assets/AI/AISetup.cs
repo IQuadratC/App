@@ -13,7 +13,6 @@ public class AISetup : MonoBehaviour
     [SerializeField]private PublicByteArray Map;
     [SerializeField]private PublicInt gridSize;
     [SerializeField]private PublicInt gridIntervall;
-    private int size;
 
     void Start()
     {
