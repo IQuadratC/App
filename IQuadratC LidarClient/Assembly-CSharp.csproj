@@ -68,6 +68,7 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicStringArray.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat3.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicInt.cs" />
+     <Compile Include="Assets\Lidar\LidarController.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat4.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat2.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicMaster.cs" />
@@ -79,10 +80,9 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat.cs" />
      <Compile Include="Assets\Network\Client\ClientSend.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicString.cs" />
+     <Compile Include="Assets\Utility\mathAdditions.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicEventMaster.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventBool.cs" />
-     <Compile Include="Assets\Lidar\LidarController.cs" />
-     <Compile Include="Assets\Utility\mathAdditions.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/2021.1.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -704,6 +704,9 @@
      <Reference Include="VSSettingsProvider">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC LidarClient/Library/ScriptAssemblies/VSSettingsProvider.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>D:/dev/IQuadratC/App/IQuadratC LidarClient/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC LidarClient/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
@@ -721,9 +724,6 @@
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC LidarClient/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>D:/dev/IQuadratC/App/IQuadratC LidarClient/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>D:/dev/IQuadratC/App/IQuadratC LidarClient/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
