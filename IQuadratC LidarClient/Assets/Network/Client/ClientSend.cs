@@ -25,14 +25,15 @@ namespace Network.V2.Client
         
         public void ClientSettings()
         {
-            string version = "1.1";
+            string version = "1.2";
             Debug.Log("CLIENT: sending settings: " +
                       "\nVersion " + version +
                       "\nUDP " + client.clientUdpSupport.value + 
                       "\nCam " + client.camSupport.value + 
                       "\nJoystick " + client.joystickSupport.value +
                       "\nChat " + client.chatSupport.value +
-                      "\nLidar " + client.lidarSupport.value
+                      "\nLidar " + client.lidarSupport.value + 
+                      "\nLidarSim " + client.lidarSimSupport.value
                       );
             
             using (Packet packet = new Packet((byte) Packets.clientSettings))
@@ -43,6 +44,7 @@ namespace Network.V2.Client
                 packet.Write(client.joystickSupport.value);
                 packet.Write(client.chatSupport.value);
                 packet.Write(client.lidarSupport.value);
+                packet.Write(client.lidarSimSupport.value);
                 
                 client.SendTCPData(packet);
             }
@@ -131,6 +133,18 @@ namespace Network.V2.Client
             using (Packet packet = new Packet((byte) Packets.clientGetPosition))
             {
                 client.SendTCPData(packet);
+            }
+        }
+        public void ClientSimulatedLidarData()
+        {
+            using (Packet packet = new Packet((byte) Packets.clientSimulatedLidarData))
+            {
+                packet.Write(client.lidarDataPolar.value.Length);
+                for (int i = 0; i < client.lidarDataPolar.value.Length; i++)
+                {
+                    packet.Write(client.lidarDataPolar.value[i].y);
+                }
+                client.SendUDPData(packet);
             }
         }
     }

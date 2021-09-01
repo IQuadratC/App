@@ -2592,6 +2592,9 @@ MonoBehaviour:
   SLAMMap: {fileID: 11400000, guid: 105820f77e288264fa81e4323a7ce2f6, type: 2}
   getPositionEvent: {fileID: 11400000, guid: 6abb8e5e8795c594c8853a58e3d92464, type: 2}
   position: {fileID: 11400000, guid: ffdb99b97ef9a0941855c50b24f52bac, type: 2}
+  lidarSimSupport: {fileID: 11400000, guid: 89d2929c251e6494d824d74ed72f8a9e, type: 2}
+  serverLidarSimSupport: {fileID: 11400000, guid: f27c658065b027944a6ea8ce1093d209, type: 2}
+  lidarDataPolar: {fileID: 11400000, guid: 2a9b71c48cdc4168b06ec5bf19ae79f8, type: 2}
 --- !u!4 &2070034877
 Transform:
   m_ObjectHideFlags: 0

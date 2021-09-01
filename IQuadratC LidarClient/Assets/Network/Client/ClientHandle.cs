@@ -37,13 +37,24 @@ namespace Network.Client
                 client.serverLidarSupport.value = packet.ReadBool();
             }
             
+            if (version == "1.2")
+            {
+                client.serverUdpSupport = packet.ReadBool();
+                client.serverCamSupport.value = packet.ReadBool();
+                client.serverJoystickSupport.value = packet.ReadBool();
+                client.serverChatSupport.value = packet.ReadBool();
+                client.serverLidarSupport.value = packet.ReadBool();
+                client.serverLidarSimSupport.value = packet.ReadBool();
+            }
+            
             Debug.Log("CLIENT: recived server settings:" +
                       "\nVersion " + version +
                       "\nUDP " + client.serverUdpSupport +
                       "\nCam " + client.serverCamSupport.value +
                       "\nJoystick " + client.serverJoystickSupport.value +
                       "\nChat " + client.serverChatSupport.value +
-                      "\nLidar " + client.serverLidarSupport.value
+                      "\nLidar " + client.serverLidarSupport.value + 
+                      "\nLidarSim " + client.serverLidarSimSupport.value
             );
             
             client.clientSend.ClientSettings();
@@ -85,6 +96,12 @@ namespace Network.Client
             client.position.value = pos;
             
             Debug.Log("CLIENT: recived Position: " + pos);
+        }
+        
+        public void ServerGetSimulatedLidarData(Packet packet)
+        {
+            Debug.Log("CLIENT: Simulated Lidar Data request");
+            client.clientSend.ClientSimulatedLidarData();
         }
     }
 }

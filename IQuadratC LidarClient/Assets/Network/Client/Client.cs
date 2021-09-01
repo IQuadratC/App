@@ -56,6 +56,10 @@ namespace Network.Client
         [SerializeField] private PublicEvent getPositionEvent;
         public PublicFloat3 position;
 
+        public PublicBool lidarSimSupport;
+        public PublicBool serverLidarSimSupport;
+        public PublicFloat2Array lidarDataPolar;
+
         private void Awake()
         {
             tcpClient = new TCPClient(this);
@@ -75,6 +79,7 @@ namespace Network.Client
                 { (byte)Packets.servertSLAMMap, clientHandle.ServerSLAMMap },
                 { (byte)Packets.serverPosition, clientHandle.ServerPosition },
                 
+                { (byte)Packets.serverGetSimulatedLidarData, clientHandle.ServerGetSimulatedLidarData },
             };
 
             connectEvent.Register(tcpClient.Connect);
@@ -91,7 +96,6 @@ namespace Network.Client
             getPositionEvent.Register(clientSend.ClientGetPosition);
             
             clientState.value = (int) NetworkState.notConnected;
-            
         }
 
         private void OnApplicationQuit()
