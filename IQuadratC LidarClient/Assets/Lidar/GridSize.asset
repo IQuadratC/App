@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 483561b2e4f30ab438b2bc33322b2d26, type: 3}
   m_Name: GridSize
   m_EditorClassIdentifier: 
-  value: 1000
-  initalValue: 1000
+  value: 4096
+  initalValue: 4096
   description: 

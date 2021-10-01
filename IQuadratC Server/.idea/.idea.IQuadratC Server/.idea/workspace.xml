@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/AI/AISetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/AI/AISetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/AI/GetPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/AI/GetPath.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +13,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@11.0.0/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/ed/243e9d77/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/Client.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@11.0.0/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.1/Unity.Mathematics/math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.1/Unity.Mathematics/float2.gen.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/Client.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -135,6 +132,8 @@
       <workItem from="1629271694072" duration="7732000" />
       <workItem from="1629286828585" duration="15997000" />
       <workItem from="1629363698603" duration="717000" />
+      <workItem from="1631116289397" duration="106000" />
+      <workItem from="1631116418454" duration="857000" />
     </task>
     <task id="LOCAL-00001" summary="Move Commands">
       <created>1626618119809</created>
