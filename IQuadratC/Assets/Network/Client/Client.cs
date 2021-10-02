@@ -27,34 +27,45 @@ namespace Network.Client
         [SerializeField] private PublicEventString debugMessageEvent;
         
         public PublicBool clientUdpSupport;
-        [HideInInspector] public bool serverUdpSupport;
-        [HideInInspector] public bool udpConnected;
+        public PublicBool serverUdpSupport;
 
-        public PublicBool camSupport;
+        public PublicBool clientChatSupport;
+        public PublicBool serverChatSupport;
+        
+        public PublicBool clientCamSupport;
         public PublicBool serverCamSupport;
         
-        public PublicBool joystickSupport;
+        public PublicBool clientJoystickSupport;
         public PublicBool serverJoystickSupport;
+        
+        public PublicBool clientLidarSupport;
+        public PublicBool serverLidarSupport;
+        
+        public PublicBool clientLidarSimSupport;
+        public PublicBool serverLidarSimSupport;
+        
+        public PublicBool clientSLAMMapSupport;
+        public PublicBool serverSLAMMapSupport;
+
+        [HideInInspector] public bool udpConnected;
         
         [SerializeField] private PublicEventInt controllModeEvent;
         [SerializeField] private PublicEventFloat3 joystickMoveEvent;
         [SerializeField] private PublicEventFloat joystickRotateEvent;
         [SerializeField] private PublicEvent joystickStopEvent;
         
-        public PublicBool chatSupport;
-        public PublicBool serverChatSupport;
-        
-        public PublicBool lidarSupport;
-        public PublicBool serverLidarSupport;
-
         [SerializeField] private PublicEventInt lidarModeEvent;
         public PublicInt lidarMode;
 
-        [SerializeField] private PublicEvent getSLAMMapEvent;
-        public PublicByteArray SLAMMap;
-        
         [SerializeField] private PublicEvent getPositionEvent;
         public PublicFloat3 position;
+        
+        public PublicFloat2Array lidarDataPolar;
+        
+        [SerializeField] private PublicEvent getSLAMMapEvent;
+        public PublicByteArray SLAMMap;
+        public PublicInt SLAMMapSize;
+        public PublicInt SLAMMapIntervall;
 
         private void Awake()
         {
@@ -75,6 +86,7 @@ namespace Network.Client
                 { (byte)Packets.servertSLAMMap, clientHandle.ServerSLAMMap },
                 { (byte)Packets.serverPosition, clientHandle.ServerPosition },
                 
+                { (byte)Packets.serverGetSimulatedLidarData, clientHandle.ServerGetSimulatedLidarData },
             };
 
             connectEvent.Register(tcpClient.Connect);
@@ -91,7 +103,6 @@ namespace Network.Client
             getPositionEvent.Register(clientSend.ClientGetPosition);
             
             clientState.value = (int) NetworkState.notConnected;
-            
         }
 
         private void OnApplicationQuit()

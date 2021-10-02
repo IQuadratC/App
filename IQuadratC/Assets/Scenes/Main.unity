@@ -513,7 +513,7 @@ MonoBehaviour:
   resolution: 480x360
   frame: {fileID: 687712134}
   ip: {fileID: 11400000, guid: 23d1fca33a0035844a09415370cb2436, type: 2}
-  CamOnline: {fileID: 11400000, guid: 138a60dee86bd2242a40853e6efb63c1, type: 2}
+  CamOnline: {fileID: 0}
 --- !u!4 &662164926
 Transform:
   m_ObjectHideFlags: 0
@@ -1761,26 +1761,33 @@ MonoBehaviour:
   disconnectEvent: {fileID: 11400000, guid: 995784cb38572f2458e145de3a59822d, type: 2}
   debugMessageEvent: {fileID: 11400000, guid: 22b926766bdbe38889e996ddcf7912ed, type: 2}
   clientUdpSupport: {fileID: 11400000, guid: 963e0f142b0aafe4ea28888da2672fba, type: 2}
-  serverUdpSupport: 0
+  serverUdpSupport: {fileID: 11400000, guid: f4d769b8cb6ba634aacf615f4f77c7fc, type: 2}
+  clientChatSupport: {fileID: 11400000, guid: 6321671cfa6764d4989e16ff4b0ce7aa, type: 2}
+  serverChatSupport: {fileID: 11400000, guid: fbbafc2e9982b11478c2f47c605f68cc, type: 2}
+  clientCamSupport: {fileID: 11400000, guid: 45646c020f9f5bd4bb885d76560cb64d, type: 2}
+  serverCamSupport: {fileID: 11400000, guid: e30e1f7d7ee8d3047907fa880f267fbe, type: 2}
+  clientJoystickSupport: {fileID: 11400000, guid: 06c38c019a6e16c4f97c6736587e9e88, type: 2}
+  serverJoystickSupport: {fileID: 11400000, guid: 5edb890a045c26b418f37eff7e83e9a0, type: 2}
+  clientLidarSupport: {fileID: 11400000, guid: 50cdc63aba52e934cb995a47fa3d8e38, type: 2}
+  serverLidarSupport: {fileID: 11400000, guid: 80393797b7c8d6a4c8d159c55313689e, type: 2}
+  clientLidarSimSupport: {fileID: 11400000, guid: 89d2929c251e6494d824d74ed72f8a9e, type: 2}
+  serverLidarSimSupport: {fileID: 11400000, guid: 126c3ecc3afd4e94abb9529d3160fd6b, type: 2}
+  clientSLAMMapSupport: {fileID: 11400000, guid: 6fdce194d654b1a4f9ee91b2dcf4f8aa, type: 2}
+  serverSLAMMapSupport: {fileID: 11400000, guid: 76a88694f7a4d9e42855f803fb9e6ae9, type: 2}
   udpConnected: 0
-  camSupport: {fileID: 11400000, guid: 45646c020f9f5bd4bb885d76560cb64d, type: 2}
-  serverCamSupport: {fileID: 11400000, guid: 138a60dee86bd2242a40853e6efb63c1, type: 2}
-  joystickSupport: {fileID: 11400000, guid: 06c38c019a6e16c4f97c6736587e9e88, type: 2}
-  serverJoystickSupport: {fileID: 11400000, guid: b54c2bae3173d3649b551b7761de72c5, type: 2}
   controllModeEvent: {fileID: 11400000, guid: 2550ad90de292764e9ef7cd211777a55, type: 2}
   joystickMoveEvent: {fileID: 11400000, guid: 4d308dcc8da71dc439982bdea35ec8d1, type: 2}
   joystickRotateEvent: {fileID: 11400000, guid: 0bac079d41d5c4e40a0197f4d93fad01, type: 2}
   joystickStopEvent: {fileID: 11400000, guid: 7ef41f9ef18e7cb42883f27f4c849eca, type: 2}
-  chatSupport: {fileID: 11400000, guid: 6321671cfa6764d4989e16ff4b0ce7aa, type: 2}
-  serverChatSupport: {fileID: 11400000, guid: 4457a761b5c46e241b6011cd1cf1a931, type: 2}
-  lidarSupport: {fileID: 11400000, guid: 50cdc63aba52e934cb995a47fa3d8e38, type: 2}
-  serverLidarSupport: {fileID: 11400000, guid: 4457a761b5c46e241b6011cd1cf1a931, type: 2}
   lidarModeEvent: {fileID: 11400000, guid: f039b6f61e23d2f498815497fbcbed12, type: 2}
   lidarMode: {fileID: 11400000, guid: 41647745564c5534bbfe4734a7c4955f, type: 2}
-  getSLAMMapEvent: {fileID: 11400000, guid: 8cc8381f93924654f8125c09240e104e, type: 2}
-  SLAMMap: {fileID: 11400000, guid: 105820f77e288264fa81e4323a7ce2f6, type: 2}
   getPositionEvent: {fileID: 11400000, guid: 6abb8e5e8795c594c8853a58e3d92464, type: 2}
   position: {fileID: 11400000, guid: ffdb99b97ef9a0941855c50b24f52bac, type: 2}
+  lidarDataPolar: {fileID: 0}
+  getSLAMMapEvent: {fileID: 11400000, guid: 8cc8381f93924654f8125c09240e104e, type: 2}
+  SLAMMap: {fileID: 11400000, guid: 105820f77e288264fa81e4323a7ce2f6, type: 2}
+  SLAMMapSize: {fileID: 0}
+  SLAMMapIntervall: {fileID: 0}
 --- !u!4 &2070034877
 Transform:
   m_ObjectHideFlags: 0

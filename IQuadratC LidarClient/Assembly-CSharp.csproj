@@ -72,7 +72,7 @@
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat4.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicEventFloat2.cs" />
      <Compile Include="Assets\Utility\EventSystem\PublicMaster.cs" />
-     <Compile Include="Assets\Lidar\MapPreview.cs" />
+     <Compile Include="Assets\SLAMMap\MapPreview.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat2.cs" />
      <Compile Include="Assets\Network\Both\Packet.cs" />
      <Compile Include="Assets\Utility\EventSystem\Generated\PublicFloat3.cs" />

@@ -25,24 +25,27 @@ namespace Network.V2.Client
         
         public void ClientSettings()
         {
-            string version = "1.1";
+            string version = "1.1,1.2,1.3";
             Debug.Log("CLIENT: sending settings: " +
                       "\nVersion " + version +
                       "\nUDP " + client.clientUdpSupport.value + 
-                      "\nCam " + client.camSupport.value + 
-                      "\nJoystick " + client.joystickSupport.value +
-                      "\nChat " + client.chatSupport.value +
-                      "\nLidar " + client.lidarSupport.value
+                      "\nCam " + client.clientCamSupport.value + 
+                      "\nJoystick " + client.clientJoystickSupport.value +
+                      "\nChat " + client.clientChatSupport.value +
+                      "\nLidar " + client.clientLidarSupport.value + 
+                      "\nLidarSim " + client.clientLidarSimSupport.value
                       );
             
             using (Packet packet = new Packet((byte) Packets.clientSettings))
             {
                 packet.Write(version);
                 packet.Write(client.clientUdpSupport.value);
-                packet.Write(client.camSupport.value);
-                packet.Write(client.joystickSupport.value);
-                packet.Write(client.chatSupport.value);
-                packet.Write(client.lidarSupport.value);
+                packet.Write(client.clientCamSupport.value);
+                packet.Write(client.clientJoystickSupport.value);
+                packet.Write(client.clientChatSupport.value);
+                packet.Write(client.clientLidarSupport.value);
+                packet.Write(client.clientLidarSimSupport.value);
+                packet.Write(client.clientSLAMMapSupport.value);
                 
                 client.SendTCPData(packet);
             }
@@ -60,7 +63,7 @@ namespace Network.V2.Client
                 Thread.Sleep(2000);
                 if (client.udpConnected) return;
                 
-                client.serverUdpSupport = false;
+                client.serverUdpSupport.value = false;
                 ClientUDPConnectionStatus();
             });
         }
@@ -131,6 +134,18 @@ namespace Network.V2.Client
             using (Packet packet = new Packet((byte) Packets.clientGetPosition))
             {
                 client.SendTCPData(packet);
+            }
+        }
+        public void ClientSimulatedLidarData()
+        {
+            using (Packet packet = new Packet((byte) Packets.clientSimulatedLidarData))
+            {
+                packet.Write(client.lidarDataPolar.value.Length);
+                for (int i = 0; i < client.lidarDataPolar.value.Length; i++)
+                {
+                    packet.Write(client.lidarDataPolar.value[i].y);
+                }
+                client.SendUDPData(packet);
             }
         }
     }

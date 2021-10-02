@@ -2,7 +2,138 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217b447f-ce63-49c5-896b-25c7aaf6fdb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientCamSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientCamSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientChatSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientChatSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientJoystickSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientJoystickSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientLidarSimSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientLidarSimSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientLidarSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientLidarSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientSLAMMapSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientSLAMMapSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientUDPSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ClientUDPSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerCamSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerCamSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerChatSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerChatSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerJoystickSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerJoystickSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerLidarSimSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerLidarSimSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerLidarSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerLidarSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerSLAMMapSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerSLAMMapSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerUDPSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ServerUDPSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/GatPosition.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/GatPosition.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/GetSLAMMap.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/GetSLAMMap.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/MapPreview.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/MapPreview.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/SLAMMap.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/SLAMMap.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/SLAMMapIntervall.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/SLAMMapIntervall.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/SLAMMapSize.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/SLAMMap/SLAMMapSize.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientCamSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientCamSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientChatSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientChatSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientJoystickSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientJoystickSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientLidarSimSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientLidarSimSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientLidarSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientLidarSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientSLAMMapSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientSLAMMapSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientUDPSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ClientUDPSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerCamSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerCamSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerChatSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerChatSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerJoystickSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerJoystickSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerLidarSimSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerLidarSimSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerLidarSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerLidarSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerSLAMMapSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerSLAMMapSupport.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerUDPSupport.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ServerUDPSupport.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Chat/serverChatSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Chat/serverChatSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/GatPosition.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/GatPosition.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/GetSLAMMap.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/GetSLAMMap.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/GridIntervall.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/GridIntervall.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/GridSize.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/GridSize.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/MapPreview.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/MapPreview.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/SLAMMap.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/SLAMMap.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/serverLidarSimSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/serverLidarSimSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/serverLidarSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Lidar/serverLidarSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/CamSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/CamSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ChatSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/ChatSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/JoystickSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/JoystickSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/LidarSimSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/LidarSimSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/LidarSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/LidarSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/UDPSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Both/Settings/UDPSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/ClientSend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Scenes/Simulation.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Scenes/Simulation.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Video/CamOnline.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Video/CamOnline.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IQuadratC Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Chat/serverChatSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Chat/serverChatSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickOnline.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Joystick/JoystickOnline.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/serverLiadarSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Lidar/serverLiadarSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/CamSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/CamSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ChatSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/ChatSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/JoystickSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/JoystickSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/LidarSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/LidarSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/UDPSupport.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/Settings/UDPSupport.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Both/State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Network/Client/ClientSend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../IQuadratC/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Video/CamOnline.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IQuadratC/Assets/Video/CamOnline.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +145,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Robot/SLAM/SLAMController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/ed/243e9d77/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/ed/243e9d77/TaskAwaiter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../IQuadratC LidarClient/Assets/Network/Client/Client.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@11.0.0/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.1/Unity.Mathematics/math.cs" root0="SKIP_HIGHLIGHTING" />
@@ -134,6 +265,7 @@
       <workItem from="1629363698603" duration="717000" />
       <workItem from="1631116289397" duration="106000" />
       <workItem from="1631116418454" duration="857000" />
+      <workItem from="1633176247675" duration="1476000" />
     </task>
     <task id="LOCAL-00001" summary="Move Commands">
       <created>1626618119809</created>

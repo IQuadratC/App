@@ -37,6 +37,11 @@
 
         clientGetPosition = 54,
         serverPosition = 55,
+        
+        // Lidar Sim 60 - 69  
+        serverGetSimulatedLidarData = 60,  
+        clientSimulatedLidarData = 61,  
+
     }
 
     public enum NetworkState

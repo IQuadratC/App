@@ -1,4 +1,5 @@
-﻿using Network.Both;
+﻿using System.Linq;
+using Network.Both;
 using Unity.Mathematics;
 using UnityEngine;
 using Utility;
@@ -27,34 +28,50 @@ namespace Network.Client
             client.clientId.value = packet.ReadByte();
             
             string version = packet.ReadString();
-
-            if (version == "1.1")
+            string[] versions = version.Split(',');
+            
+            if (versions.Contains("1.3"))
             {
-                client.serverUdpSupport = packet.ReadBool();
+                client.serverUdpSupport.value = packet.ReadBool();
                 client.serverCamSupport.value = packet.ReadBool();
                 client.serverJoystickSupport.value = packet.ReadBool();
                 client.serverChatSupport.value = packet.ReadBool();
                 client.serverLidarSupport.value = packet.ReadBool();
+                client.serverLidarSimSupport.value = packet.ReadBool();
+                client.serverSLAMMapSupport.value = packet.ReadBool();
+                client.SLAMMapSize.value = packet.ReadInt32();
+                client.SLAMMapIntervall.value = packet.ReadInt32();
             }
-            
-            if (version == "1.2")
+            else if (versions.Contains("1.2"))
             {
-                client.serverUdpSupport = packet.ReadBool();
+                client.serverUdpSupport.value = packet.ReadBool();
                 client.serverCamSupport.value = packet.ReadBool();
                 client.serverJoystickSupport.value = packet.ReadBool();
                 client.serverChatSupport.value = packet.ReadBool();
                 client.serverLidarSupport.value = packet.ReadBool();
                 client.serverLidarSimSupport.value = packet.ReadBool();
             }
+            else if (versions.Contains("1.1"))
+            {
+                client.serverUdpSupport.value = packet.ReadBool();
+                client.serverCamSupport.value = packet.ReadBool();
+                client.serverJoystickSupport.value = packet.ReadBool();
+                client.serverChatSupport.value = packet.ReadBool();
+                client.serverLidarSupport.value = packet.ReadBool();
+            }
             
             Debug.Log("CLIENT: recived server settings:" +
                       "\nVersion " + version +
-                      "\nUDP " + client.serverUdpSupport +
+                      "\nUDP " + client.serverUdpSupport.value +
                       "\nCam " + client.serverCamSupport.value +
                       "\nJoystick " + client.serverJoystickSupport.value +
                       "\nChat " + client.serverChatSupport.value +
                       "\nLidar " + client.serverLidarSupport.value + 
-                      "\nLidarSim " + client.serverLidarSimSupport.value
+                      "\nLidarSim " + client.serverLidarSimSupport.value +
+                      "\nSALMMap " + client.serverSLAMMapSupport.value +
+                      "\nSALMMapSize " + client.SLAMMapSize.value +
+                      "\nSALMMapIntervall " + client.SLAMMapIntervall.value
+                      
             );
             
             client.clientSend.ClientSettings();
