@@ -107,6 +107,28 @@ namespace Network.Client
             
             Debug.Log("CLIENT: recived SLAM Map");
         }
+        public void ServerSLAMMapPart(Packet packet)
+        {
+            int size = (client.SLAMMapSize.value / client.SLAMMapIntervall.value) *
+                       (client.SLAMMapSize.value / client.SLAMMapIntervall.value);
+            if (client.SLAMMap.value == null || client.SLAMMap.value.Length != size)
+            {
+                client.SLAMMap.value = new byte[size];
+            }
+            
+            int start = packet.ReadInt32();
+            int end = packet.ReadInt32();
+
+            byte[] map = packet.ReadBytes(end-start);
+
+            for (int i = start; i < end; i++)
+            {
+                client.SLAMMap.value[i] = map[i-start];
+            }
+
+            Debug.LogFormat("CLIENT: recived SLAM Map Part {0}, {1}",start,end);
+        }
+        
         public void ServerPosition(Packet packet)
         {
             float3 pos = packet.ReadFloat3();

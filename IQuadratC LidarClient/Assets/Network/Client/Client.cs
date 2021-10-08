@@ -84,6 +84,7 @@ namespace Network.Client
                 
                 { (byte)Packets.serverLidarStatus, clientHandle.ServerLidarStatus },
                 { (byte)Packets.servertSLAMMap, clientHandle.ServerSLAMMap },
+                { (byte)Packets.servertSLAMMapPart, clientHandle.ServerSLAMMapPart },
                 { (byte)Packets.serverPosition, clientHandle.ServerPosition },
                 
                 { (byte)Packets.serverGetSimulatedLidarData, clientHandle.ServerGetSimulatedLidarData },

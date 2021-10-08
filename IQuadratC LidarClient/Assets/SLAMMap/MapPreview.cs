@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,18 +12,27 @@ public class MapPreview : MonoBehaviour
     
     private int convertIndex(float x, float y)
     {
-        return (int) ((y + gridSize.value) / gridIntervall.value) * (gridSize.value / gridIntervall.value) * 2 + (int) (x + gridSize.value) / gridIntervall.value; 
+        return (int) (y / gridIntervall.value) * (gridSize.value / gridIntervall.value) + (int) (x / gridIntervall.value); 
     }
     
     private void OnDrawGizmos()
     {
         if (grid != null && grid.value.Length > 0)
         {
-            for (int x = -gridSize.value; x < gridSize.value; x += gridIntervall.value)
+            for (int x = 0; x < gridSize.value; x += gridIntervall.value)
             {
-                for (int y = -gridSize.value; y < gridSize.value; y += gridIntervall.value)
+                for (int y = 0; y < gridSize.value; y += gridIntervall.value)
                 {
-                    byte gridCell = grid.value[convertIndex(x, y)];
+                    byte gridCell = 0;
+                    try
+                    {
+                        gridCell = grid.value[convertIndex(x, y)];
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogFormat("{0}, {0}", x, y);
+                    }
+                    
                     if (gridCell == 0)
                     {
                         Gizmos.color = Color.grey;
@@ -35,7 +45,7 @@ public class MapPreview : MonoBehaviour
                     {
                         Gizmos.color = Color.red;
                     }
-                    Gizmos.DrawCube(new Vector3(x + gridIntervall.value / 2, 20, y + gridIntervall.value / 2), Vector3.one * 2);
+                    Gizmos.DrawCube(new Vector3(x + gridIntervall.value,y + gridIntervall.value, 20), Vector3.one * 2);
                 }
             }
         }
